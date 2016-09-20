@@ -44,6 +44,23 @@ var point = {
     }]
 };
 
+// Calculate the distance in kilometers between route start/end point.
+var lineDistance = turf.lineDistance(route.features[0], 'kilometers');
+
+var arc = [];
+
+// Draw an arc between the `origin` & `destination` of the two points
+for (var i = 0; i < lineDistance; i++) {
+    var segment = turf.along(route.features[0], i / 1000 * lineDistance, 'kilometers');
+    arc.push(segment.geometry.coordinates);
+}
+
+// Update the route with calculated arc coordinates
+route.features[0].geometry.coordinates = arc;
+
+// Used to increment the value of the point measurement against the route.
+var counter = 0;
+
 map.on('load', function () {
 	// prepare data
     map.addSource('route', {
@@ -76,4 +93,24 @@ map.on('load', function () {
             "icon-rotate": 90
         }
     });
+    
+    function animate() {
+        // Update point geometry to a new position based on counter denoting
+        // the index to access the arc.
+        point.features[0].geometry.coordinates = route.features[0].geometry.coordinates[counter];
+
+        // Update the source with this new data.
+        map.getSource('point').setData(point);
+
+        // Request the next frame of animation so long as destination has not
+        // been reached.
+        if (point.features[0].geometry.coordinates[0] !== destination[0]) {
+            requestAnimationFrame(animate);
+        }
+
+        counter = counter + 1;
+    }
+    
+     // Start the animation.
+    animate(counter);
 });
