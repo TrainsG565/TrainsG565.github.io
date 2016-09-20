@@ -105,25 +105,14 @@ map.on('load', function () {
     	});
 	}
 	
-    
-    function animate() {
-        // Update point geometry to a new position based on counter denoting
-        // the index to access the arc.
-        point.features[0].geometry.coordinates = route.features[0].geometry.coordinates[counter];
-		
-        // Update the source with this new data.
-        map.getSource('point').setData(point);
+	var maple = setInterval(sausage, 10);
 
-        // Request the next frame of animation so long as destination has not
-        // been reached.
-        if (point.features[0].geometry.coordinates[0] !== destination[0]) {
-            requestAnimationFrame(animate);
-        }
-		
-
-        counter = counter + 1;
-    }
+	function sausage() {
+    	point.features[0].geometry.coordinates = route.features[0].geometry.coordinates[counter];
+    	
+    	map.getSource('point').setData(point);
+    	
+    	counter = counter + 1;
+	}
     
-     // Start the animation.
-    animate(counter);
 });
