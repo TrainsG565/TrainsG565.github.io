@@ -93,12 +93,24 @@ map.on('load', function () {
             "icon-rotate": 90
         }
     });
+
+	
+	var myVar = setInterval(myTimer, 50);
+	
+	function myTimer() {
+    	var target = point.features[0].geometry.coordinates;
+    	map.flyTo({
+        	center: target,
+        	zoom: 3
+    	});
+	}
+	
     
     function animate() {
         // Update point geometry to a new position based on counter denoting
         // the index to access the arc.
         point.features[0].geometry.coordinates = route.features[0].geometry.coordinates[counter];
-
+		
         // Update the source with this new data.
         map.getSource('point').setData(point);
 
@@ -107,6 +119,7 @@ map.on('load', function () {
         if (point.features[0].geometry.coordinates[0] !== destination[0]) {
             requestAnimationFrame(animate);
         }
+		
 
         counter = counter + 1;
     }
