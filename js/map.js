@@ -101,11 +101,11 @@ map.on('load', function () {
     	var target = point.features[0].geometry.coordinates;
     	map.flyTo({
         	center: target,
-        	zoom: 3
+        	zoom: 5
     	});
 	}
 	
-	var maple = setInterval(sausage, 10);
+	var maple = setInterval(sausage, 50);
 
 	function sausage() {
     	point.features[0].geometry.coordinates = route.features[0].geometry.coordinates[counter];
