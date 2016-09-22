@@ -95,9 +95,9 @@ map.on('load', function () {
     });
 
 	
-	var myVar = setInterval(myTimer, 50);
+	var myVar = setInterval(followMarker, 50);
 	
-	function myTimer() {
+	function followMarker() {
     	var target = point.features[0].geometry.coordinates;
     	map.flyTo({
         	center: target,
@@ -105,9 +105,9 @@ map.on('load', function () {
     	});
 	}
 	
-	var maple = setInterval(sausage, 50);
+	var maple = setInterval(moveMarker, 50);
 
-	function sausage() {
+	function moveMarker() {
     	point.features[0].geometry.coordinates = route.features[0].geometry.coordinates[counter];
     	
     	map.getSource('point').setData(point);
