@@ -1,6 +1,8 @@
 // access token from specific mapbox account
 mapboxgl.accessToken = 'pk.eyJ1IjoiYm9yZG5lcndsZWkiLCJhIjoiY2lyZjd1a2tyMDA3dmc2bmtkcjUzaG5meCJ9.eswxCZSAnob59HR0wEaTpA';
-	
+
+var sliderValue = 0;
+
 // define the map variable that will be displayed
 var map = new mapboxgl.Map({
 	container: 'map', //div id container of the map
@@ -97,9 +99,7 @@ map.on('load', function () {
 	
 	
 	var followMarkerTimer = setInterval(followMarker, 50);
-	
 	function followMarker() {
-		
     	var target = point.features[0].geometry.coordinates;
     	map.flyTo({
         	center: target,
@@ -108,7 +108,6 @@ map.on('load', function () {
 	}
 	
 	var moveMarkerTimer = setInterval(moveMarker, 50);
-
 	function moveMarker() {
     	point.features[0].geometry.coordinates = route.features[0].geometry.coordinates[counter];
     	
@@ -116,5 +115,55 @@ map.on('load', function () {
     	
     	counter = counter + 1;
 	}
+	
+	
     
 });
+
+var maple = setInterval(sausage, 1000);
+function sausage() {
+	sliderValue = 75;
+	console.log(sliderValue);
+}
+$("#slider").roundSlider({
+    min: 0,
+   	max: 100,
+    step: 1,
+    value: sliderValue,
+    radius: 105,
+    width: 16,
+	handleSize: 0,
+    startAngle: 315,
+    endAngle: "+360",
+    animation: true,
+    showTooltip: true,
+    editableTooltip: false,
+    readOnly: true,
+    disabled: false,
+    keyboardAction: true,
+    mouseScrollAction: false,
+    sliderType: "min-range",
+    circleShape: "pie",
+    handleShape: "square",
+    lineCap: "square",
+
+    // events
+    beforeCreate: null,
+    create: null,
+    start: null,
+    drag: null,
+    change: null,
+    stop: null,
+    tooltipFormat: "changeTooltip"
+});
+
+function changeTooltip(e) {
+	var val = e.value, speed;
+	if (val < 20) speed = "Slow";
+	else if (val < 40) speed = "Normal";
+	else if (val < 70) speed = "Fast";
+	else speed = "Very Fast";
+	
+	return val + " km/h" + "<div>" + speed + "<div>";
+}
+
