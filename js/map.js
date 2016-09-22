@@ -121,7 +121,6 @@ map.on('load', function () {
     
 });
 
-
 sliderValue = 75;
 
 $("#slider").roundSlider({
@@ -151,9 +150,9 @@ $("#slider").roundSlider({
     create: null,
     start: null,
     drag: null,
-    change: null,
+    change: onCircleChange,
     stop: null,
-    tooltipFormat: "changeTooltip"
+    tooltipFormat: changeTooltip
 });
 
 function changeTooltip(e) {
@@ -165,4 +164,10 @@ function changeTooltip(e) {
 	
 	return val + " km/h" + "<div>" + speed + "<div>";
 }
+
+function onCircleChange (e) {
+	sliderValue = e.value;
+};
+
+
 
