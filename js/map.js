@@ -99,6 +99,7 @@ map.on('load', function () {
 	var followMarkerTimer = setInterval(followMarker, 50);
 	
 	function followMarker() {
+		
     	var target = point.features[0].geometry.coordinates;
     	map.flyTo({
         	center: target,
