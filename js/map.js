@@ -93,7 +93,8 @@ map.on('load', function () {
             "icon-rotate": 90
         }
     });
-
+	
+	
 	
 	var followMarkerTimer = setInterval(followMarker, 50);
 	
