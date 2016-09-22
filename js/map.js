@@ -117,14 +117,13 @@ map.on('load', function () {
 	}
 	
 	
+	
     
 });
 
-var maple = setInterval(sausage, 1000);
-function sausage() {
-	sliderValue = 75;
-	console.log(sliderValue);
-}
+
+sliderValue = 75;
+
 $("#slider").roundSlider({
     min: 0,
    	max: 100,
