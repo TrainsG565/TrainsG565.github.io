@@ -38,7 +38,7 @@ var counter = 0;
 
 
 // function for adding map sources
-addMapSources() {
+function addMapSources() {
 	map.addSource('route', {
     	"type": "geojson",
         "data": route
@@ -51,7 +51,7 @@ addMapSources() {
 };
 
 // function for adding map layers
-addMapLayers() {
+function addMapLayers() {
 	map.addLayer({
         "id": "route",
         "source": "route",
