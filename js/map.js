@@ -1,7 +1,7 @@
 // access token from specific mapbox account
 mapboxgl.accessToken = 'pk.eyJ1IjoiYm9yZG5lcndsZWkiLCJhIjoiY2lyZjd1a2tyMDA3dmc2bmtkcjUzaG5meCJ9.eswxCZSAnob59HR0wEaTpA';
 
-var sliderValue = 0;
+var sliderValue = 2;
 
 // define the map variable that will be displayed
 var map = new mapboxgl.Map({
@@ -121,7 +121,16 @@ map.on('load', function () {
     
 });
 
-sliderValue = 75;
+
+
+// angleToValue
+
+var testTimer = setInterval(testSlide , 1000);
+function testSlide() {
+	sliderValue += 1;
+	$("#slider").roundSlider("setValue", sliderValue);
+}
+
 
 $("#slider").roundSlider({
     min: 0,
@@ -136,7 +145,7 @@ $("#slider").roundSlider({
     animation: true,
     showTooltip: true,
     editableTooltip: false,
-    readOnly: true,
+    readOnly: false,
     disabled: false,
     keyboardAction: true,
     mouseScrollAction: false,
@@ -155,6 +164,7 @@ $("#slider").roundSlider({
     tooltipFormat: changeTooltip
 });
 
+
 function changeTooltip(e) {
 	var val = e.value, speed;
 	if (val < 20) speed = "Slow";
@@ -168,6 +178,7 @@ function changeTooltip(e) {
 function onCircleChange (e) {
 	sliderValue = e.value;
 };
+
 
 
 
