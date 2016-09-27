@@ -125,7 +125,7 @@ map.on('load', function () {
 
 // angleToValue
 
-var testTimer = setInterval(testSlide , 1000);
+var testTimer = setInterval(testSlide , 100);
 function testSlide() {
 	sliderValue += 1;
 	$("#slider").roundSlider("setValue", sliderValue);
@@ -134,7 +134,7 @@ function testSlide() {
 
 $("#slider").roundSlider({
     min: 0,
-   	max: 100,
+   	max: 1000,
     step: 1,
     value: sliderValue,
     radius: 105,
