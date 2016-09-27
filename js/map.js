@@ -97,13 +97,16 @@ map.on('load', function () {
     });
 	
 	
-	
+	var followControl = 0;
 	var followMarkerTimer = setInterval(followMarker, 50);
 	function followMarker() {
     	var target = point.features[0].geometry.coordinates;
+    	followControl += 1;
     	map.flyTo({
         	center: target,
-        	zoom: 5
+        	zoom: 5, 
+        	ptich: 40,
+        	bearing: -60
     	});
 	}
 	
