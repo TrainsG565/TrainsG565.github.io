@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<!-- check meta tags with bootstrap -->
+    <meta charset="utf-8" />
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mappoth Home Page</title>
+	
+
+	
+    <!-- Bootstrap & Font-Awesome CSS & owl-carousel -->
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link href="lib/owl_carousel_2/assets/owl.theme.default.css" rel="stylesheet" type="text/css" />
+    <link href="lib/owl_carousel_2/assets/owl.carousel.css" rel="stylesheet" type="text/css" />
+    
+    <!-- Link mapbox GL css -->
+	<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.14.1/mapbox-gl.css' rel='stylesheet' />
+    
+    <!-- Custom CSS -->
+    <link href="css/home.css" rel="stylesheet" type="text/css" />
+    
+    
+    <!-- ********** -->
+    <!-- CSS Styling -->
+    <style>
+    	
+    	.affix {
+      		top: 0px;
+  		}
+  		
+
+    </style>
+    <!-- ********** -->
+    <!-- /CSS Styling -->
+    
+
+</head>
+<body id="myBody" onresize="resizeOwlItem()">
+	
+	<!-- NAVBAR -->
+	
+	<nav class="navbar navbar-inverse navbar-fixed-top" style="z-index: 101; background: rgba(0,0,0,0); border: 0;position: absolute;">
+  		<ul class="nav navbar-nav">
+    		<li><a href="#" style="margin-left: 20%; font-size: 20px; color: white;">mappoth</a></li>
+    	</ul>
+    	
+    	<ul class="nav navbar-nav navbar-right" style="margin-right: 10%;">
+    		<li><a href="#">Explore</a></li>
+    		<!--<li><a href="#">Products</a></li>-->
+    		<li><a href="#">About</a></li>
+    		<li><a href="#">Map</a></li>
+    		<li><a href="#"><i class="fa fa-sign-in"></i><i class="fa fa-user"></i>Login/Signup</a></li>
+  		</ul>
+	</nav>
+
+	
+	<div id="slideNav" style="z-index:101; background: rgba(0,0,0,0.7); border: 0; height:100%; position: fixed; width: 100%;">
+		<h1 style="color:white; font-size:80px;">mappoth</h1>
+		<h1 style="color:white; font-size: 60px;"><a href="#">Explore</a></h1>
+		<!--<h1 style="color:white; font-size: 60px;"><a href="#">Products</a></h1>-->
+		<h1 style="color:white; font-size: 60px;"><a href="#">About</a></h1>
+		<h1 style="color:white; font-size: 60px;"><a href="#">Map</a></h1>
+		<h1 style="color:white; font-size: 60px;"><a href="#"><i class="fa fa-sign-in"></i><i class="fa fa-user"></i>Login/Signup</a></h1>
+	</div>
+	
+	
+	<div id="menuButton" onclick="testFunction()" style="z-index: 101; position: fixed; background:black; border:0; top:10px; right:25px; width:auto; height:auto; padding: 12.5px; transform:translate(150%); -webkit-transition: transform .5s; transition: transform .5s;">
+		<i class="fa fa-map fa-3x" style="color: white; cursor: pointer;"></i>
+	</div>
+	<!-- /NAVBAR -->
+	
+	
+	
+	
+	<!-- VIDEO HEADER -->
+
+    <header class="full-screen">
+        <div class="fullscreen-bg box">
+        	
+        	<div id="introText">
+  					
+			</div>
+		
+  			<video loop muted autoplay poster="img/featured/img4s.jpeg" class="fullscreen-bg-video">
+  				<source src="mp4/goPro_1.mp4" type="video/mp4">
+  			</video>
+		</div>
+    </header>
+    <!-- /VIDEO HEADER poster="img/featured/img4s.jpeg"-->
+	
+	
+	
+	
+	
+	
+	
+	<div id="affixTest" style="width: 70%; height: 100%; z-index: -10; float:left;">
+		<div id="map"></div>
+	</div>
+
+	<div id="scrollTest" style="position:absolute;width: 50%; height: 500%; margin-left: 50%; float:right;">
+		<div id="scrollBox1" class="active" style="width: 100%; height: 20%; background: orange; text-align:center;">
+			<hr style="margin-left: 10%; margin-right: 10%; margin-top: 0px; margin-bottom: 0px;padding: 0px; width: 80%; visibility:hidden;">
+			<h1 style="margin-top:30px; color:white;">A Mapping Playground</h1>
+			<p style="color:white;">colors, base maps</p>
+		</div>
+		<div id="scrollBox2" style="width: 100%; height: 20%; background: orange; text-align:center;">
+			<hr style="margin-left: 10%; margin-right: 10%; margin-top: 0px; margin-bottom: 0px;padding: 0px; width: 80%;">
+			<h1 style="margin-top:30px; color:white;">Intense Data</h1>
+			<p style="color:white;">layers, symbols</p>
+		</div>
+		<div id="scrollBox3" style="width: 100%; height: 20%; background: orange; text-align:center;">
+			<hr style="margin-left: 10%; margin-right: 10%; margin-top: 0px; margin-bottom: 0px;padding: 0px; width: 80%;">
+			<h1 style="margin-top:30px; color:white;">Get Inspired</h1>
+			<p style="color:white;">blog, featured integration</p>
+		</div>
+		<div id="scrollBox4" style="width: 100%; height: 20%; background: orange; text-align:center;">
+			<hr style="margin-left: 10%; margin-right: 10%; margin-top: 0px; margin-bottom: 0px;padding: 0px; width: 80%;">
+			<h1 style="margin-top:30px; color:white;">Share</h1>
+			<p style="color:white;">print, sharing capabilities</p>
+		</div>
+		<div id="scrollBox5" style="width: 100%; height: 20%; background: orange; text-align:center;">
+			<hr style="margin-left: 10%; margin-right: 10%; margin-top: 0px; margin-bottom: 0px;padding: 0px; width: 80%;">
+			<h1 style="margin-top:30px; color:white;">Something Else</h1>
+			<p style="color:white;">I dunno</p>
+		</div>
+		
+		
+		
+		
+		<div style="width:200%; height: 15%; background: orange; margin-left: -100%; background: url('img/featured/img4s.jpeg') no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;">
+			<div style="width: 100%; height: 100%; background: rgba(0,0,0,0.25);">
+			</div>
+		</div>
+		
+		<div id="footer" style="background: black; width: 200%; height: 200px;color:white; margin-left: -100%;">
+			<p style="color: white;"> Footer!</p>
+			<i class="fa fa-instagram"></i>
+			<i class="fa fa-facebook"></i>
+		
+			<i class="fa fa-google-plus"></i>
+			<i class="fa fa-youtube"></i>
+			<i class="fa fa-facebook-official"></i>
+			<i class="fa fa-twitter"></i>
+		</div>
+	</div>
+	
+	
+	
+	
+    <!-- jQuery -->
+    <script type="text/javascript" src="lib/jquery/jquery-1.12.1.min.js"></script>
+    
+	<!-- Link lazy load jQuery plugin -->
+	<script type="text/javascript" src="lib/jquery/jquery.lazyload.min.js"></script>
+	
+    <!-- Bootstrap Core JavaScript -->
+    <script type="text/javascript" src="lib/bootstrap/js/bootstrap.min.js"></script>
+    
+    <!-- Owl-carousel -->
+    <script type="text/javascript" src="lib/owl_carousel_2/owl.carousel.min.js"></script>
+    
+    <!-- Link mapbox GL js -->
+	<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.14.1/mapbox-gl.js'></script>
+	
+	<!-- Link custom js script -->
+	<script type="text/javascript" src="js/index.js"></script>
+	
+	<!-- Link home map script -->
+	<script type="text/javascript" src="js/homeMap.js"></script>
+    
+   
+    
+  
+
+</body>
+</html>

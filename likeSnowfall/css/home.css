@@ -1,0 +1,117 @@
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    background: #fffafa;
+}
+
+/* FONT SIZE */
+body p {
+	font-size: 20px;
+}
+
+
+
+
+
+
+
+
+#map { 
+	width: 100%;
+	height: 100%;
+}
+
+
+
+
+
+
+
+#slideNav {
+	transform: translate(100%);
+	-webkit-transition: transform .25s;
+	transition: transform .25s
+}
+
+
+
+
+
+
+header {
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+    text-align: center;
+    color: #fff;
+    z-index: 100;
+}
+
+@media(min-width:768px) {
+    header {
+        min-height: 100%;
+    }
+}
+
+
+
+
+
+/* VIDEO BACKGROUND */
+
+
+.fullscreen-bg {
+	position: absolute;
+ 	top: 0;
+ 	right: 0;
+  	bottom: 0;
+  	left: 0;
+  	overflow: hidden;
+  	background-color: rgba(0, 0, 0, .5); /*overlay*/
+}
+
+.fullscreen-bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -100;
+  background: black;
+}
+
+
+@media (min-aspect-ratio: 16/9) {
+  .fullscreen-bg-video {
+    height: 300%;
+    top: -100%;
+  }
+}
+
+@media (max-aspect-ratio: 16/9) {
+  .fullscreen-bg-video {
+    width: 300%;
+    left: -100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .fullscreen-bg {
+    background: url('assets/images/preview/slider/vision.jpg') center center / cover no-repeat;
+  }
+
+  .fullscreen-bg__video {
+    display: none;
+  }
+
+/* /VIDEO BACKGROUND */
+
+
+
+
+
+
+
+
