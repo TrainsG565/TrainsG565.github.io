@@ -24,25 +24,13 @@ body p {
 
 
 
-
-#slideNav {
-	transform: translate(100%);
-	-webkit-transition: transform .25s;
-	transition: transform .25s
-}
-
-
-
-
-
-
 header {
     position: relative;
     width: 100%;
     min-height: 100%;
     text-align: center;
     color: #fff;
-    z-index: 100;
+    z-index: 0;
 }
 
 @media(min-width:768px) {
