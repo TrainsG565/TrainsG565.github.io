@@ -39,7 +39,7 @@ $(function() {
 
 
 
-
+/*
 $(window).scroll(function(){
 	var a = $('header').height() * .7;
 	var pos = $(window).scrollTop();
@@ -54,7 +54,7 @@ $(window).scroll(function(){
 		});
 	}
 });
-	
+	*/
 
 
 
