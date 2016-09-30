@@ -3,12 +3,29 @@ html,
 body {
     width: 100%;
     height: 100%;
+    /*font-family: 'Raleway', sans-serif;*/
+    /*font-family: 'Crimson Text', serif;*/
 }
 
-/* FONT SIZE */
+
 body p {
 
 }
+
+.navText {
+	font-family: 'Catamaran', sans-serif;
+	font-size: 12px;
+}
+
+#titleText {
+	/*font-family: 'Droid Serif', serif;*/
+	/*font-family: 'David Libre', serif;*/
+	/*font-family: 'Playfair Display', serif;*/
+	/*font-family: 'PT Serif', serif;*/
+	/*font-family: 'Quattrocento', serif;*/
+	font-family: 'Cardo', serif;
+}
+
 
 
 
@@ -28,7 +45,25 @@ body p {
 	height: auto;
 	background: #fff;
 	z-index: 0;
+	font-family: 'Cardo', serif;
+	font-size: 16px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 header {
@@ -45,10 +80,6 @@ header {
         min-height: 100%;
     }
 }
-
-
-
-
 
 /* VIDEO BACKGROUND */
 
