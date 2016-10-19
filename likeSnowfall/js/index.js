@@ -43,11 +43,13 @@ $(function() {
 $(window).scroll(function(){
 	var scroll = $(window).scrollTop();
 	var placeHolder = document.getElementById('testScroll');
+	var opacityC = scroll / 1000
 	
 	if (scroll > 0 && scroll < 150) {
 		placeHolder.style.backgroundColor = "rgba(0,0,0,.35)";
 	} else {
-		placeHolder.style.backgroundColor = "rgba(255,255,255,0.25)";
+		placeHolder.style.backgroundColor = "rgb(255,255,255)";
+		placeHolder.style.opacity = opacityC;
 	}
 		
 	/*
