@@ -15,7 +15,11 @@ body p {
 .navText {
 	font-family: 'Catamaran', sans-serif;
 	font-size: 12px;
+}
+
+.highlight {
 	background: black;
+	border-radius: 10px;
 }
 
 #headerMenus {

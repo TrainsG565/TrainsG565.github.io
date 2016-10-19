@@ -66,11 +66,12 @@ $(window).scroll(function(){
 		document.getElementById('testScroll').style.backgroundColor = "rgba(255,255,255,0.35)";
 	} else if (scroll > 250 && scroll <= 300) {
 		document.getElementById('testScroll').style.backgroundColor = "rgba(255,255,255,0.40)";
+		document.getElementById('headerMenus').style.visibility = "visible";
 	} else if (scroll > 300 && scroll <= 350) {
 		document.getElementById('testScroll').style.backgroundColor = "rgba(255,255,255,0.45)";
 	} else if (scroll > 350 && scroll <= 400) {
 		document.getElementById('testScroll').style.backgroundColor = "rgba(255,255,255,0.50)";
-		document.getElementById('headerMenus').style.visibility = "visible";
+		//document.getElementById('headerMenus').style.visibility = "visible";
 	} else if (scroll > 400 && scroll <= 450) {
 		document.getElementById('testScroll').style.backgroundColor = "rgba(255,255,255,0.55)";
 	} else if (scroll > 450 && scroll <= 500) {
