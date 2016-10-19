@@ -30,6 +30,10 @@ body p {
 	visibility: hidden;
 }
 
+#first b {
+	font-size: 50px;
+}
+
 
 #titleText {
 	/*font-family: 'Droid Serif', serif;*/
