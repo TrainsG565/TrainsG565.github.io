@@ -18,6 +18,10 @@ body p {
 	background: black;
 }
 
+#headerMenus {
+	visibility: hidden;
+}
+
 
 #titleText {
 	/*font-family: 'Droid Serif', serif;*/
