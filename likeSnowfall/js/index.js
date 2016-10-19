@@ -43,8 +43,13 @@ $(function() {
 $(window).scroll(function(){
 	var scroll = $(window).scrollTop();
 	
-	if (scroll > 50 && scroll <= 200) {
-		document.getElementById('testScroll').style.backgroundColor = "rgba(255,255,255,0.75)"
+	if (scroll > 150 && scroll <= 200) {
+		document.getElementById('testScroll').style.backgroundColor = "rgba(255,255,255,0.25)"
+	}
+	else if (scroll > 200 && scroll <= 400) {
+		document.getElementById('testScroll').style.backgroundColor = "rgba(255,255,255,0.5)"
+	} else if (scroll > 400 && scroll <= 600) {
+		document.getElementById('testScroll').style.backgroundColor = "rgba(255,255,255,0.7)"
 	}
 	/*
 	var a = $('header').height() * .7;
