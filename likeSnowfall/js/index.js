@@ -42,6 +42,8 @@ $(function() {
 
 $(window).scroll(function(){
 	var scroll = $(window).scrollTop();
+	
+	/*
 	var placeHolder = document.getElementById('testScroll');
 	var opacityC = scroll / 1000
 	
@@ -52,21 +54,46 @@ $(window).scroll(function(){
 		placeHolder.style.backgroundColor = "rgb(255,255,255)";
 		placeHolder.style.opacity = opacityC;
 	}
-		
-	/*
-	if (scroll > 150 && scroll <= 200) {
-		document.getElementById('testScroll').style.backgroundColor = "rgba(255,255,255,0.25)"
-	}
-	else if (scroll > 200 && scroll <= 400) {
-		document.getElementById('testScroll').style.backgroundColor = "rgba(255,255,255,0.5)"
-	} else if (scroll > 400 && scroll <= 600) {
-		document.getElementById('testScroll').style.backgroundColor = "rgba(255,255,255,0.7)"
-	} else if (scroll > 600 && scroll <= 800) {
-		document.getElementById('testScroll').style.backgroundColor = "rgba(255,255,255,1)"
-	} else if (scroll > 0 && scroll < 150) {
-		document.getElementById('testScroll').style.backgroundColor = "rgba(0,0,0,0.35)"
-	}
 	*/
+		
+	
+	if (scroll > 100 && scroll <= 150) {
+		document.getElementById('testScroll').style.backgroundColor = "rgba(255,255,255,0.25)";
+	}
+	else if (scroll > 150 && scroll <= 200) {
+		document.getElementById('testScroll').style.backgroundColor = "rgba(255,255,255,0.3)";
+	} else if (scroll > 200 && scroll <= 250) {
+		document.getElementById('testScroll').style.backgroundColor = "rgba(255,255,255,0.35)";
+	} else if (scroll > 250 && scroll <= 300) {
+		document.getElementById('testScroll').style.backgroundColor = "rgba(255,255,255,0.40)";
+	} else if (scroll > 300 && scroll <= 350) {
+		document.getElementById('testScroll').style.backgroundColor = "rgba(255,255,255,0.45)";
+	} else if (scroll > 350 && scroll <= 400) {
+		document.getElementById('testScroll').style.backgroundColor = "rgba(255,255,255,0.50)";
+	} else if (scroll > 400 && scroll <= 450) {
+		document.getElementById('testScroll').style.backgroundColor = "rgba(255,255,255,0.55)";
+	} else if (scroll > 450 && scroll <= 500) {
+		document.getElementById('testScroll').style.backgroundColor = "rgba(255,255,255,0.60)";
+	} else if (scroll > 500 && scroll <= 550) {
+		document.getElementById('testScroll').style.backgroundColor = "rgba(255,255,255,0.65)";
+	} else if (scroll > 600 && scroll <= 650) {
+		document.getElementById('testScroll').style.backgroundColor = "rgba(255,255,255,0.70)";
+	} else if (scroll > 650 && scroll <= 700) {
+		document.getElementById('testScroll').style.backgroundColor = "rgba(255,255,255,0.75)";
+	} else if (scroll > 700 && scroll <= 750) {
+		document.getElementById('testScroll').style.backgroundColor = "rgba(255,255,255,0.80)";
+	} else if (scroll > 750 && scroll <= 800) {
+		document.getElementById('testScroll').style.backgroundColor = "rgba(255,255,255,0.85)";
+	} else if (scroll > 800 && scroll <= 850) {
+		document.getElementById('testScroll').style.backgroundColor = "rgba(255,255,255,0.90)";
+	} else if (scroll > 850 && scroll <= 900) {
+		document.getElementById('testScroll').style.backgroundColor = "rgba(255,255,255,0.95)";
+	} else if (scroll > 900 && scroll <= 950) {
+		document.getElementById('testScroll').style.backgroundColor = "rgba(255,255,255,1)";
+	} else if (scroll > 0 && scroll <= 100) {
+		document.getElementById('testScroll').style.backgroundColor = "rgba(0,0,0,0.35)";
+	}
+	
 	
 	
 	/*
