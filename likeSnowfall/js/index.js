@@ -39,8 +39,14 @@ $(function() {
 
 
 
-/*
+
 $(window).scroll(function(){
+	var scroll = $(window).scrollTop();
+	
+	if (scroll > 50 && scroll <= 200) {
+		document.getElementById('testScroll').style.backgroundColor = "rgba(255,255,255,0.75)"
+	}
+	/*
 	var a = $('header').height() * .7;
 	var pos = $(window).scrollTop();
 	
@@ -53,8 +59,8 @@ $(window).scroll(function(){
 			transform: 'translate(150%)'
 		});
 	}
-});
 	*/
+});
 
 
 
