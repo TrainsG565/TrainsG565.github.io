@@ -51,7 +51,7 @@ $(window).scroll(function(){
 	} else if (scroll > 400 && scroll <= 600) {
 		document.getElementById('testScroll').style.backgroundColor = "rgba(255,255,255,0.7)"
 	} else if (scroll > 0 && scroll < 150) {
-		document.getElementById('testScroll').style.backgroundColor = "rgba(0,0,0,0.5)"
+		document.getElementById('testScroll').style.backgroundColor = "rgba(0,0,0,0.35)"
 	}
 	/*
 	var a = $('header').height() * .7;

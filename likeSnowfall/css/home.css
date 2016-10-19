@@ -97,7 +97,7 @@ header {
   	bottom: 0;
   	left: 0;
   	overflow: hidden;
-  	background-color: rgba(0, 0, 0, .5); /*overlay*/
+  	background-color: rgba(0, 0, 0, .35); /*overlay*/
 }
 
 .fullscreen-bg-video {
