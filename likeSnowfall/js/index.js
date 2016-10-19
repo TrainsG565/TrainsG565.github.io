@@ -42,7 +42,15 @@ $(function() {
 
 $(window).scroll(function(){
 	var scroll = $(window).scrollTop();
+	var placeHolder = document.getElementById('testScroll');
 	
+	if (scroll > 0 && scroll < 150) {
+		placeHolder.style.backgroundColor = "rgba(0,0,0,.35)";
+	} else {
+		placeHolder.style.backgroundColor = "rgba(255,255,255,0.25)";
+	}
+		
+	/*
 	if (scroll > 150 && scroll <= 200) {
 		document.getElementById('testScroll').style.backgroundColor = "rgba(255,255,255,0.25)"
 	}
@@ -55,6 +63,9 @@ $(window).scroll(function(){
 	} else if (scroll > 0 && scroll < 150) {
 		document.getElementById('testScroll').style.backgroundColor = "rgba(0,0,0,0.35)"
 	}
+	*/
+	
+	
 	/*
 	var a = $('header').height() * .7;
 	var pos = $(window).scrollTop();
