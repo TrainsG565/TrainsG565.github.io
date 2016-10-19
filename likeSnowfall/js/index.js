@@ -45,8 +45,9 @@ $(window).scroll(function(){
 	var placeHolder = document.getElementById('testScroll');
 	var opacityC = scroll / 1000
 	
-	if (scroll > 0 && scroll < 150) {
-		placeHolder.style.backgroundColor = "rgba(0,0,0,.35)";
+	if (scroll >= 0 && scroll < 150) {
+		placeHolder.style.backgroundColor = "rgb(0,0,0)";
+		placeHolder.style.opacity = .35;
 	} else {
 		placeHolder.style.backgroundColor = "rgb(255,255,255)";
 		placeHolder.style.opacity = opacityC;
