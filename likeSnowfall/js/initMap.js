@@ -22,8 +22,8 @@ map01.on('style.load', function () {
 		'source': 'tax-parcels',
 		'paint': {
 			'fill-color': 'orange',
-			'fill-extrude-height': 50,
-			'fill-extrude-base': 0,
+			//'fill-extrude-height': 50,
+			//'fill-extrude-base': 0,
 			'fill-opacity': 0.5
 		}
 	});
