@@ -10,26 +10,16 @@ var map01 = new mapboxgl.Map({
     attributionControl: false
 });
 
-/*
+
 map01.on('style.load', function () {
 	map01.addSource('tax-parcels', {
 		'type': 'geojson',
 		'data': 'data/tax_parcels.geojson'
 	});
 	
-	map01.addLayer({
-		'id': 'tax-parcels',
-		'type': 'fill',
-		'source': 'tax-parcels',
-		'paint': {
-			'fill-color': 'orange',
-			//'fill-extrude-height': 50,
-			//'fill-extrude-base': 0,
-			'fill-opacity': 0.5
-		}
-	});
+	
 });
-*/
+
 
 
 
