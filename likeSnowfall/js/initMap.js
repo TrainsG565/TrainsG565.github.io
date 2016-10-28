@@ -10,6 +10,7 @@ var map01 = new mapboxgl.Map({
     attributionControl: false
 });
 
+/*
 map01.on('style.load', function () {
 	map01.addSource('tax-parcels', {
 		'type': 'geojson',
@@ -28,7 +29,7 @@ map01.on('style.load', function () {
 		}
 	});
 });
-
+*/
 
 
 
