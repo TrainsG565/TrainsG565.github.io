@@ -13,7 +13,7 @@ var map01 = new mapboxgl.Map({
 
 map01.on('style.load', function () {
 	map01.setPaintProperty('tax-parcels', 'fill-extrude-height', {
-		'property': 'NetTaxes',
+		'property': 'height',
 		'type': 'identity'
 	});
 	
