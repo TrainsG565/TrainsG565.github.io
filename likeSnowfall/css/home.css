@@ -45,6 +45,14 @@ body p {
 	font-family: 'Cardo', serif;
 }
 
+.carrotFloat {
+	position:absolute;
+	bottom: 0px;
+	right: 10px;
+	width: auto;
+	height: auto;
+	cursor: pointer;
+}
 
 
 
