@@ -12,14 +12,14 @@ var map01 = new mapboxgl.Map({
 
 
 map01.on('style.load', function () {
-	map01.setPaintProperty('tax-parcels', 'fill-extrude-height', {
+	map01.setPaintProperty('taxparcels', 'fill-extrude-height', {
 		'property': 'height',
 		'type': 'identity'
 	});
 	
-	map01.setPaintProperty('tax-parcels', 'fill-extrude-base', 0);
+	map01.setPaintProperty('taxparcels', 'fill-extrude-base', 0);
 	
-	map01.setPaintProperty('tax-parcels', 'fill-opacity', 0.5);
+	map01.setPaintProperty('taxparcels', 'fill-opacity', 0.5);
 	
 });
 
