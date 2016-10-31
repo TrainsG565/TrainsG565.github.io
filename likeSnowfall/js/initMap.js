@@ -4,7 +4,7 @@ mapboxgl.accessToken = 'pk.eyJ1Ijoic2t5d2lsbGlhbXMiLCJhIjoibUI4TlByNCJ9.9UuhBU3E
 // Initialize the map
 var map01 = new mapboxgl.Map({
     container: 'map01',
-    style: 'mapbox://styles/mapbox/light-v8',
+    style: 'mapbox://styles/skywilliams/ciuxinskg00f92io46tlqruc3',
     center: [-89.4012, 43.0731],
     zoom: 12,
     attributionControl: false
@@ -12,11 +12,7 @@ var map01 = new mapboxgl.Map({
 
 
 map01.on('style.load', function () {
-	map01.addSource('tax-parcels', {
-		'type': 'geojson',
-		'data': 'data/tax_parcels.geojson'
-	});
-	
+
 	
 });
 
