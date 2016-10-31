@@ -5,8 +5,10 @@ mapboxgl.accessToken = 'pk.eyJ1Ijoic2t5d2lsbGlhbXMiLCJhIjoibUI4TlByNCJ9.9UuhBU3E
 var map01 = new mapboxgl.Map({
     container: 'map01',
     style: 'mapbox://styles/skywilliams/ciuxinskg00f92io46tlqruc3',
-    center: [-89.4012, 43.0731],
-    zoom: 12,
+    center: [-89.4, 43.06],
+    zoom: 14,
+    pitch: 65,
+    bearing: 35,
     attributionControl: false
 });
 
@@ -40,7 +42,7 @@ map01.on('style.load', function () {
 var map02 = new mapboxgl.Map({
 	container: 'map02',
 	style: 'mapbox://styles/mapbox/light-v8',
-	center: [-89.7372, 43.4316],
+	center: [-89.4, 43.06],
 	zoom: 12,
 	attributionControl: false
 });
