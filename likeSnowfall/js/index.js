@@ -58,11 +58,11 @@ $(window).scroll(function(){
 		
 	
 	if (scroll > 200 && scroll <= 225) {
-		document.getElementById('testScroll').style.backgroundColor = "rgba(255,255,255,0.25)";
+		document.getElementById('testScroll').style.backgroundColor = "rgba(0,0,0,0.15)";
 		document.getElementById('headerMenus').style.visibility = "visible";
-	}
+	} 
 	else if (scroll > 225 && scroll <= 250) {
-		document.getElementById('testScroll').style.backgroundColor = "rgba(255,255,255,0.3)";
+		document.getElementById('testScroll').style.backgroundColor = "rgba(255,255,255,0.15)";
 	} else if (scroll > 250 && scroll <= 275) {
 		document.getElementById('testScroll').style.backgroundColor = "rgba(255,255,255,0.35)";
 	} else if (scroll > 275 && scroll <= 300) {
