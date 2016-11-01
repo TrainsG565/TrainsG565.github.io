@@ -14,7 +14,7 @@ body p {
 
 .navText {
 	font-family: 'Catamaran', sans-serif;
-	font-size: 12px;
+	font-size: 10px;
 	padding-top:2px;
 	padding-bottom:2px;
 	padding-left:2px;
@@ -47,11 +47,19 @@ body p {
 
 .carrotFloat {
 	position:absolute;
-	bottom: 0px;
+	bottom: -5px;
 	right: 10px;
 	width: auto;
 	height: auto;
 	cursor: pointer;
+}
+
+.textCarrotFloat {
+	position: absolute;
+	bottom: 0px;
+	right: 50px;
+	width:auto;
+	height:auto;
 }
 
 
