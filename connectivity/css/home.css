@@ -27,7 +27,7 @@ body p {
 }
 
 #headerMenus {
-	visibility: hidden;
+	visibility: visible;
 }
 
 #first b {
@@ -58,6 +58,25 @@ body p {
 	position: absolute;
 	bottom: 0px;
 	right: 50px;
+	width:auto;
+	height:auto;
+}
+
+
+
+.carrotFloatL {
+	position:absolute;
+	bottom: -5px;
+	left: 10px;
+	width: auto;
+	height: auto;
+	cursor: pointer;
+}
+
+.textCarrotFloatL {
+	position: absolute;
+	bottom: 0px;
+	left: 50px;
 	width:auto;
 	height:auto;
 }
