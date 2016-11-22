@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<!-- check meta tags with bootstrap -->
+    <meta charset="utf-8" />
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Rail Games: Visualizing High Speed Rail in Wisconsin; Environment</title>
+	
+
+	
+    <!-- Bootstrap & Font-Awesome CSS & owl-carousel -->
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link href="lib/owl_carousel_2/assets/owl.theme.default.css" rel="stylesheet" type="text/css" />
+    <link href="lib/owl_carousel_2/assets/owl.carousel.css" rel="stylesheet" type="text/css" />
+    
+    <!-- google fonts -->
+    <!--<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">-->
+    <link href="https://fonts.googleapis.com/css?family=Catamaran" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Droid+Serif" rel="stylesheet">
+    <!--<link href="https://fonts.googleapis.com/css?family=Crimson+Text" rel="stylesheet">-->
+    <!--<link href="https://fonts.googleapis.com/css?family=David+Libre" rel="stylesheet">-->
+    <!--<link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">-->
+    <!--<link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">-->
+    <!--<link href="https://fonts.googleapis.com/css?family=Quattrocento" rel="stylesheet">-->
+    <link href="https://fonts.googleapis.com/css?family=Cardo" rel="stylesheet">
+    
+    <!-- Link mapbox GL css -->
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.26.0/mapbox-gl.css' rel='stylesheet' />
+    
+    <!-- Custom CSS -->
+    <link href="css/home.css" rel="stylesheet" type="text/css" />
+    
+    
+    <!-- ********** -->
+    <!-- CSS Styling -->
+    <style>
+    	
+    	.affix {
+      		top: 0px;
+  		}
+  		
+
+    </style>
+    <!-- ********** -->
+    <!-- /CSS Styling -->
+    
+
+</head>
+<body id="myBody">
+	
+	<!-- NAVBAR -->
+	
+	<nav class="navbar navbar-default navbar-fixed-top" style="z-index: 101; background: #FBFCFC;">
+  		<ul class="nav navbar-nav" style="margin-left:20px;">
+    		<li><a href="#" style="font-size: 18px; font-family: 'Cardo', serif;">Rail Games</a></li>
+    	</ul>
+    	
+    	<ul id ="headerMenus" class="nav navbar-nav" style="margin-right: 10%;">
+    		<li><a class="navText" href="index.html">BACKGROUND</a></li>
+    		<li><a class="navText" href="connectivity">CONNECTIVITY</a></li>
+    		<li><a class="navText highlight" href="environment">ENVIRONMENT</a></li>
+    		<li><a class="navText" href="stations">STATIONS</a></li>
+    		<li style="border-right: 1px solid #BDC3C7;"><a class="navText" href="madison">MADISON CASE STUDY</a></li>
+    		<li><a class="navText" href="map">MAP</a></li>
+  		</ul>
+	</nav>
+	
+	
+	<div id="menuButton" onclick="testFunction()" style="z-index: 101; position: fixed; background:black; border:0; top:10px; right:25px; width:auto; height:auto; padding: 12.5px; transform:translate(150%); -webkit-transition: transform .5s; transition: transform .5s;">
+		<i class="fa fa-map fa-3x" style="color: white; cursor: pointer;"></i>
+	</div>
+	<!-- /NAVBAR -->
+	
+	
+	
+	
+	<!-- VIDEO HEADER -->
+
+    <header class="full-screen">
+        <div id="testScroll" class="fullscreen-bg box">
+        	
+        	<div id="titleText" class="row" style="margin-top:100px;">
+        		<div class="col-sm-4 col-sm-offset-7 text-center">
+        			<h1 style="font-size: 50px; color:black;">Rail Games</h1>
+        			<!--<p style="font-size: 16px;">Feasibility Assessment analysis and visualization predictions of High Speed Rail in Wisconsin</p>-->
+        			<p style="font-size: 20px; color:#424949;">Visualizing High Speed Rail in Wisconsin</p>
+        			<hr style="width: 100px; height: 1.5px; background-color:#424949;">
+        			<p style="color:black;"> By: Schuyler Williams, Veronica Plum, and Genevieve Burgess</p> 
+        		</div>
+        	</div>
+			<!-- if we want video simply move the rail.mp4 into LikeSnowfall mp4 folder-->
+			<!-- back to original = trainImage03 in train folder -->
+  			<video loop muted autoplay poster="img/trainTwo/train_03_bw5.jpeg" class="fullscreen-bg-video">
+  				<source src="mp4/rail.mp4" type="video/mp4">
+  			</video>
+		</div>
+    </header>
+    <!-- /VIDEO HEADER poster="img/featured/img4s.jpeg"-->
+    
+    
+	<div id="blocker">
+	
+		<div class="container">
+			<div class="row">
+				<div id="first" class="col-sm-8">
+					<p><b>L</b>orem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel dolor dui. Vestibulum faucibus massa sit amet enim fermentum, eget bibendum felis iaculis. Duis auctor pharetra leo. Etiam tincidunt tincidunt aliquam. Nullam ac rutrum erat, consectetur malesuada nisi. In orci velit, dictum vel lorem vel, auctor lacinia erat. Proin turpis eros, mollis in enim vel, auctor rhoncus diam. Morbi sed luctus libero. Nulla tempor nunc lacus, sit amet accumsan sapien consectetur eget. Suspendisse at feugiat mi. Nam nisl diam, sagittis eget nibh rutrum, sagittis condimentum odio. In pulvinar vestibulum libero in euismod.</p>
+				</div>
+			</div>
+		
+			<div class="row">
+				<div class="col-sm-4">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel dolor dui. Vestibulum faucibus massa sit amet enim fermentum, eget bibendum felis iaculis. Duis auctor pharetra leo. Etiam tincidunt tincidunt aliquam. Nullam ac rutrum erat, consectetur malesuada nisi. In orci velit, dictum vel lorem vel, auctor lacinia erat. Proin turpis eros, mollis in enim vel, auctor rhoncus diam. Morbi sed luctus libero. Nulla tempor nunc lacus, sit amet accumsan sapien consectetur eget. Suspendisse at feugiat mi. Nam nisl diam, sagittis eget nibh rutrum, sagittis condimentum odio. In pulvinar vestibulum libero in euismod.</p>
+				</div>
+				
+				<div class="col-sm-4">
+					<hr style="width:100%; height:.5px; background-color: #CACFD2;">
+					<img class="img-responsive" src="img/featured/img4s.jpeg" alt="Chania">
+					<hr style="width:100%; height:.5px; background-color: #CACFD2;">
+				</div>
+			</div>
+		
+			<div class="row">
+				<div class="col-sm-8">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel dolor dui. Vestibulum faucibus massa sit amet enim fermentum, eget bibendum felis iaculis. Duis auctor pharetra leo. Etiam tincidunt tincidunt aliquam. Nullam ac rutrum erat, consectetur malesuada nisi. In orci velit, dictum vel lorem vel, auctor lacinia erat. Proin turpis eros, mollis in enim vel, auctor rhoncus diam. Morbi sed luctus libero. Nulla tempor nunc lacus, sit amet accumsan sapien consectetur eget. Suspendisse at feugiat mi. Nam nisl diam, sagittis eget nibh rutrum, sagittis condimentum odio. In pulvinar vestibulum libero in euismod.</p>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-sm-4">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel dolor dui. Vestibulum faucibus massa sit amet enim fermentum, eget bibendum felis iaculis. Duis auctor pharetra leo. Etiam tincidunt tincidunt aliquam. Nullam ac rutrum erat, consectetur malesuada nisi. In orci velit, dictum vel lorem vel, auctor lacinia erat. Proin turpis eros, mollis in enim vel, auctor rhoncus diam. Morbi sed luctus libero. Nulla tempor nunc lacus, sit amet accumsan sapien consectetur eget. Suspendisse at feugiat mi. Nam nisl diam, sagittis eget nibh rutrum, sagittis condimentum odio. In pulvinar vestibulum libero in euismod.</p>
+				</div>
+				
+				<!--<div class="col-sm-4" style="border-left:1px solid #CACFD2; border-right:1px solid #CACFD2;">-->
+				<div class="col-sm-4">
+					<hr style="width:100%; height:.5px; background-color: #CACFD2;">
+					<img class="img-responsive" src="img/featured/photo1.jpeg" alt="Chania">
+					<hr style="width:100%; height:.5px; background-color: #CACFD2;">
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-sm-8">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel dolor dui. Vestibulum faucibus massa sit amet enim fermentum, eget bibendum felis iaculis. Duis auctor pharetra leo. Etiam tincidunt tincidunt aliquam. Nullam ac rutrum erat, consectetur malesuada nisi. In orci velit, dictum vel lorem vel, auctor lacinia erat. Proin turpis eros, mollis in enim vel, auctor rhoncus diam. Morbi sed luctus libero. Nulla tempor nunc lacus, sit amet accumsan sapien consectetur eget. Suspendisse at feugiat mi. Nam nisl diam, sagittis eget nibh rutrum, sagittis condimentum odio. In pulvinar vestibulum libero in euismod.</p>
+				</div>
+			</div>
+			
+			
+			<div class="row">
+				<div class="col-sm-4">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel dolor dui. Vestibulum faucibus massa sit amet enim fermentum, eget bibendum felis iaculis. Duis auctor pharetra leo. Etiam tincidunt tincidunt aliquam. Nullam ac rutrum erat, consectetur malesuada nisi. In orci velit, dictum vel lorem vel, auctor lacinia erat. Proin turpis eros, mollis in enim vel, auctor rhoncus diam. Morbi sed luctus libero. Nulla tempor nunc lacus, sit amet accumsan sapien consectetur eget. Suspendisse at feugiat mi. Nam nisl diam, sagittis eget nibh rutrum, sagittis condimentum odio. In pulvinar vestibulum libero in euismod.</p>
+				</div>
+				
+				<div class="col-sm-4">
+					<img class="img-responsive" src="img/featured/photo1.jpeg" alt="Chania">
+					<p style="font-size: 12px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel dolor dui. Vestibulum faucibus massa sit amet enim fermentum, eget bibendum felis iaculis.</p>
+				</div>
+				
+				<div class="col-sm-4">
+					<img class="img-responsive" src="img/featured/photo1.jpeg" alt="Chania">
+					<p style="font-size: 12px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel dolor dui. Vestibulum faucibus massa sit amet enim fermentum, eget bibendum felis iaculis.</p>
+				</div>
+			</div>
+			
+			
+			<div class="row">
+				<div class="col-sm-8">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel dolor dui. Vestibulum faucibus massa sit amet enim fermentum, eget bibendum felis iaculis. Duis auctor pharetra leo. Etiam tincidunt tincidunt aliquam. Nullam ac rutrum erat, consectetur malesuada nisi. In orci velit, dictum vel lorem vel, auctor lacinia erat. Proin turpis eros, mollis in enim vel, auctor rhoncus diam. Morbi sed luctus libero. Nulla tempor nunc lacus, sit amet accumsan sapien consectetur eget. Suspendisse at feugiat mi. Nam nisl diam, sagittis eget nibh rutrum, sagittis condimentum odio. In pulvinar vestibulum libero in euismod.</p>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-sm-8">
+					<h2 style="margin-bottom: 30px; margin-top: 80px;">Lorem ipsum dolor</h2>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-sm-8">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel dolor dui. Vestibulum faucibus massa sit amet enim fermentum, eget bibendum felis iaculis. Duis auctor pharetra leo. Etiam tincidunt tincidunt aliquam. Nullam ac rutrum erat, consectetur malesuada nisi. In orci velit, dictum vel lorem vel, auctor lacinia erat. Proin turpis eros, mollis in enim vel, auctor rhoncus diam. Morbi sed luctus libero. Nulla tempor nunc lacus, sit amet accumsan sapien consectetur eget. Suspendisse at feugiat mi. Nam nisl diam, sagittis eget nibh rutrum, sagittis condimentum odio. In pulvinar vestibulum libero in euismod.</p>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-sm-8">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel dolor dui. Vestibulum faucibus massa sit amet enim fermentum, eget bibendum felis iaculis. Duis auctor pharetra leo. Etiam tincidunt tincidunt aliquam. Nullam ac rutrum erat, consectetur malesuada nisi. In orci velit, dictum vel lorem vel, auctor lacinia erat. Proin turpis eros, mollis in enim vel, auctor rhoncus diam. Morbi sed luctus libero. Nulla tempor nunc lacus, sit amet accumsan sapien consectetur eget. Suspendisse at feugiat mi. Nam nisl diam, sagittis eget nibh rutrum, sagittis condimentum odio. In pulvinar vestibulum libero in euismod.</p>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-sm-8">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel dolor dui. Vestibulum faucibus massa sit amet enim fermentum, eget bibendum felis iaculis. Duis auctor pharetra leo. Etiam tincidunt tincidunt aliquam. Nullam ac rutrum erat, consectetur malesuada nisi. In orci velit, dictum vel lorem vel, auctor lacinia erat. Proin turpis eros, mollis in enim vel, auctor rhoncus diam. Morbi sed luctus libero. Nulla tempor nunc lacus, sit amet accumsan sapien consectetur eget. Suspendisse at feugiat mi. Nam nisl diam, sagittis eget nibh rutrum, sagittis condimentum odio. In pulvinar vestibulum libero in euismod.</p>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-sm-8">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel dolor dui. Vestibulum faucibus massa sit amet enim fermentum, eget bibendum felis iaculis. Duis auctor pharetra leo. Etiam tincidunt tincidunt aliquam. Nullam ac rutrum erat, consectetur malesuada nisi. In orci velit, dictum vel lorem vel, auctor lacinia erat. Proin turpis eros, mollis in enim vel, auctor rhoncus diam. Morbi sed luctus libero. Nulla tempor nunc lacus, sit amet accumsan sapien consectetur eget. Suspendisse at feugiat mi. Nam nisl diam, sagittis eget nibh rutrum, sagittis condimentum odio. In pulvinar vestibulum libero in euismod.</p>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-sm-8">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel dolor dui. Vestibulum faucibus massa sit amet enim fermentum, eget bibendum felis iaculis. Duis auctor pharetra leo. Etiam tincidunt tincidunt aliquam. Nullam ac rutrum erat, consectetur malesuada nisi. In orci velit, dictum vel lorem vel, auctor lacinia erat. Proin turpis eros, mollis in enim vel, auctor rhoncus diam. Morbi sed luctus libero. Nulla tempor nunc lacus, sit amet accumsan sapien consectetur eget. Suspendisse at feugiat mi. Nam nisl diam, sagittis eget nibh rutrum, sagittis condimentum odio. In pulvinar vestibulum libero in euismod.</p>
+				</div>
+			</div>
+			
+			<div id='map01'></div>
+			
+			<div class="row">
+				<div class="col-sm-4">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel dolor dui. Vestibulum faucibus massa sit amet enim fermentum, eget bibendum felis iaculis. Duis auctor pharetra leo. Etiam tincidunt tincidunt aliquam. Nullam ac rutrum erat, consectetur malesuada nisi. In orci velit, dictum vel lorem vel, auctor lacinia erat. Proin turpis eros, mollis in enim vel, auctor rhoncus diam. Morbi sed luctus libero. Nulla tempor nunc lacus, sit amet accumsan sapien consectetur eget. Suspendisse at feugiat mi. Nam nisl diam, sagittis eget nibh rutrum, sagittis condimentum odio. In pulvinar vestibulum libero in euismod.</p>
+				</div>
+				
+				<div class="col-sm-4">
+					<hr style="width:100%; height:.5px; background-color: #CACFD2;">
+					<img class="img-responsive" src="img/featured/photo2.jpeg" alt="Chania">
+					<hr style="width:100%; height:.5px; background-color: #CACFD2;">
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-sm-7">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel dolor dui. Vestibulum faucibus massa sit amet enim fermentum, eget bibendum felis iaculis. Duis auctor pharetra leo. Etiam tincidunt tincidunt aliquam. Nullam ac rutrum erat, consectetur malesuada nisi. In orci velit, dictum vel lorem vel, auctor lacinia erat. Proin turpis eros, mollis in enim vel, auctor rhoncus diam. Morbi sed luctus libero. Nulla tempor nunc lacus, sit amet accumsan sapien consectetur eget. Suspendisse at feugiat mi. Nam nisl diam, sagittis eget nibh rutrum, sagittis condimentum odio. In pulvinar vestibulum libero in euismod.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel dolor dui. Vestibulum faucibus massa sit amet enim fermentum, eget bibendum felis iaculis. Duis auctor pharetra leo. Etiam tincidunt tincidunt aliquam. Nullam ac rutrum erat, consectetur malesuada nisi. In orci velit, dictum vel lorem vel, auctor lacinia erat. Proin turpis eros, mollis in enim vel, auctor rhoncus diam. Morbi sed luctus libero. Nulla tempor nunc lacus, sit amet accumsan sapien consectetur eget. Suspendisse at feugiat mi. Nam nisl diam, sagittis eget nibh rutrum, sagittis condimentum odio. In pulvinar vestibulum libero in euismod.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel dolor dui. Vestibulum faucibus massa sit amet enim fermentum, eget bibendum felis iaculis. Duis auctor pharetra leo. Etiam tincidunt tincidunt aliquam. Nullam ac rutrum erat, consectetur malesuada nisi. In orci velit, dictum vel lorem vel, auctor lacinia erat. Proin turpis eros, mollis in enim vel, auctor rhoncus diam. Morbi sed luctus libero. Nulla tempor nunc lacus, sit amet accumsan sapien consectetur eget. Suspendisse at feugiat mi. Nam nisl diam, sagittis eget nibh rutrum, sagittis condimentum odio. In pulvinar vestibulum libero in euismod.</p>
+				</div>
+				<div class="col-sm-5">
+					<div id='map02'></div>
+				</div>
+			</div>
+			
+			<!--
+			<div class="row">
+				<div class="col-xs-1 col-xs-offset-11 text-center">
+					<p>Next Part</p>
+					<p>Stations Location</p>
+				</div>
+			</div>
+			-->
+			
+			<div id="carrotText" class="textCarrotFloat">
+				<p style="text-align:right;">Next part</p>
+				<p style="text-align:left;">Stations</p>
+			</div>
+			
+			<div id="carrot" class="carrotFloat">
+				<a href="stations"><i class="fa fa-caret-right fa-5x" aria-hidden="true"></i></a>
+			</div>
+	
+			<!--
+			<div class="row">
+				<div class="col-sm-7">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel dolor dui. Vestibulum faucibus massa sit amet enim fermentum, eget bibendum felis iaculis. Duis auctor pharetra leo. Etiam tincidunt tincidunt aliquam. Nullam ac rutrum erat, consectetur malesuada nisi. In orci velit, dictum vel lorem vel, auctor lacinia erat. Proin turpis eros, mollis in enim vel, auctor rhoncus diam. Morbi sed luctus libero. Nulla tempor nunc lacus, sit amet accumsan sapien consectetur eget. Suspendisse at feugiat mi. Nam nisl diam, sagittis eget nibh rutrum, sagittis condimentum odio. In pulvinar vestibulum libero in euismod.</p>
+				</div>
+			</div>
+			-->
+		</div>
+	
+	</div>
+
+	
+	
+	
+	
+	
+	<!--
+	<div id="affixTest" style="width: 70%; height: 100%; z-index: -10; float:left;">
+		<div id="map"></div>
+	</div>
+
+	<div id="scrollTest" style="position:absolute;width: 50%; height: 500%; margin-left: 50%; float:right;">
+		<div id="scrollBox1" class="active" style="width: 100%; height: 20%; background: orange; text-align:center;">
+			<hr style="margin-left: 10%; margin-right: 10%; margin-top: 0px; margin-bottom: 0px;padding: 0px; width: 80%; visibility:hidden;">
+			<h1 style="margin-top:30px; color:white;">Section 01</h1>
+			<p style="color:white;"></p>
+		</div>
+		<div id="scrollBox2" style="width: 100%; height: 20%; background: orange; text-align:center;">
+			<hr style="margin-left: 10%; margin-right: 10%; margin-top: 0px; margin-bottom: 0px;padding: 0px; width: 80%;">
+			<h1 style="margin-top:30px; color:white;">Section 02</h1>
+			<p style="color:white;"></p>
+		</div>
+		<div id="scrollBox3" style="width: 100%; height: 20%; background: orange; text-align:center;">
+			<hr style="margin-left: 10%; margin-right: 10%; margin-top: 0px; margin-bottom: 0px;padding: 0px; width: 80%;">
+			<h1 style="margin-top:30px; color:white;">Section 03</h1>
+			<p style="color:white;"></p>
+		</div>
+		<div id="scrollBox4" style="width: 100%; height: 20%; background: orange; text-align:center;">
+			<hr style="margin-left: 10%; margin-right: 10%; margin-top: 0px; margin-bottom: 0px;padding: 0px; width: 80%;">
+			<h1 style="margin-top:30px; color:white;">Section 04</h1>
+			<p style="color:white;"></p>
+		</div>
+		<div id="scrollBox5" style="width: 100%; height: 20%; background: orange; text-align:center;">
+			<hr style="margin-left: 10%; margin-right: 10%; margin-top: 0px; margin-bottom: 0px;padding: 0px; width: 80%;">
+			<h1 style="margin-top:30px; color:white;">Section 05</h1>
+			<p style="color:white;"></p>
+		</div>
+		-->
+		
+		
+		<!--
+		<div style="width:200%; height: 100vh;; background: orange; margin-left: -100%; background: url('img/featured/img4s.jpeg') no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;">
+			<div style="width: 100%; height: 100%; background: rgba(0,0,0,0.25);">
+			</div>
+		</div>
+		-->
+		
+		<!--
+		<div id="footer" style="background: black; width: 200%; height: 200px;color:white; margin-left: -100%;">
+			<p style="color: white;"> Footer!</p>
+			<i class="fa fa-instagram"></i>
+			<i class="fa fa-facebook"></i>
+		
+			<i class="fa fa-google-plus"></i>
+			<i class="fa fa-youtube"></i>
+			<i class="fa fa-facebook-official"></i>
+			<i class="fa fa-twitter"></i>
+		</div>
+		
+	</div>
+	-->
+	
+	
+	
+    <!-- jQuery -->
+    <script type="text/javascript" src="lib/jquery/jquery-1.12.1.min.js"></script>
+    
+	<!-- Link lazy load jQuery plugin -->
+	<script type="text/javascript" src="lib/jquery/jquery.lazyload.min.js"></script>
+	
+    <!-- Bootstrap Core JavaScript -->
+    <script type="text/javascript" src="lib/bootstrap/js/bootstrap.min.js"></script>
+    
+    <!-- Owl-carousel -->
+    <script type="text/javascript" src="lib/owl_carousel_2/owl.carousel.min.js"></script>
+    
+    <!-- Link mapbox GL js -->
+	<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.26.0/mapbox-gl.js'></script>
+	
+	<!-- Link custom js script -->
+	<script type="text/javascript" src="js/index.js"></script>
+	
+	<script type="text/javascript" src="js/initMap.js"></script>
+    
+   
+    
+  
+
+</body>
+</html>
