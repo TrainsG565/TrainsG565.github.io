@@ -27,7 +27,7 @@ body p {
 }
 
 #headerMenus {
-	visibility: hidden;
+	visibility: visible;
 }
 
 #first b {
