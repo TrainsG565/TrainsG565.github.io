@@ -23,6 +23,22 @@ map01.on('style.load', function () {
 	
 	map01.setPaintProperty('taxparcels', 'fill-opacity', 0.5);
 	
+	map.addSource('assessment-points', {
+		'type': 'geojson',
+		'data': '/madison/data/stations_v2.geojson'
+	});
+	
+	map.addLayer({
+		'id': 'assessment-points',
+		'type': 'circle',
+		'source': 'assessment-points',
+		'layout': {},
+		'paint': {
+			'circle-color': 'black',
+			'circle-radius': 10
+		}
+	});
+	
 });
 
 
