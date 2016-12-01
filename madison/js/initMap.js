@@ -221,11 +221,50 @@ map01.on('style.load', function () {
 	
 	
 	
-	var features = map01.queryRenderedFeatures({ layers: ['dotdemo'] });
+	setTimeout(function(){
+		var features = map01.queryRenderedFeatures({ layers: ['dotdemo'] });
+		var feature = features[0];
+		
+		console.log(feature);
+		
+		var pointOnPolygon = turf.pointOnSurface(feature);
+		
+		
+		var result1 = {
+			"type": "FeatureCollection",
+			"features": pointOnPolygon
+		};
+		
+		console.log(result1);
+		
+		console.log(pointOnPolygon);
+		
+		map01.addSource('point01', {
+			'type':'geojson',
+			'data': pointOnPolygon
+		});
+		
+		map01.addLayer({
+		'id': 'point01',
+		'type': 'circle',
+		'source': 'point01',
+		'layout': {},
+		'paint': {
+			'circle-color': 'black',
+			'circle-radius': 20
+		}
+	});
+		
+		
+		
+	 }, 3000);
 	
-	console.log(features);
+	
+
 	
 	//dotdemov3-ankksr
+	
+	
      
 	
 	
