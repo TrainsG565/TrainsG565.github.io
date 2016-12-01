@@ -100,7 +100,6 @@ map01.on('style.load', function () {
 	
 	map01.setPaintProperty('taxparcels', 'fill-opacity', 0.5);
 	
-	
 	map01.addSource('msnResult', {
 		'type': 'geojson',
 		'data': msnResult
@@ -122,6 +121,7 @@ map01.on('style.load', function () {
 	});
 	
 	
+
 	
 	map01.addLayer({
 		'id': 'msn-circle',
@@ -218,6 +218,19 @@ map01.on('style.load', function () {
 		},
 		"filter": ["==", "$type", "Point"]
 	});
+	
+	
+	
+	var features = map01.queryRenderedFeatures({ layers: ['dotdemo'] });
+	
+	console.log(features);
+	
+	//dotdemov3-ankksr
+     
+	
+	
+	
+	
 	
 	
 	
