@@ -1,5 +1,8 @@
 // Access Token
 mapboxgl.accessToken = 'pk.eyJ1Ijoic2t5d2lsbGlhbXMiLCJhIjoibUI4TlByNCJ9.9UuhBU3ElNiesrd-BcTdPQ';
+
+var incrementID;
+var pointArr;
 		
 		
 		
@@ -223,16 +226,22 @@ map01.on('style.load', function () {
 	
 	setTimeout(function(){
 		var features = map01.queryRenderedFeatures({ layers: ['dotdemo'] });
-		var feature = features[0];
+		var i;
+		for (i=0; i < features.length; i++) {
+			var feature = features[i];
 		
-		console.log(feature);
+			console.log(feature);
 		
-		var pointOnPolygon = turf.pointOnSurface(feature);
+			var pointOnPolygon = turf.pointOnSurface(feature);
+			
+			pointArr.push(pointOnPolygon);
+		}
+			
 		
 		
 		var result1 = {
 			"type": "FeatureCollection",
-			"features": pointOnPolygon
+			"features": pointArr
 		};
 		
 		console.log(result1);
@@ -241,7 +250,7 @@ map01.on('style.load', function () {
 		
 		map01.addSource('point01', {
 			'type':'geojson',
-			'data': pointOnPolygon
+			'data': result1
 		});
 		
 		map01.addLayer({
@@ -251,7 +260,7 @@ map01.on('style.load', function () {
 		'layout': {},
 		'paint': {
 			'circle-color': 'black',
-			'circle-radius': 20
+			'circle-radius': 2
 		}
 	});
 		
