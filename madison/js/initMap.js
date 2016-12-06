@@ -251,43 +251,89 @@ map01.on('style.load', function () {
 			var x_max = box[2];
 			var y_min = box[3];
 			var y;
-			for (y=0; y < feature.properties.H7X001; y++) {
-				randomPoint(x_min, y_max, x_max, y_min, feature, 1);		
+			for (y=0; y < feature.properties.H7X002; y++) {
+				randomPoint(x_min, y_max, x_max, y_min, feature, 2);		
+			}
+			for (y=0; y < feature.properties.H7X003; y++) {
+				randomPoint(x_min, y_max, x_max, y_min, feature, 3);		
+			}
+			for (y=0; y < feature.properties.H7X005; y++) {
+				randomPoint(x_min, y_max, x_max, y_min, feature, 5);		
 			}
 		}
 		
 		/*
-		H7X001:      Total
         H7X002:      White alone
         H7X003:      Black or African American alone
         H7X004:      American Indian and Alaska Native alone
         H7X005:      Asian alone
         H7X006:      Native Hawaiian and Other Pacific Islander alone
         H7X007:      Some Other Race alone
-        H7X008:      Two or More Races
         */
 
 			
 		
 		
-		var result1 = {
+		var result2 = {
 			"type": "FeatureCollection",
-			"features": pointArr
+			"features": pointArr2
+		};
+		
+		var result3 = {
+			"type": "FeatureCollection",
+			"features": pointArr3
+		};
+		
+		var result5 = {
+			"type": "FeatureCollection",
+			"features": pointArr5
 		};
 		
 		
-		map01.addSource('point01', {
+		map01.addSource('point02', {
 			'type':'geojson',
-			'data': result1
+			'data': result2
+		});
+		
+		map01.addSource('point03', {
+			'type': 'geojson',
+			'data': result3
+		});
+		
+		map01.addSource('point05', {
+			'type': 'geojson',
+			'data': result5
 		});
 		
 		map01.addLayer({
-			'id': 'point01',
+			'id': 'point02 - white',
 			'type': 'circle',
-			'source': 'point01',
+			'source': 'point02',
 			'layout': {},
 			'paint': {
-				'circle-color': 'black',
+				'circle-color': 'red',
+				'circle-radius': 2
+			}
+		});
+		
+		map01.addLayer({
+			'id': 'point03 - black',
+			'type': 'circle',
+			'source': 'point03',
+			'layout': {},
+			'paint': {
+				'circle-color': 'blue',
+				'circle-radius': 2
+			}
+		});
+		
+		map01.addLayer({
+			'id': 'point05 - asian',
+			'type': 'circle',
+			'source': 'point05',
+			'layout': {},
+			'paint': {
+				'circle-color': 'green',
 				'circle-radius': 2
 			}
 		});
@@ -295,11 +341,6 @@ map01.on('style.load', function () {
 		
 		
 	 }, 3000);
-	
-	
-
-	
-	//dotdemov3-ankksr
 	
 });
 
@@ -314,8 +355,16 @@ function randomPoint(xmin, ymax, xmax, ymin, feature, z) {
 	var inside1 = turf.inside(point2, feature);
 	
 	if (inside1 == true) {
-		pointArr.push(point2);
-		return;
+		if (z == 2) {
+			pointArr2.push(point2);
+			return;
+		} else if (z == 3) {
+			pointArr3.push(point2);
+			return;
+		} else if (z == 5) {
+			pointArr5.push(point2);
+			return;
+		}
 	} else if (inside1 == false) {
 		randomPoint(xmin, ymax, xmax, ymin, feature, z);
 	}
