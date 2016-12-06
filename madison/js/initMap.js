@@ -139,6 +139,11 @@ map01.on('style.load', function () {
 		'data': kohlResult
 	});
 	
+	map01.addSource('mergedDots', {
+		'type': 'geojson',
+		'data': 'mergedDots.geojson'
+	});
+	
 	
 
 	
@@ -238,8 +243,32 @@ map01.on('style.load', function () {
 		"filter": ["==", "$type", "Point"]
 	});
 	
+	map01.addLayer({
+		'id': 'mergedDots',
+		'type': 'circle',
+		'source': 'mergedDots',
+		'layout': {},
+		'paint': {
+			'circle-radius': {
+				'base': 1.75,
+				'stops': [[12, 2], [22, 10]]
+			},
+			'circle-color': {
+				property: 'type',
+				type: 'categorical',
+				stops: [
+					['2', '#fbb03b'],
+					['3', '#223b53'],
+					['4', '#e55e5e'],
+					['5', '#3bb2d0'],
+					['6', '#ccc']
+				]
+			}
+		}
+	});
 	
 	
+	/*
 	setTimeout(function(){
 		var features = map01.queryRenderedFeatures({ layers: ['dotdemo'] });
 		var i;
@@ -262,14 +291,14 @@ map01.on('style.load', function () {
 			}
 		}
 		
-		/*
+		
         H7X002:      White alone
         H7X003:      Black or African American alone
         H7X004:      American Indian and Alaska Native alone
         H7X005:      Asian alone
         H7X006:      Native Hawaiian and Other Pacific Islander alone
         H7X007:      Some Other Race alone
-        */
+        
 
 			
 		
@@ -346,6 +375,7 @@ map01.on('style.load', function () {
 
 
 
+
 function randomPoint(xmin, ymax, xmax, ymin, feature, z) {
 	var lat = ymin + (Math.random() * (ymax - ymin));
 	var lng = xmin + (Math.random() * (xmax - xmin));
@@ -369,7 +399,7 @@ function randomPoint(xmin, ymax, xmax, ymin, feature, z) {
 		randomPoint(xmin, ymax, xmax, ymin, feature, z);
 	}
 };
-
+*/
 
 
 
