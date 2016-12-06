@@ -2,7 +2,8 @@
 mapboxgl.accessToken = 'pk.eyJ1Ijoic2t5d2lsbGlhbXMiLCJhIjoibUI4TlByNCJ9.9UuhBU3ElNiesrd-BcTdPQ';
 
 var incrementID;
-var pointArr;
+var pointArr = [];
+var inside1;
 		
 		
 		
@@ -12,7 +13,7 @@ var map01 = new mapboxgl.Map({
     container: 'map01',
     style: 'mapbox://styles/skywilliams/ciuxinskg00f92io46tlqruc3',
     center: [-89.348880892901192, 43.1363520479551],
-    zoom: 14,
+    zoom: 11,
     //pitch: 65,
     //bearing: 35,
     attributionControl: false
@@ -229,13 +230,18 @@ map01.on('style.load', function () {
 		var i;
 		for (i=0; i < features.length; i++) {
 			var feature = features[i];
-		
-			console.log(feature);
-		
-			var pointOnPolygon = turf.pointOnSurface(feature);
-			
-			pointArr.push(pointOnPolygon);
+			var box = turf.bbox(feature);
+			var x_min = box[0];
+			var y_max = box[1];
+			var x_max = box[2];
+			var y_min = box[3];
+			var y;
+			for (y=0; y < feature.properties.H7X001; y++) {
+				randomPoint(x_min, y_max, x_max, y_min, feature);		
+			}
 		}
+		
+
 			
 		
 		
@@ -244,9 +250,6 @@ map01.on('style.load', function () {
 			"features": pointArr
 		};
 		
-		console.log(result1);
-		
-		console.log(pointOnPolygon);
 		
 		map01.addSource('point01', {
 			'type':'geojson',
@@ -254,15 +257,15 @@ map01.on('style.load', function () {
 		});
 		
 		map01.addLayer({
-		'id': 'point01',
-		'type': 'circle',
-		'source': 'point01',
-		'layout': {},
-		'paint': {
-			'circle-color': 'black',
-			'circle-radius': 2
-		}
-	});
+			'id': 'point01',
+			'type': 'circle',
+			'source': 'point01',
+			'layout': {},
+			'paint': {
+				'circle-color': 'black',
+				'circle-radius': 2
+			}
+		});
 		
 		
 		
@@ -273,16 +276,25 @@ map01.on('style.load', function () {
 	
 	//dotdemov3-ankksr
 	
-	
-     
-	
-	
-	
-	
-	
-	
-	
 });
+
+
+
+function randomPoint(xmin, ymax, xmax, ymin, feature) {
+	var lat = ymin + (Math.random() * (ymax - ymin));
+	var lng = xmin + (Math.random() * (xmax - xmin));
+				
+	var point2  = turf.point([lng, lat]);
+				
+	var inside1 = turf.inside(point2, feature);
+	
+	if (inside1 == true) {
+		pointArr.push(point2);
+		return;
+	} else if (inside1 == false) {
+		randomPoint(xmin, ymax, xmax, ymin, feature);
+	}
+};
 
 
 
