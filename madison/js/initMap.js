@@ -1,26 +1,6 @@
 // Access Token
 mapboxgl.accessToken = 'pk.eyJ1Ijoic2t5d2lsbGlhbXMiLCJhIjoibUI4TlByNCJ9.9UuhBU3ElNiesrd-BcTdPQ';
 
-var incrementID;
-var pointArr = [];
-var pointArr2 = [];
-var pointArr3 = [];
-var pointArr4 = [];
-var pointArr5 = [];
-var pointArr6 = [];
-var pointArr7 = [];
-var pointArr8 = [];
-
-var inside1;
-var inside2;
-var inside3;
-var inside4;
-var inside5;
-var inside6;
-var inside7;
-var inside8;
-		
-		
 		
 
 // Initialize the map
@@ -269,6 +249,25 @@ map01.on('style.load', function () {
 	
 	
 	/*
+	var incrementID;
+	var pointArr = [];
+	var pointArr2 = [];
+	var pointArr3 = [];
+	var pointArr4 = [];
+	var pointArr5 = [];
+	var pointArr6 = [];
+	var pointArr7 = [];
+	var pointArr8 = [];
+
+	var inside1;
+	var inside2;
+	var inside3;
+	var inside4;
+	var inside5;
+	var inside6;
+	var inside7;
+	var inside8;
+
 	setTimeout(function(){
 		var features = map01.queryRenderedFeatures({ layers: ['dotdemo'] });
 		var i;
@@ -370,12 +369,13 @@ map01.on('style.load', function () {
 		
 		
 	 }, 3000);
+	 */
 	
 });
 
 
 
-
+/*
 function randomPoint(xmin, ymax, xmax, ymin, feature, z) {
 	var lat = ymin + (Math.random() * (ymax - ymin));
 	var lng = xmin + (Math.random() * (xmax - xmin));
@@ -400,6 +400,7 @@ function randomPoint(xmin, ymax, xmax, ymin, feature, z) {
 	}
 };
 */
+
 
 
 
