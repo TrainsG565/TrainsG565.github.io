@@ -3,6 +3,13 @@ mapboxgl.accessToken = 'pk.eyJ1Ijoic2t5d2lsbGlhbXMiLCJhIjoibUI4TlByNCJ9.9UuhBU3E
 
 var incrementID;
 var pointArr = [];
+var pointArr2 = [];
+var pointArr3 = [];
+var pointArr4 = [];
+var pointArr5 = [];
+var pointArr6 = [];
+var pointArr7 = [];
+var pointArr8 = [];
 
 var inside1;
 var inside2;
