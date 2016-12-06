@@ -229,21 +229,8 @@ map01.on('style.load', function () {
 		'source': 'mergedDots',
 		'layout': {},
 		'paint': {
-			'circle-radius': {
-				'base': 1.75,
-				'stops': [[12, 2], [22, 10]]
-			},
-			'circle-color': {
-				property: 'type',
-				type: 'categorical',
-				stops: [
-					['2', '#fbb03b'],
-					['3', '#223b53'],
-					['4', '#e55e5e'],
-					['5', '#3bb2d0'],
-					['6', '#ccc']
-				]
-			}
+			'circle-radius': 2,
+			'circle-color': 'blue'
 		}
 	});
 	
