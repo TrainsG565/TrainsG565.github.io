@@ -119,11 +119,6 @@ map01.on('style.load', function () {
 		'data': kohlResult
 	});
 	
-	map01.addSource('mergedDots', {
-		'type': 'geojson',
-		'data': '/madison/js/mergedDots.geojson'
-	});
-	
 	
 
 	
@@ -223,16 +218,7 @@ map01.on('style.load', function () {
 		"filter": ["==", "$type", "Point"]
 	});
 	
-	map01.addLayer({
-		'id': 'mergedDots',
-		'type': 'circle',
-		'source': 'mergedDots',
-		'layout': {},
-		'paint': {
-			'circle-radius': 2,
-			'circle-color': 'blue'
-		}
-	});
+	
 	
 	
 	/*
