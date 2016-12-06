@@ -121,7 +121,7 @@ map01.on('style.load', function () {
 	
 	map01.addSource('mergedDots', {
 		'type': 'geojson',
-		'data': 'mergedDots.geojson'
+		'data': '/madison/js/mergedDots.geojson'
 	});
 	
 	
