@@ -96,9 +96,7 @@ map01.on('load', function() {
 		'layout': {},
 		'paint': {
 			'circle-color': '#F39C12',
-			'circle-radius': 4,
-			'circle-stroke-width': .75,
-			'circle-stroke-color': '#fff'
+			'circle-radius': 4
 		}
 	});
 	
