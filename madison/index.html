@@ -89,14 +89,20 @@
       		
       		<div id="headerMenus" class="collapse navbar-collapse" id="myNavbar">
       			<ul class="nav navbar-nav">
-    				<li><a class="navText" href="/index.html">BACKGROUND</a></li>
+    				<!--<li><a class="navText" href="/index.html">BACKGROUND</a></li>-->
     				<li><a class="navText" href="/connectivity">CONNECTIVITY</a></li>
     				<li><a class="navText" href="/environment">ENVIRONMENT</a></li>
     				<li><a class="navText" href="/stations">STATIONS</a></li>
-    				<li style="border-right: 1px solid #BDC3C7;"><a class="navText" href="/madison">VISUALIZING MADISON</a></li>
+    				<li style="border-right: 1px solid #BDC3C7;"><a class="navText highlight" href="/madison">VISUALIZING MADISON</a></li>
     				<li><a class="navText" href="/map">STATE MAP</a></li>
-    				<li><a class="navText" href="/bibliography">BIBLIOGRAPHY</a></li>
-    				<li><a class="navText" href="/documentation">DOCUMENTATION</a></li>
+    				<li class="dropdown navText">
+        				<a class="dropdown-toggle" data-toggle="dropdown" href="#">NOTES
+        					<span class="caret"></span></a>
+        					<ul class="dropdown-menu navText" style="background: #FBFCFC;">
+          						<li><a href="/bibliography">BIBLIOGRAPHY</a></li>
+          						<li><a href="/documentation">DOCUMENTATION</a></li>
+        					</ul>
+      				</li>
   				</ul>
   			</div>
   		</div>
