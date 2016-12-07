@@ -35,7 +35,7 @@ map01.on('load', function() {
 	
 	map01.addSource('wisconsinStops', {
 		'type': 'geojson',
-		'data': '/map/data/madisonStops.geojson'
+		'data': '/map/data/wisconsinStops.geojson'
 	});
 	
 	
