@@ -33,6 +33,11 @@ map01.on('load', function() {
 		'data': '/map/data/parking.geojson'
 	});
 	
+	map01.addSource('wisconsinStops', {
+		'type': 'geojson',
+		'data': '/map/data/madisonStops.geojson'
+	});
+	
 	
 	map01.addLayer({
 		'id': 'amtrak',
@@ -81,6 +86,17 @@ map01.on('load', function() {
 		'paint': {
 			'fill-color': '#BB8FCE',
 			'fill-opacity': 0.75
+		}
+	});
+	
+	map01.addLayer({
+		'id': 'wisconsinStops',
+		'type': 'circle',
+		'source': 'wisconsinStops',
+		'layout': {},
+		'paint': {
+			'circle-color': 'orange',
+			'circle-radius': 5
 		}
 	});
 	
