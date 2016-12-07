@@ -48,7 +48,7 @@ map01.on('load', function() {
 			'line-join': 'round'
 			},
 		'paint': {
-			'line-color': '#3498DB',
+			'line-color': '#2471A3',
 			'line-width': 5
 		}
 	});
@@ -73,7 +73,7 @@ map01.on('load', function() {
 			'line-join': 'round'
 			},
 		'paint': {
-			'line-color': '#3498DB',
+			'line-color': '#2471A3',
 			'line-width': 5
 		}
 	});
