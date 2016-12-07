@@ -11,6 +11,76 @@ var map01 = new mapboxgl.Map({
     attributionControl: false
 });
 
+map01.on('load', function() {
+	
+	map01.addSource('amtrak', {
+		'type': 'geojson',
+		'data': '/map/data/amtrakLine.geojson'
+	});
+	
+	map01.addSource('cityPolys', {
+		'type': 'geojson',
+		'data': '/map/data/cityPolys.geojson'
+	});
+	
+	map01.addSource('msnRails', {
+		'type': 'geojson',
+		'data': '/map/data/msnRails.geojson'
+	});
+	
+	map01.addSource('parking', {
+		'type': 'geojson',
+		'data': '/map/data/parking.geojson'
+	});
+	
+	
+	map01.addLayer({
+		'id': 'amtrak',
+		'type': 'line',
+		'source': 'amtrak',
+		'layout': {},
+		'paint': {
+			'line-color': 'black',
+			'line-width': 5
+		}
+	});
+	
+	map01.addLayer({
+		'id': 'cityPolys',
+		'type': 'fill',
+		'source': 'cityPolys',
+		'layout': {},
+		'paint': {
+			'fill-color': 'black',
+			'fill-opacity': 0.75
+		}
+	});
+	
+	map01.addLayer({
+		'id': 'msnRails',
+		'type': 'line',
+		'source': 'msnRails',
+		'layout': {},
+		'paint': {
+			'line-color': 'black',
+			'line-width': 5
+		}
+	});
+	
+	map01.addLayer({
+		'id': 'parking',
+		'type': 'fill',
+		'source': 'parking',
+		'layout': {},
+		'paint': {
+			'fill-color': 'black',
+			'fill-opacity': 0.75
+		}
+	});
+	
+	
+});
+
 
 
 
