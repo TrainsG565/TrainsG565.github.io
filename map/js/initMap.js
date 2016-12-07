@@ -95,8 +95,10 @@ map01.on('load', function() {
 		'source': 'wisconsinStops',
 		'layout': {},
 		'paint': {
-			'circle-color': 'orange',
-			'circle-radius': 5
+			'circle-color': '#F39C12',
+			'circle-radius': 4,
+			'circle-stroke-width': .75,
+			'circle-stroke-color': '#fff'
 		}
 	});
 	
