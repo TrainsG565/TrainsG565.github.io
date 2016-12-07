@@ -3,10 +3,17 @@
 var menuControl1 = false;
 
 var headerHeight = $('header').height();
-//var toolHeight = $('#tool').height();
 var aboutHeight = $('#about').height();
+var section01Height = $('#section01').height();
+var section02Height = $('#section02').height();
+var section03Height = $('#section03').height();
+var section04Height = $('#section04').height();
+var section05Height = $('#section05').height();
+var section06Height = $('#section06').height();
+var section07Height = $('#section07').height();
 
-var mapAffixHeight = headerHeight + aboutHeight;
+var mapAffixHeight = headerHeight + aboutHeight + section01Height + section02Height + section03Height + 
+	section04Height + section05Height + section06Height + section07Height;
 
 
 $('#affixTest').affix({
