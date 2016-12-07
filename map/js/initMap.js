@@ -38,9 +38,12 @@ map01.on('load', function() {
 		'id': 'amtrak',
 		'type': 'line',
 		'source': 'amtrak',
-		'layout': {},
+		'layout': {
+			'line-cap': 'round',
+			'line-join': 'round'
+			},
 		'paint': {
-			'line-color': 'black',
+			'line-color': '#3498DB',
 			'line-width': 5
 		}
 	});
@@ -51,7 +54,7 @@ map01.on('load', function() {
 		'source': 'cityPolys',
 		'layout': {},
 		'paint': {
-			'fill-color': 'black',
+			'fill-color': '#EC7063',
 			'fill-opacity': 0.75
 		}
 	});
@@ -60,9 +63,12 @@ map01.on('load', function() {
 		'id': 'msnRails',
 		'type': 'line',
 		'source': 'msnRails',
-		'layout': {},
+		'layout': {
+			'line-cap': 'round',
+			'line-join': 'round'
+			},
 		'paint': {
-			'line-color': 'black',
+			'line-color': '#3498DB',
 			'line-width': 5
 		}
 	});
@@ -73,7 +79,7 @@ map01.on('load', function() {
 		'source': 'parking',
 		'layout': {},
 		'paint': {
-			'fill-color': 'black',
+			'fill-color': '#BB8FCE',
 			'fill-opacity': 0.75
 		}
 	});
