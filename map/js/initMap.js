@@ -11,6 +11,18 @@ var map01 = new mapboxgl.Map({
     attributionControl: false
 });
 
+
+
+var hoverLayers = [
+	'cityPolys',
+	'wisconsinStops',
+	'amtrakAreasWI',
+	'amtrakCitiesIL',
+	'amtrakCitiesMN'
+];
+
+
+
 map01.on('load', function() {
 	
 	map01.addSource('amtrak', {
@@ -133,7 +145,7 @@ map01.on('load', function() {
 		'layout': {},
 		'paint': {
 			'line-color': '#2471A3',
-			'line-width': 2.5
+			'line-width': 1
 		}
 	});
 	
@@ -181,6 +193,31 @@ map01.on('load', function() {
 		}
 	});
 	
+	
+	// Create a popup, but don't add it to the map yet.
+	var popup = new mapboxgl.Popup({
+    	closeButton: false,
+    	closeOnClick: false
+	});
+	
+	map.on('mousemove', function(e) {
+    	var features = map.queryRenderedFeatures(e.point, { layers: hoverLayers });
+    	// Change the cursor style as a UI indicator.
+    	map.getCanvas().style.cursor = (features.length) ? 'pointer' : '';
+
+    	if (!features.length) {
+       		popup.remove();
+     		return;
+    	}
+
+    	var feature = features[0];
+
+    	// Populate the popup and set its coordinates
+    	// based on the feature found.
+    	popup.setLngLat(feature.geometry.coordinates)
+        	.setHTML('This is a popup.')
+        	.addTo(map);
+	});
 	
 	
 	
