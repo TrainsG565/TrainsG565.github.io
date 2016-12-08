@@ -195,6 +195,8 @@ function kohlButton(source) {
 		button.style.background = '#E5E7E9';
 		button.style.color = 'black';
 		kohlButtonControl = false;
+		
+		removeStation(source);
 	} else if (kohlButtonControl == false) {
 		button.style.background = '#2980B9';
 		button.style.color = '#fff';
@@ -212,6 +214,8 @@ function mononaButton(source) {
 		button.style.background = '#E5E7E9';
 		button.style.color = 'black';
 		mononaButtonControl = false;
+		
+		removeStation(source);
 	} else if (mononaButtonControl == false) {
 		button.style.background = '#2980B9';
 		button.style.color = '#fff';
@@ -229,6 +233,8 @@ function yaharaButton(source) {
 		button.style.background = '#E5E7E9';
 		button.style.color = 'black';
 		yaharaButtonControl = false;
+		
+		removeStation(source);
 	} else if (yaharaButtonControl == false) {
 		button.style.background = '#2980B9';
 		button.style.color = '#fff';
@@ -246,6 +252,8 @@ function msnButton(source) {
 		button.style.background = '#E5E7E9';
 		button.style.color = 'black';
 		msnButtonControl = false;
+		
+		removeStation(source);
 	} else if (msnButtonControl == false) {
 		button.style.background = '#2980B9';
 		button.style.color = '#fff';
