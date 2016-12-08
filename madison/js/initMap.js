@@ -31,6 +31,29 @@ map01.on('style.load', function () {
 		'data': '/madison/data/stations_v2.geojson'
 	});
 	
+	map01.addSource('busKohl01', {
+		'type': 'geojson',
+		'data': '/madison/data/upload/1km/busKohl_1.geojson'
+	});
+	
+	
+	
+	
+	
+	
+	map01.addLayer({
+		'id': 'busKohl01',
+		'type': 'fill',
+		'source': 'busKohl01',
+		'layout': {},
+		'paint': {
+			'fill-color': 'orange',
+			'fill-opacity': '0.5'
+		}
+	});
+	
+	
+	
 	map01.addLayer({
 		'id': 'madisonStations',
 		'type': 'circle',
@@ -45,25 +68,4 @@ map01.on('style.load', function () {
 });
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-var map02 = new mapboxgl.Map({
-	container: 'map02',
-	style: 'mapbox://styles/mapbox/light-v8',
-	center: [-89.4, 43.06],
-	zoom: 12,
-	attributionControl: false
-});
 		
