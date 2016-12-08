@@ -40,27 +40,27 @@ map01.on('load', function() {
 	
 	map01.addSource('allRailWI', {
 		'type': 'geojson',
-		'data': '/map/data/needUpload/allRailWI.geojson'
+		'data': '/map/data/allRailWI.geojson'
 	});
 	
 	map01.addSource('amtrakAreasWI', {
 		'type': 'geojson',
-		'data': '/map/data/needUpload/amtrakAreasWI.geojson'
+		'data': '/map/data/amtrakAreasWI.geojson'
 	});
 	
 	map01.addSource('amtrakCitiesIL', {
 		'type': 'geojson',
-		'data': '/map/data/needUpload/amtrakCitiesIL.geojson'
+		'data': '/map/data/amtrakCitiesIL.geojson'
 	});
 	
 	map01.addSource('amtrakCitiesMN', {
 		'type': 'geojson',
-		'data': '/map/data/needUpload/amtrakCitiesMN.geojson'
+		'data': '/map/data/amtrakCitiesMN.geojson'
 	});
 	
 	map01.addSource('kohlRail', {
 		'type': 'geojson',
-		'data': '/map/data/needUpload/kohlRail.geojson'
+		'data': '/map/data/kohlRail.geojson'
 	});
 	
 	
