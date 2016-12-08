@@ -203,8 +203,8 @@ function kohlButton(source) {
 	var button = document.getElementById(source);
 	
 	if (kohlButtonControl == true) {
-		button.style.background = '#E5E7E9';
-		button.style.color = 'black';
+		button.style.background = '#566573';
+		button.style.color = 'white';
 		kohlButtonControl = false;
 		
 		removeStation(source);
@@ -214,6 +214,7 @@ function kohlButton(source) {
 		kohlButtonControl = true;
 		
 		addStation(source);
+		activateBuffers();
 	}
 };
 
@@ -222,8 +223,8 @@ function mononaButton(source) {
 	var button = document.getElementById(source);
 	
 	if (mononaButtonControl == true) {
-		button.style.background = '#E5E7E9';
-		button.style.color = 'black';
+		button.style.background = '#566573';
+		button.style.color = 'white';
 		mononaButtonControl = false;
 		
 		removeStation(source);
@@ -241,8 +242,8 @@ function yaharaButton(source) {
 	var button = document.getElementById(source);
 	
 	if (yaharaButtonControl == true) {
-		button.style.background = '#E5E7E9';
-		button.style.color = 'black';
+		button.style.background = '#566573';
+		button.style.color = 'white';
 		yaharaButtonControl = false;
 		
 		removeStation(source);
@@ -298,6 +299,21 @@ function bike1Button(source) {
 var bike2ButtonControl = false;
 function bike2Button(source) {
 
+};
+
+
+
+
+function activateBuffers() {
+	document.getElementById('bus1Button').style.cursor = 'pointer';
+	document.getElementById('bus2Button').style.cursor = 'pointer';
+	document.getElementById('bike1Button').stye.cursor = 'pointer';
+	document.getElementById('bike2Button').style.cursor = 'pointer';
+	
+	document.getElementById('bus1Button').style.background = '#fff';
+	document.getElementById('bus2Button').style.background = '#fff';
+	document.getElementById('bike1Button').stye.background = '#fff';
+	document.getElementById('bike2Button').style.background = '#fff';
 };
 
 
