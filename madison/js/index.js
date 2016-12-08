@@ -181,6 +181,17 @@ var stationListCross = [
 	'MSN_station'
 ];
 
+var bufferList = [
+	'bus1Button',
+	'bus2Button',
+	'bike1Button',
+	'bike2Button'
+];
+
+var bufferListCross = [
+	
+];
+
 
 
 
@@ -261,6 +272,32 @@ function msnButton(source) {
 		
 		addStation(source);
 	}
+};
+
+
+
+
+
+
+
+var bus1ButtonControl = false;
+function bus1Button(source) {
+
+};
+
+var bus2ButtonControl = false;
+function bus2Button(source) {
+
+};
+
+var bike1ButtonControl = false;
+function bike1Button(source) {
+
+};
+
+var bike2ButtonControl = false;
+function bike2Button(source) {
+
 };
 
 
