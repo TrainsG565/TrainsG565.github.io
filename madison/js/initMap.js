@@ -9,7 +9,7 @@ var map01 = new mapboxgl.Map({
     style: 'mapbox://styles/skywilliams/ciuxinskg00f92io46tlqruc3',
     center: [-89.348880892901192, 43.1363520479551],
     zoom: 11,
-    //pitch: 65,
+    pitch: 0.1,
     //bearing: 35,
     attributionControl: false
 });
@@ -217,6 +217,12 @@ map01.on('style.load', function () {
 		},
 		"filter": ["==", "$type", "Point"]
 	});
+	
+	setTimeout(function(){
+		var features = map01.queryRenderedFeatures({ layers: ['dots-asian', 'dots-white', 'dots-black'] });
+		var ptsWithin = turf.within(features, kohlCircle);
+		console.log(ptsWithin);
+	}, 3000);
 	
 	
 	
