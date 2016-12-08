@@ -86,7 +86,7 @@ function addStation(x) {
 		'layout': {},
 		'paint': {
 			'circle-color': 'black',
-			'circule-radius': 8
+			'circle-radius': 8
 		},
 		'filter': ['==', 'Name', stationCross]
 	});
