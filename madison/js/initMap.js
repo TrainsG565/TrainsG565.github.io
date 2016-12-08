@@ -48,7 +48,7 @@ map01.on('style.load', function () {
 		'layout': {},
 		'paint': {
 			'fill-color': 'orange',
-			'fill-opacity': '0.5'
+			'fill-opacity': 0.5
 		}
 	});
 	
