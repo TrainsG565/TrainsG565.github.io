@@ -41,7 +41,7 @@ map01.on('style.load', function () {
 	
 	
 	
-	
+	/*
 	map01.addLayer({
 		'id': 'busKohl01',
 		'type': 'fill',
@@ -52,9 +52,10 @@ map01.on('style.load', function () {
 			'fill-opacity': 0.5
 		}
 	});
+	*/
 	
 	
-	
+	/*
 	map01.addLayer({
 		'id': 'madisonStations',
 		'type': 'circle',
@@ -65,8 +66,47 @@ map01.on('style.load', function () {
 			'circle-radius': 10
 		}
 	});
+	*/
+	
 	
 });
+
+
+
+function addStation(x) {
+	//x = button id
+	//get button id, add layer - filter
+	var stationPosition = stationList.indexOf(x);
+	var stationCross = stationListCross[stationPosition];
+	
+	map01.addLayer({
+		'id': x,
+		'type': 'circle',
+		'source': 'madisonStations',
+		'layout': {},
+		'paint': {
+			'circle-color': 'black',
+			'circule-radius': 8
+		},
+		'filter': ['==', 'Name', stationCross]
+	});
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 		

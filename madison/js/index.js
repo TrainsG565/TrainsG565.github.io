@@ -162,7 +162,32 @@ function stopScrolling(x) {
 
 
 
-var kohlButtonControl = true;
+
+
+
+
+
+var stationList = [
+	'kohlButton',
+	'mononaButton',
+	'yaharaButton',
+	'msnButton'
+];
+
+var stationListCross = [
+	'Kohl_station',
+	'Monona_station',
+	'Yahara_station',
+	'MSN_station'
+];
+
+
+
+
+
+
+
+var kohlButtonControl = false;
 function kohlButton(source) {
 	var button = document.getElementById(source);
 	
@@ -174,6 +199,8 @@ function kohlButton(source) {
 		button.style.background = '#2980B9';
 		button.style.color = '#fff';
 		kohlButtonControl = true;
+		
+		addStation(source);
 	}
 };
 
@@ -189,6 +216,8 @@ function mononaButton(source) {
 		button.style.background = '#2980B9';
 		button.style.color = '#fff';
 		mononaButtonControl = true;
+		
+		addStation(source);
 	}
 };
 
@@ -204,6 +233,8 @@ function yaharaButton(source) {
 		button.style.background = '#2980B9';
 		button.style.color = '#fff';
 		yaharaButtonControl = true;
+		
+		addStation(source);
 	}
 };
 
@@ -219,6 +250,8 @@ function msnButton(source) {
 		button.style.background = '#2980B9';
 		button.style.color = '#fff';
 		msnButtonControl = true;
+		
+		addStation(source);
 	}
 };
 
