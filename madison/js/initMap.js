@@ -7,7 +7,7 @@ mapboxgl.accessToken = 'pk.eyJ1Ijoic2t5d2lsbGlhbXMiLCJhIjoibUI4TlByNCJ9.9UuhBU3E
 var map01 = new mapboxgl.Map({
     container: 'map01',
     style: 'mapbox://styles/skywilliams/ciuxinskg00f92io46tlqruc3',
-    center: [-89.348880892901192, 43.1363520479551],
+    center: [-89.396691603682072, 43.068686375866029],
     zoom: 11,
     pitch: 0.1,
     attributionControl: false
@@ -24,6 +24,11 @@ map01.on('style.load', function () {
 	
 	map01.setPaintProperty('taxparcels', 'fill-extrude-base', 0);
 	map01.setPaintProperty('taxparcels', 'fill-opacity', 0.5);
+	
+	map01.setLayoutProperty('busstops', 'visibility', 'hidden');
+	map01.setLayoutProperty('bikeshare', 'visibility', 'hidden');
+	map01.setLayoutProperty('busroute', 'visibility', 'hidden');
+	map01.setLayoutProperty('bikepath', 'visibility', 'hidden');
 	
 	
 	
