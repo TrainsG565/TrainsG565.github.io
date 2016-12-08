@@ -111,6 +111,39 @@ body p {
 
 
 
+#kohlButton {
+	background: #2980B9;
+	color: #fff;
+}
+
+#mononaButton {
+	background: #E5E7E9;
+	color: black;
+	top:20vh;
+}
+
+#yaharaButton {
+	background: #E5E7E9;
+	color: black;
+	top:40vh;
+}
+
+#msnButton {
+	background: #E5E7E9;
+	color: black;
+	top:60vh;
+}
+
+.mapButton {
+	width:75px;
+	height:20vh;
+	z-index:10;
+	position: absolute;
+	text-align:center;
+	cursor:pointer;
+}
+
+
 
 
 

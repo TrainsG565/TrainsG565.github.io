@@ -149,7 +149,7 @@ function testFunction() {
 		menuControl1 = false;
 		stopScrolling(menuControl1);
 	}
-}
+};
 
 
 function stopScrolling(x) {
@@ -158,4 +158,75 @@ function stopScrolling(x) {
 	} else if (x == false) {
 		document.getElementById("myBody").style.overflow = "";
 	}
-}
+};
+
+
+
+var kohlButtonControl = true;
+function kohlButton(source) {
+	var button = document.getElementById(source);
+	
+	if (kohlButtonControl == true) {
+		button.style.background = '#E5E7E9';
+		button.style.color = 'black';
+		kohlButtonControl = false;
+	} else if (kohlButtonControl == false) {
+		button.style.background = '#2980B9';
+		button.style.color = '#fff';
+		kohlButtonControl = true;
+	}
+};
+
+var mononaButtonControl = false;
+function mononaButton(source) {
+	var button = document.getElementById(source);
+	
+	if (mononaButtonControl == true) {
+		button.style.background = '#E5E7E9';
+		button.style.color = 'black';
+		mononaButtonControl = false;
+	} else if (mononaButtonControl == false) {
+		button.style.background = '#2980B9';
+		button.style.color = '#fff';
+		mononaButtonControl = true;
+	}
+};
+
+var yaharaButtonControl = false;
+function yaharaButton(source) {
+	var button = document.getElementById(source);
+	
+	if (yaharaButtonControl == true) {
+		button.style.background = '#E5E7E9';
+		button.style.color = 'black';
+		yaharaButtonControl = false;
+	} else if (yaharaButtonControl == false) {
+		button.style.background = '#2980B9';
+		button.style.color = '#fff';
+		yaharaButtonControl = true;
+	}
+};
+
+var msnButtonControl = false;
+function msnButton(source) {
+	var button = document.getElementById(source);
+	
+	if (msnButtonControl == true) {
+		button.style.background = '#E5E7E9';
+		button.style.color = 'black';
+		msnButtonControl = false;
+	} else if (msnButtonControl == false) {
+		button.style.background = '#2980B9';
+		button.style.color = '#fff';
+		msnButtonControl = true;
+	}
+};
+
+
+
+
+
+
+
+
+

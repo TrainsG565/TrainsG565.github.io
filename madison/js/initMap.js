@@ -23,8 +23,9 @@ map01.on('style.load', function () {
 	});
 	
 	map01.setPaintProperty('taxparcels', 'fill-extrude-base', 0);
-	
 	map01.setPaintProperty('taxparcels', 'fill-opacity', 0.5);
+	
+	
 	
 	map01.addSource('madisonStations', {
 		'type': 'geojson',
