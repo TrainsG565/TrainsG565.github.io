@@ -155,7 +155,7 @@ map01.on('load', function() {
 		'source': 'amtrakAreasWI',
 		'layout': {},
 		'paint': {
-			'fill-color': 'black',
+			'fill-color': '#EC7063',
 			'fill-opacity': 0.75
 		}
 	});
@@ -166,7 +166,7 @@ map01.on('load', function() {
 		'source': 'amtrakCitiesIL',
 		'layout': {},
 		'paint': {
-			'circle-color': 'black',
+			'circle-color': '#EC7063',
 			'circle-radius': 4
 		}
 	});
@@ -177,7 +177,7 @@ map01.on('load', function() {
 		'source': 'amtrakCitiesMN',
 		'layout': {},
 		'paint': {
-			'circle-color': 'black',
+			'circle-color': '#EC7063',
 			'circle-radius': 4
 		}
 	});
@@ -188,7 +188,7 @@ map01.on('load', function() {
 		'source': 'kohlRail',
 		'layout': {},
 		'paint': {
-			'line-color': 'black',
+			'line-color': '#2471A3',
 			'line-width': 2.5
 		}
 	});
