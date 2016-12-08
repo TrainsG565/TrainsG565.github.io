@@ -91,7 +91,7 @@ body p {
 
 #map02 {
 	width: 100%;
-	height: 100vh;
+	height: 80vh;
 	margin-bottom: 75px;
 }
 
@@ -108,6 +108,10 @@ body p {
 	font-family: 'Cardo', serif;
 	font-size: 16px;
 }
+
+
+
+
 
 
 
@@ -142,6 +146,9 @@ body p {
 	text-align:center;
 	cursor:pointer;
 }
+
+
+
 
 
 
@@ -183,6 +190,75 @@ body p {
 	right:0;
 }
 
+
+
+
+
+
+
+#kohlButton2 {
+	background: #566573;
+	color: white;
+}
+
+#mononaButton2 {
+	background: #566573;
+	color: white;
+	top:20vh;
+}
+
+#yaharaButton2 {
+	background: #566573;
+	color: white;
+	top:40vh;
+}
+
+#msnButton2 {
+	background: #566573;
+	color: white;
+	top:60vh;
+}
+
+
+
+
+
+
+#demo1Button {
+	background: #E5E7E9;
+	color: black;
+	cursor: not-allowed;
+}
+
+#demo2Button {
+	background: #E5E7E9;
+	color: black;
+	top:20vh;
+	cursor: not-allowed;
+}
+
+#parcel1Button {
+	background: #E5E7E9;
+	color: black;
+	top:40vh;
+	cursor: not-allowed;
+}
+
+#parcel2Button {
+	background: #E5E7E9;
+	color: black;
+	top:60vh;
+	cursor: not-allowed;
+}
+
+.mapButton2 {
+	width:75px;
+	height:20vh;
+	z-index:10;
+	position: absolute;
+	text-align:center;
+	right:0;
+}
 
 
 

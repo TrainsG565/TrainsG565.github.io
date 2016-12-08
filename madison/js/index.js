@@ -305,24 +305,98 @@ function bike2Button(source) {
 
 
 function activateBuffers() {
-	document.getElementById('bus1Button').style.cursor = 'pointer';
-	document.getElementById('bus2Button').style.cursor = 'pointer';
-	document.getElementById('bike1Button').style.cursor = 'pointer';
-	document.getElementById('bike2Button').style.cursor = 'pointer';
 	
-	document.getElementById('bus1Button').style.background = '#566573';
-	document.getElementById('bus2Button').style.background = '#566573';
-	document.getElementById('bike1Button').stye.background = '#566573';
-	document.getElementById('bike2Button').style.background = '#566573';
-	
-	document.getElementById('bus1Button').style.color = '#fff';
-	document.getElementById('bus2Button').style.color = '#fff';
-	document.getElementById('bike1Button').stye.color = '#fff';
-	document.getElementById('bike2Button').style.color = '#fff';
 };
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+var kohlButtonControl2 = false;
+function kohlButton2(source) {
+	var button = document.getElementById(source);
+	
+	if (kohlButtonControl2 == true) {
+		button.style.background = '#566573';
+		button.style.color = 'white';
+		kohlButtonControl2 = false;
+		
+		removeStation2(source);
+	} else if (kohlButtonControl2 == false) {
+		button.style.background = '#2980B9';
+		button.style.color = '#fff';
+		kohlButtonControl2 = true;
+		
+		addStation2(source);
+	}
+};
+
+var mononaButtonControl2 = false;
+function mononaButton2(source) {
+	var button = document.getElementById(source);
+	
+	if (mononaButtonControl2 == true) {
+		button.style.background = '#566573';
+		button.style.color = 'white';
+		mononaButtonControl2 = false;
+		
+		removeStation2(source);
+	} else if (mononaButtonControl2 == false) {
+		button.style.background = '#2980B9';
+		button.style.color = '#fff';
+		mononaButtonControl2 = true;
+		
+		addStation2(source);
+	}
+};
+
+var yaharaButtonControl2 = false;
+function yaharaButton2(source) {
+	var button = document.getElementById(source);
+	
+	if (yaharaButtonControl2 == true) {
+		button.style.background = '#566573';
+		button.style.color = 'white';
+		yaharaButtonControl2 = false;
+		
+		removeStation2(source);
+	} else if (yaharaButtonControl2 == false) {
+		button.style.background = '#2980B9';
+		button.style.color = '#fff';
+		yaharaButtonControl2 = true;
+		
+		addStation2(source);
+	}
+};
+
+var msnButtonControl2 = false;
+function msnButton2(source) {
+	var button = document.getElementById(source);
+	
+	if (msnButtonControl2 == true) {
+		button.style.background = '#E5E7E9';
+		button.style.color = 'black';
+		msnButtonControl2 = false;
+		
+		removeStation2(source);
+	} else if (msnButtonControl2 == false) {
+		button.style.background = '#2980B9';
+		button.style.color = '#fff';
+		msnButtonControl2 = true;
+		
+		addStation2(source);
+	}
+};
 
 
 
