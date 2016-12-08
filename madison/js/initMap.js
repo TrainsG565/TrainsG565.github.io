@@ -25,10 +25,10 @@ map01.on('style.load', function () {
 	map01.setPaintProperty('taxparcels', 'fill-extrude-base', 0);
 	map01.setPaintProperty('taxparcels', 'fill-opacity', 0.5);
 	
-	map01.setLayoutProperty('busstops', 'visibility', 'hidden');
-	map01.setLayoutProperty('bikeshare', 'visibility', 'hidden');
-	map01.setLayoutProperty('busroute', 'visibility', 'hidden');
-	map01.setLayoutProperty('bikepath', 'visibility', 'hidden');
+	map01.setLayoutProperty('busstops', 'visibility', 'none');
+	map01.setLayoutProperty('bikeshare', 'visibility', 'none');
+	map01.setLayoutProperty('busroute', 'visibility', 'none');
+	map01.setLayoutProperty('bikepath', 'visibility', 'none');
 	
 	
 	
