@@ -1,0 +1,11 @@
+{
+"type": "FeatureCollection",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+                                                                                
+"features": [
+{ "type": "Feature", "properties": { "osm_id": "151370967", "code": 1002, "fclass": "town", "population": 15754, "name": "Red Wing" }, "geometry": { "type": "Point", "coordinates": [ -92.5338013, 44.5624676 ] } },
+{ "type": "Feature", "properties": { "osm_id": "151538698", "code": 1001, "fclass": "city", "population": 410939, "name": "Minneapolis" }, "geometry": { "type": "Point", "coordinates": [ -93.2654692, 44.9772995 ] } },
+{ "type": "Feature", "properties": { "osm_id": "151799511", "code": 1002, "fclass": "town", "population": 26533, "name": "Winona" }, "geometry": { "type": "Point", "coordinates": [ -91.6393152, 44.049963 ] } },
+{ "type": "Feature", "properties": { "osm_id": "316967589", "code": 1041, "fclass": "county", "population": 0, "name": "Winona" }, "geometry": { "type": "Point", "coordinates": [ -91.7807784, 43.9582272 ] } }
+]
+}

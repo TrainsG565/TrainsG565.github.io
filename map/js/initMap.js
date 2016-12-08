@@ -38,6 +38,32 @@ map01.on('load', function() {
 		'data': '/map/data/wisconsinStops.geojson'
 	});
 	
+	map01.addSource('allRailWI', {
+		'type': 'geojson',
+		'data': '/map/data/needUpload/allRailWI.geojson'
+	});
+	
+	map01.addSource('amtrakAreasWI', {
+		'type': 'geojson',
+		'data': '/map/data/needUpload/amtrakAreasWI.geojson'
+	});
+	
+	map01.addSource('amtrakCitiesIL', {
+		'type': 'geojson',
+		'data': '/map/data/needUpload/amtrakCitiesIL.geojson'
+	});
+	
+	map01.addSource('amtrakCitiesMN', {
+		'type': 'geojson',
+		'data': '/map/data/needUpload/amtrakCitiesMN.geojson'
+	});
+	
+	map01.addSource('kohlRail', {
+		'type': 'geojson',
+		'data': '/map/data/needUpload/kohlRail.geojson'
+	});
+	
+	
 	
 	map01.addLayer({
 		'id': 'amtrak',
@@ -99,6 +125,63 @@ map01.on('load', function() {
 			'circle-radius': 4
 		}
 	});
+	
+	map01.addLayer({
+		'id': 'allRailWI',
+		'type': 'line',
+		'source': 'allRailWI',
+		'layout': {},
+		'paint': {
+			'line-color': '#2471A3',
+			'line-width': 2.5
+		}
+	});
+	
+	map01.addLayer({
+		'id': 'amtrakAreasWI',
+		'type': 'fill',
+		'source': 'amtrakAreasWI',
+		'layout': {},
+		'paint': {
+			'fill-color': 'black',
+			'fill-opacity': 0.75
+		}
+	});
+	
+	map01.addLayer({
+		'id': 'amtrakCitiesIL',
+		'type': 'circle',
+		'source': 'amtrakCitiesIL',
+		'layout': {},
+		'paint': {
+			'circle-color': 'black',
+			'circle-radius': 4
+		}
+	});
+	
+	map01.addLayer({
+		'id': 'amtrakCitiesMN',
+		'type': 'circle',
+		'source': 'amtrakCitiesMN',
+		'layout': {},
+		'paint': {
+			'circle-color': 'black',
+			'circle-radius': 4
+		}
+	});
+	
+	map01.addLayer({
+		'id': 'kohlRail',
+		'type': 'line',
+		'source': 'kohlRail',
+		'layout': {},
+		'paint': {
+			'line-color': 'black',
+			'line-width': 2.5
+		}
+	});
+	
+	
 	
 	
 });
