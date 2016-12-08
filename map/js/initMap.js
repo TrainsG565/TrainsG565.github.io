@@ -200,10 +200,10 @@ map01.on('load', function() {
     	closeOnClick: false
 	});
 	
-	map.on('mousemove', function(e) {
-    	var features = map.queryRenderedFeatures(e.point, { layers: hoverLayers });
+	map01.on('mousemove', function(e) {
+    	var features = map01.queryRenderedFeatures(e.point, { layers: hoverLayers });
     	// Change the cursor style as a UI indicator.
-    	map.getCanvas().style.cursor = (features.length) ? 'pointer' : '';
+    	map01.getCanvas().style.cursor = (features.length) ? 'pointer' : '';
 
     	if (!features.length) {
        		popup.remove();
