@@ -314,7 +314,7 @@ function bus2Button(source) {
 	if (bus2ButtonControl == true && buffer1Control == true) {
 		button.style.background = '#566573';
 		button.style.color = 'white';
-		bu21ButtonControl = false;
+		bu2ButtonControl = false;
 	} else if (bus2ButtonControl == false && buffer1Control == true) {
 		button.style.background = '#2980B9';
 		button.style.color = '#fff';
