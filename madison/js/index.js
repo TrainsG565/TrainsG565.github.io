@@ -271,7 +271,7 @@ function msnButton(source) {
 	
 	if (msnButtonControl == true) {
 		button.style.background = '#E5E7E9';
-		button.style.color = 'black';
+		button.style.color = 'white';
 		msnButtonControl = false;
 		
 		removeStation(source);
@@ -296,8 +296,8 @@ function bus1Button(source) {
 	var button = document.getElementById(source);
 	
 	if (bus1ButtonControl == true && buffer1Control == true) {
-		button.style.background = '#E5E7E9';
-		button.style.color = 'black';
+		button.style.background = '#566573';
+		button.style.color = 'white';
 		bus1ButtonControl = false;
 	} else if (bus1ButtonControl == false && buffer1Control == true) {
 		button.style.background = '#2980B9';
@@ -312,8 +312,8 @@ function bus2Button(source) {
 	var button = document.getElementById(source);
 	
 	if (bus2ButtonControl == true && buffer1Control == true) {
-		button.style.background = '#E5E7E9';
-		button.style.color = 'black';
+		button.style.background = '#566573';
+		button.style.color = 'white';
 		bu21ButtonControl = false;
 	} else if (bus2ButtonControl == false && buffer1Control == true) {
 		button.style.background = '#2980B9';
@@ -327,8 +327,8 @@ function bike1Button(source) {
 	var button = document.getElementById(source);
 	
 	if (bike1ButtonControl == true && buffer1Control == true) {
-		button.style.background = '#E5E7E9';
-		button.style.color = 'black';
+		button.style.background = '#566573';
+		button.style.color = 'white';
 		bike1ButtonControl = false;
 	} else if (bike1ButtonControl == false && buffer1Control == true) {
 		button.style.background = '#2980B9';
@@ -342,8 +342,8 @@ function bike2Button(source) {
 	var button = document.getElementById(source);
 	
 	if (bike2ButtonControl == true && buffer1Control == true) {
-		button.style.background = '#E5E7E9';
-		button.style.color = 'black';
+		button.style.background = '#566573';
+		button.style.color = 'white';
 		bike2ButtonControl = false;
 	} else if (bike2ButtonControl == false && buffer1Control == true) {
 		button.style.background = '#2980B9';
