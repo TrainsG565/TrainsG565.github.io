@@ -527,8 +527,8 @@ function demo1Button(source) {
 	var button = document.getElementById(source);
 	
 	if (demo1ButtonControl == true && buffer2Control == true) {
-		button.style.background = '#E5E7E9';
-		button.style.color = 'black';
+		button.style.background = '#566573';
+		button.style.color = 'white';
 		demo1ButtonControl = false;
 	} else if (demo1ButtonControl == false && buffer2Control == true) {
 		button.style.background = '#2980B9';
@@ -543,8 +543,8 @@ function demo2Button(source) {
 	var button = document.getElementById(source);
 	
 	if (demo2ButtonControl == true && buffer2Control == true) {
-		button.style.background = '#E5E7E9';
-		button.style.color = 'black';
+		button.style.background = '#566573';
+		button.style.color = 'white';
 		demo2ButtonControl = false;
 	} else if (demo2ButtonControl == false && buffer2Control == true) {
 		button.style.background = '#2980B9';
@@ -558,8 +558,8 @@ function parcel1Button(source) {
 	var button = document.getElementById(source);
 	
 	if (parcel1ButtonControl == true && buffer2Control == true) {
-		button.style.background = '#E5E7E9';
-		button.style.color = 'black';
+		button.style.background = '#566573';
+		button.style.color = 'white';
 		parcel1ButtonControl = false;
 	} else if (parcel1ButtonControl == false && buffer2Control == true) {
 		button.style.background = '#2980B9';
@@ -573,8 +573,8 @@ function parcel2Button(source) {
 	var button = document.getElementById(source);
 	
 	if (parcel2ButtonControl == true && buffer2Control == true) {
-		button.style.background = '#E5E7E9';
-		button.style.color = 'black';
+		button.style.background = '#566573';
+		button.style.color = 'white';
 		parcel2ButtonControl = false;
 	} else if (parcel2ButtonControl == false && buffer2Control == true) {
 		button.style.background = '#2980B9';
@@ -589,7 +589,7 @@ function parcel2Button(source) {
 var buffer2Control = false;
 function activateBuffers2() {
 	if (buffer2Control == true) {
-		return;
+		buffer2Control = true;
 	} else if (buffer2Control == false) {
 		buffer1Control = true;
 		document.getElementById('demo1Button').style.background = '#566573';
@@ -609,6 +609,30 @@ function activateBuffers2() {
 	}
 };
 
+
+function deactivateBuffers2() {
+	buffer2Control = false;
+	
+	demo1ButtonControl = false;
+	demo2ButtonControl = false;
+	parcel1ButtonControl = false;
+	parcel2ButtonControl = false;
+	
+	document.getElementById('bus1Button').style.background = '#E5E7E9';
+	document.getElementById('bus2Button').style.background = '#E5E7E9';
+	document.getElementById('bike1Button').style.background = '#E5E7E9';
+	document.getElementById('bike2Button').style.background = '#E5E7E9';
+	
+	document.getElementById('bus1Button').style.color = 'black';
+	document.getElementById('bus2Button').style.color = 'black';
+	document.getElementById('bike1Button').style.color = 'black';
+	document.getElementById('bike2Button').style.color = 'black';
+	
+	document.getElementById('bus1Button').style.cursor = 'not-allowed';
+	document.getElementById('bus2Button').style.cursor = 'not-allowed';
+	document.getElementById('bike1Button').style.cursor = 'not-allowed';
+	document.getElementById('bike2Button').style.cursor = 'not-allowed';
+};
 
 
 

@@ -66,8 +66,11 @@ function addStation2(x) {
 
 function removeStation2(x) {
 	map02.removeLayer(x);
+	
+	if (kohlButtonControl2 == false && mononaButtonControl2 == false && yaharaButtonControl2 == false && msnButtonControl2 == false) {
+		deactivateBuffers2();
+	}
 };
-
 
 
 
