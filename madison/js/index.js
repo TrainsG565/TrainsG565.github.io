@@ -283,26 +283,69 @@ function msnButton(source) {
 
 var bus1ButtonControl = false;
 function bus1Button(source) {
+	var button = document.getElementById(source);
+	
+	if (bus1ButtonControl == true && buffer1Control == true) {
+		button.style.background = '#E5E7E9';
+		button.style.color = 'black';
+		bus1ButtonControl = false;
+	} else if (bus1ButtonControl == false && buffer1Control == true) {
+		button.style.background = '#2980B9';
+		button.style.color = '#fff';
+		bus1ButtonControl = true;
+	}
 
 };
 
 var bus2ButtonControl = false;
 function bus2Button(source) {
-
+	var button = document.getElementById(source);
+	
+	if (bus2ButtonControl == true && buffer1Control == true) {
+		button.style.background = '#E5E7E9';
+		button.style.color = 'black';
+		bu21ButtonControl = false;
+	} else if (bus2ButtonControl == false && buffer1Control == true) {
+		button.style.background = '#2980B9';
+		button.style.color = '#fff';
+		bus2ButtonControl = true;
+	}
 };
 
 var bike1ButtonControl = false;
 function bike1Button(source) {
-
+	var button = document.getElementById(source);
+	
+	if (bike1ButtonControl == true && buffer1Control == true) {
+		button.style.background = '#E5E7E9';
+		button.style.color = 'black';
+		bike1ButtonControl = false;
+	} else if (bike1ButtonControl == false && buffer1Control == true) {
+		button.style.background = '#2980B9';
+		button.style.color = '#fff';
+		bike1ButtonControl = true;
+	}
 };
 
 var bike2ButtonControl = false;
 function bike2Button(source) {
-
+	var button = document.getElementById(source);
+	
+	if (bike2ButtonControl == true && buffer1Control == true) {
+		button.style.background = '#E5E7E9';
+		button.style.color = 'black';
+		bike2ButtonControl = false;
+	} else if (bike2ButtonControl == false && buffer1Control == true) {
+		button.style.background = '#2980B9';
+		button.style.color = '#fff';
+		bike2ButtonControl = true;
+	}
 };
 
 
+var buffer1Control = false;
 function activateBuffers() {
+	buffer1Control = true;
 	document.getElementById('bus1Button').style.background = '#566573';
 	document.getElementById('bus2Button').style.background = '#566573';
 	document.getElementById('bike1Button').style.background = '#566573';
@@ -317,7 +360,6 @@ function activateBuffers() {
 	document.getElementById('bus2Button').style.cursor = 'pointer';
 	document.getElementById('bike1Button').style.cursor = 'pointer';
 	document.getElementById('bike2Button').style.cursor = 'pointer';
-	
 };
 
 
