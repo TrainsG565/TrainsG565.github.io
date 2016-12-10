@@ -195,6 +195,13 @@ var bufferList = [
 	'bike2Button'
 ];
 
+var bufferList2 = [
+	'demo1Button',
+	'demo2Button',
+	'parcel1Button',
+	'parcel2Button'
+];
+
 var bufferListCross = [	
 ];
 
@@ -206,6 +213,11 @@ var bus2List = [
 ];
 var bike2List = [
 ];
+
+var demo1List = [];
+var demo2List = [];
+var parcel1List = [];
+var parcel2List = [];
 
 
 
@@ -568,10 +580,16 @@ function demo1Button(source) {
 		button.style.background = '#566573';
 		button.style.color = 'white';
 		demo1ButtonControl = false;
+		
+		// remove bus 1km buffers, defined from source (parameter)
+		removeBuffers2(source);
 	} else if (demo1ButtonControl == false && buffer2Control == true) {
 		button.style.background = '#2980B9';
 		button.style.color = '#fff';
 		demo1ButtonControl = true;
+		
+		// add bus 1km buffers, defined from source (parameter)
+		addBuffers2(source);
 	}
 
 };
@@ -584,10 +602,16 @@ function demo2Button(source) {
 		button.style.background = '#566573';
 		button.style.color = 'white';
 		demo2ButtonControl = false;
+		
+		// remove bus 1km buffers, defined from source (parameter)
+		removeBuffers2(source);
 	} else if (demo2ButtonControl == false && buffer2Control == true) {
 		button.style.background = '#2980B9';
 		button.style.color = '#fff';
 		demo2ButtonControl = true;
+		
+		// add bus 1km buffers, defined from source (parameter)
+		addBuffers2(source);
 	}
 };
 
@@ -599,10 +623,16 @@ function parcel1Button(source) {
 		button.style.background = '#566573';
 		button.style.color = 'white';
 		parcel1ButtonControl = false;
+		
+		// remove bus 1km buffers, defined from source (parameter)
+		removeBuffers2(source);
 	} else if (parcel1ButtonControl == false && buffer2Control == true) {
 		button.style.background = '#2980B9';
 		button.style.color = '#fff';
 		parcel1ButtonControl = true;
+		
+		// add bus 1km buffers, defined from source (parameter)
+		addBuffers2(source);
 	}
 };
 
@@ -614,10 +644,16 @@ function parcel2Button(source) {
 		button.style.background = '#566573';
 		button.style.color = 'white';
 		parcel2ButtonControl = false;
+		
+		// remove bus 1km buffers, defined from source (parameter)
+		removeBuffers2(source);
 	} else if (parcel2ButtonControl == false && buffer2Control == true) {
 		button.style.background = '#2980B9';
 		button.style.color = '#fff';
 		parcel2ButtonControl = true;
+		
+		// add bus 1km buffers, defined from source (parameter)
+		addBuffers2(source);
 	}
 };
 

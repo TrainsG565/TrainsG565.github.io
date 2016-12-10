@@ -69,6 +69,66 @@ function removeStation2(x) {
 
 
 
+function addBuffers2(x) {
+	
+	var bufferPosition = bufferList2.indexOf(x); // gets either demo1Button, demo2Button, parcel1Button, parcel2Button
+	//var bufferCross = bufferListCross[bufferPosition]; 
+	
+	var i;
+	for (i=0; i < currentStationList2.length; i++) {
+		var position = stationList2.indexOf(currentStationList2[i]);
+		
+		if (position == 0) {
+			if (bufferPosition == 0) {
+				console.log('add demo 1km kohl');
+			} else if (bufferPosition == 1) {
+				console.log('add demo 2km kohl');
+			} else if (bufferPosition == 2) {
+				console.log('add parcel 1km kohl');
+			} else if (bufferPosition == 3) {
+				console.log('add parcel 2km kohl');
+			}
+		} else if (position == 1) {
+			if (bufferPosition == 0) {
+				console.log('add demo 1km monona');
+			} else if (bufferPosition == 1) {
+				console.log('add demo 2km monona');
+			} else if (bufferPosition == 2) {
+				console.log('add parcel 1km monona');
+			} else if (bufferPosition == 3) {
+				console.log('add parcel 2km monona');
+			}
+		} else if (position == 2) {
+			if (bufferPosition == 0) {
+				console.log('add demo 1km yahara');
+			} else if (bufferPosition == 1) {
+				console.log('add demo 2km yahara');
+			} else if (bufferPosition == 2) {
+				console.log('add parcel 1km yahara');
+			} else if (bufferPosition == 3) {
+				console.log('add parcel 2km yahara');
+			}
+		} else if (position == 3) {
+			if (bufferPosition == 0) {
+				console.log('add demo 1km msn');
+			} else if (bufferPosition == 1) {
+				console.log('add demo 2km msn');
+			} else if (bufferPosition == 2) {
+				console.log('add parcel 1km msn');
+			} else if (bufferPosition == 3) {
+				console.log('add parcel 2km msn');
+			}
+		}
+	}
+};
+
+function removeBuffers2(x) {
+	
+};
+
+
+
+
 
 
 
