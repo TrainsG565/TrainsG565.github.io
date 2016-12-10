@@ -299,10 +299,16 @@ function bus1Button(source) {
 		button.style.background = '#566573';
 		button.style.color = 'white';
 		bus1ButtonControl = false;
+		
+		// remove bus 1km buffers, defined from source (parameter)
+		removeBuffers(source);
 	} else if (bus1ButtonControl == false && buffer1Control == true) {
 		button.style.background = '#2980B9';
 		button.style.color = '#fff';
 		bus1ButtonControl = true;
+		
+		// add bus 1km buffers, defined from source (parameter)
+		addBuffers(source);
 	}
 
 };
@@ -315,10 +321,16 @@ function bus2Button(source) {
 		button.style.background = '#566573';
 		button.style.color = 'white';
 		bus2ButtonControl = false;
+		
+		// remove bus 1km buffers, defined from source (parameter)
+		removeBuffers(source);
 	} else if (bus2ButtonControl == false && buffer1Control == true) {
 		button.style.background = '#2980B9';
 		button.style.color = '#fff';
 		bus2ButtonControl = true;
+		
+		// add bus 1km buffers, defined from source (parameter)
+		addBuffers(source);
 	}
 };
 
@@ -330,10 +342,16 @@ function bike1Button(source) {
 		button.style.background = '#566573';
 		button.style.color = 'white';
 		bike1ButtonControl = false;
+		
+		// remove bus 1km buffers, defined from source (parameter)
+		removeBuffers(source);
 	} else if (bike1ButtonControl == false && buffer1Control == true) {
 		button.style.background = '#2980B9';
 		button.style.color = '#fff';
 		bike1ButtonControl = true;
+		
+		// add bus 1km buffers, defined from source (parameter)
+		addBuffers(source);
 	}
 };
 
@@ -345,10 +363,16 @@ function bike2Button(source) {
 		button.style.background = '#566573';
 		button.style.color = 'white';
 		bike2ButtonControl = false;
+		
+		// remove bus 1km buffers, defined from source (parameter)
+		removeBuffers(source);
 	} else if (bike2ButtonControl == false && buffer1Control == true) {
 		button.style.background = '#2980B9';
 		button.style.color = '#fff';
 		bike2ButtonControl = true;
+		
+		// add bus 1km buffers, defined from source (parameter)
+		addBuffers(source);
 	}
 };
 

@@ -67,6 +67,17 @@ function removeStation(x) {
 
 
 
+function addBuffers(x) {
+	// check which stations are activated, then add buffers for those stations
+};
+
+function removeBuffers(x) {
+
+};
+
+
+
+
 
 
 
