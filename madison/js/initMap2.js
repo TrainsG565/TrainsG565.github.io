@@ -1,7 +1,5 @@
 
 
-		
-
 // Initialize the map
 var map02 = new mapboxgl.Map({
     container: 'map02',
@@ -11,9 +9,6 @@ var map02 = new mapboxgl.Map({
     pitch: 0.1,
     attributionControl: false
 });
-
-
-
 
 map02.on('style.load', function () {
 	map02.setPaintProperty('taxparcels', 'fill-extrude-height', {
@@ -29,8 +24,6 @@ map02.on('style.load', function () {
 	map02.setLayoutProperty('busroute', 'visibility', 'none');
 	map02.setLayoutProperty('bikepath', 'visibility', 'none');
 	
-	
-	
 	map02.addSource('madisonStations', {
 		'type': 'geojson',
 		'data': '/madison/data/stations_v2.geojson'
@@ -40,9 +33,7 @@ map02.on('style.load', function () {
 		'type': 'geojson',
 		'data': '/madison/data/upload/1km/busKohl_1.geojson'
 	});
-	
 });
-
 
 
 function addStation2(x) {

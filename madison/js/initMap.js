@@ -1,8 +1,6 @@
 // Access Token
 mapboxgl.accessToken = 'pk.eyJ1Ijoic2t5d2lsbGlhbXMiLCJhIjoibUI4TlByNCJ9.9UuhBU3ElNiesrd-BcTdPQ';
 
-		
-
 // Initialize the map
 var map01 = new mapboxgl.Map({
     container: 'map01',
@@ -12,9 +10,6 @@ var map01 = new mapboxgl.Map({
     pitch: 0.1,
     attributionControl: false
 });
-
-
-
 
 map01.on('style.load', function () {
 	map01.setPaintProperty('taxparcels', 'fill-extrude-height', {
@@ -30,8 +25,6 @@ map01.on('style.load', function () {
 	map01.setLayoutProperty('busroute', 'visibility', 'none');
 	map01.setLayoutProperty('bikepath', 'visibility', 'none');
 	
-	
-	
 	map01.addSource('madisonStations', {
 		'type': 'geojson',
 		'data': '/madison/data/stations_v2.geojson'
@@ -41,10 +34,7 @@ map01.on('style.load', function () {
 		'type': 'geojson',
 		'data': '/madison/data/upload/1km/busKohl_1.geojson'
 	});
-	
-	
 });
-
 
 
 function addStation(x) {

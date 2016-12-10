@@ -270,7 +270,7 @@ function msnButton(source) {
 	var button = document.getElementById(source);
 	
 	if (msnButtonControl == true) {
-		button.style.background = '#E5E7E9';
+		button.style.background = '#566573';
 		button.style.color = 'white';
 		msnButtonControl = false;
 		
@@ -500,8 +500,8 @@ function msnButton2(source) {
 	var button = document.getElementById(source);
 	
 	if (msnButtonControl2 == true) {
-		button.style.background = '#E5E7E9';
-		button.style.color = 'black';
+		button.style.background = '#566573';
+		button.style.color = 'white';
 		msnButtonControl2 = false;
 		
 		removeStation2(source);
