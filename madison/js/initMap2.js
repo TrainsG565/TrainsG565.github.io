@@ -37,7 +37,7 @@ map02.on('style.load', function () {
 
 
 function addStation2(x) {
-	currentStationList2.push(source);
+	currentStationList2.push(x);
 	//x = button id
 	//get button id, add layer - filter
 	var stationPosition = stationList2.indexOf(x);
