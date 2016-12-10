@@ -174,6 +174,13 @@ var stationList = [
 	'msnButton'
 ];
 
+var stationList2 = [
+	'kohlButton2',
+	'mononaButton2',
+	'yaharaButton2',
+	'msnButton2'
+];
+
 var stationListCross = [
 	'Kohl_station',
 	'Monona_station',
@@ -406,6 +413,7 @@ function kohlButton2(source) {
 		kohlButtonControl2 = true;
 		
 		addStation2(source);
+		activateBuffers2();
 	}
 };
 
@@ -425,6 +433,7 @@ function mononaButton2(source) {
 		mononaButtonControl2 = true;
 		
 		addStation2(source);
+		activateBuffers2();
 	}
 };
 
@@ -444,6 +453,7 @@ function yaharaButton2(source) {
 		yaharaButtonControl2 = true;
 		
 		addStation2(source);
+		activateBuffers2();
 	}
 };
 
@@ -463,6 +473,7 @@ function msnButton2(source) {
 		msnButtonControl2 = true;
 		
 		addStation2(source);
+		activateBuffers2();
 	}
 };
 
