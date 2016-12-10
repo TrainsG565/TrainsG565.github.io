@@ -234,6 +234,7 @@ function mononaButton(source) {
 		mononaButtonControl = true;
 		
 		addStation(source);
+		activateBuffers();
 	}
 };
 
@@ -253,6 +254,7 @@ function yaharaButton(source) {
 		yaharaButtonControl = true;
 		
 		addStation(source);
+		activateBuffers();
 	}
 };
 
@@ -272,6 +274,7 @@ function msnButton(source) {
 		msnButtonControl = true;
 		
 		addStation(source);
+		activateBuffers();
 	}
 };
 
@@ -345,21 +348,25 @@ function bike2Button(source) {
 
 var buffer1Control = false;
 function activateBuffers() {
-	buffer1Control = true;
-	document.getElementById('bus1Button').style.background = '#566573';
-	document.getElementById('bus2Button').style.background = '#566573';
-	document.getElementById('bike1Button').style.background = '#566573';
-	document.getElementById('bike2Button').style.background = '#566573';
+	if (buffer1Control == true) {
+		return;
+	} else if (buffer1Control == false) {
+		buffer1Control = true;
+		document.getElementById('bus1Button').style.background = '#566573';
+		document.getElementById('bus2Button').style.background = '#566573';
+		document.getElementById('bike1Button').style.background = '#566573';
+		document.getElementById('bike2Button').style.background = '#566573';
 	
-	document.getElementById('bus1Button').style.color = '#fff';
-	document.getElementById('bus2Button').style.color = '#fff';
-	document.getElementById('bike1Button').style.color = '#fff';
-	document.getElementById('bike2Button').style.color = '#fff';
+		document.getElementById('bus1Button').style.color = '#fff';
+		document.getElementById('bus2Button').style.color = '#fff';
+		document.getElementById('bike1Button').style.color = '#fff';
+		document.getElementById('bike2Button').style.color = '#fff';
 	
-	document.getElementById('bus1Button').style.cursor = 'pointer';
-	document.getElementById('bus2Button').style.cursor = 'pointer';
-	document.getElementById('bike1Button').style.cursor = 'pointer';
-	document.getElementById('bike2Button').style.cursor = 'pointer';
+		document.getElementById('bus1Button').style.cursor = 'pointer';
+		document.getElementById('bus2Button').style.cursor = 'pointer';
+		document.getElementById('bike1Button').style.cursor = 'pointer';
+		document.getElementById('bike2Button').style.cursor = 'pointer';
+	}
 };
 
 
@@ -456,6 +463,100 @@ function msnButton2(source) {
 		msnButtonControl2 = true;
 		
 		addStation2(source);
+	}
+};
+
+
+
+
+
+
+
+
+var demo1ButtonControl = false;
+function demo1Button(source) {
+	var button = document.getElementById(source);
+	
+	if (demo1ButtonControl == true && buffer2Control == true) {
+		button.style.background = '#E5E7E9';
+		button.style.color = 'black';
+		demo1ButtonControl = false;
+	} else if (demo1ButtonControl == false && buffer2Control == true) {
+		button.style.background = '#2980B9';
+		button.style.color = '#fff';
+		demo1ButtonControl = true;
+	}
+
+};
+
+var demo2ButtonControl = false;
+function demo2Button(source) {
+	var button = document.getElementById(source);
+	
+	if (demo2ButtonControl == true && buffer2Control == true) {
+		button.style.background = '#E5E7E9';
+		button.style.color = 'black';
+		demo2ButtonControl = false;
+	} else if (demo2ButtonControl == false && buffer2Control == true) {
+		button.style.background = '#2980B9';
+		button.style.color = '#fff';
+		demo2ButtonControl = true;
+	}
+};
+
+var parcel1ButtonControl = false;
+function parcel1Button(source) {
+	var button = document.getElementById(source);
+	
+	if (parcel1ButtonControl == true && buffer2Control == true) {
+		button.style.background = '#E5E7E9';
+		button.style.color = 'black';
+		parcel1ButtonControl = false;
+	} else if (parcel1ButtonControl == false && buffer2Control == true) {
+		button.style.background = '#2980B9';
+		button.style.color = '#fff';
+		parcel1ButtonControl = true;
+	}
+};
+
+var parcel2ButtonControl = false;
+function parcel2Button(source) {
+	var button = document.getElementById(source);
+	
+	if (parcel2ButtonControl == true && buffer2Control == true) {
+		button.style.background = '#E5E7E9';
+		button.style.color = 'black';
+		parcel2ButtonControl = false;
+	} else if (parcel2ButtonControl == false && buffer2Control == true) {
+		button.style.background = '#2980B9';
+		button.style.color = '#fff';
+		parcel2ButtonControl = true;
+	}
+};
+
+
+
+
+var buffer2Control = false;
+function activateBuffers2() {
+	if (buffer2Control == true) {
+		return;
+	} else if (buffer2Control == false) {
+		buffer1Control = true;
+		document.getElementById('demo1Button').style.background = '#566573';
+		document.getElementById('demo2Button').style.background = '#566573';
+		document.getElementById('parcel1Button').style.background = '#566573';
+		document.getElementById('parcel2Button').style.background = '#566573';
+	
+		document.getElementById('demo1Button').style.color = '#fff';
+		document.getElementById('demo2Button').style.color = '#fff';
+		document.getElementById('parcel1Button').style.color = '#fff';
+		document.getElementById('parcel2Button').style.color = '#fff';
+	
+		document.getElementById('demo1Button').style.cursor = 'pointer';
+		document.getElementById('demo2Button').style.cursor = 'pointer';
+		document.getElementById('parcel1Button').style.cursor = 'pointer';
+		document.getElementById('parcel2Button').style.cursor = 'pointer';
 	}
 };
 
