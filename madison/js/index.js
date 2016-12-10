@@ -434,6 +434,8 @@ function deactivateBuffers() {
 	bike1ButtonControl = false;
 	bike2ButtonControl = false;
 	
+	console.log('remove all buffer layers');
+	
 	document.getElementById('bus1Button').style.background = '#E5E7E9';
 	document.getElementById('bus2Button').style.background = '#E5E7E9';
 	document.getElementById('bike1Button').style.background = '#E5E7E9';
@@ -691,6 +693,8 @@ function deactivateBuffers2() {
 	demo2ButtonControl = false;
 	parcel1ButtonControl = false;
 	parcel2ButtonControl = false;
+	
+	console.log('remove all buffer layers');
 	
 	document.getElementById('demo1Button').style.background = '#E5E7E9';
 	document.getElementById('demo2Button').style.background = '#E5E7E9';

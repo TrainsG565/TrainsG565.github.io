@@ -124,6 +124,55 @@ function addBuffers(x) {
 };
 
 function removeBuffers(x) {
+	var bufferPosition = bufferList.indexOf(x); // gets either bus1Button, bus2Button, bike1Button, bike2Button
+	//var bufferCross = bufferListCross[bufferPosition]; 
+	
+	var i;
+	for (i=0; i < currentStationList.length; i++) {
+		var position = stationList.indexOf(currentStationList[i]);
+		
+		if (position == 0) {
+			if (bufferPosition == 0) {
+				console.log('remove bus 1km kohl');
+			} else if (bufferPosition == 1) {
+				console.log('remove bus 2km kohl');
+			} else if (bufferPosition == 2) {
+				console.log('remove bike 1km kohl');
+			} else if (bufferPosition == 3) {
+				console.log('remove bike 2km kohl');
+			}
+		} else if (position == 1) {
+			if (bufferPosition == 0) {
+				console.log('remove bus 1km monona');
+			} else if (bufferPosition == 1) {
+				console.log('remove bus 2km monona');
+			} else if (bufferPosition == 2) {
+				console.log('remove bike 1km monona');
+			} else if (bufferPosition == 3) {
+				console.log('remove bike 2km monona');
+			}
+		} else if (position == 2) {
+			if (bufferPosition == 0) {
+				console.log('remove bus 1km yahara');
+			} else if (bufferPosition == 1) {
+				console.log('remove bus 2km yahara');
+			} else if (bufferPosition == 2) {
+				console.log('remove bike 1km yahara');
+			} else if (bufferPosition == 3) {
+				console.log('remove bike 2km yahara');
+			}
+		} else if (position == 3) {
+			if (bufferPosition == 0) {
+				console.log('remove bus 1km msn');
+			} else if (bufferPosition == 1) {
+				console.log('remove bus 2km msn');
+			} else if (bufferPosition == 2) {
+				console.log('remove bike 1km msn');
+			} else if (bufferPosition == 3) {
+				console.log('remove bike 2km msn');
+			}
+		}
+	}
 	
 };
 
