@@ -195,9 +195,23 @@ var bufferList = [
 	'bike2Button'
 ];
 
-var bufferListCross = [
-	
+var bufferListCross = [	
 ];
+
+var bus1List = [
+];
+var bike1List = [
+];
+var bus2List = [
+];
+var bike2List = [
+];
+
+
+
+
+var currentStationList = [];
+var currentStationList2 = [];
 
 
 

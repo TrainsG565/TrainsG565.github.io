@@ -38,6 +38,7 @@ map01.on('style.load', function () {
 
 
 function addStation(x) {
+	currentStationList.push(source);
 	//x = button id
 	//get button id, add layer - filter
 	var stationPosition = stationList.indexOf(x);
@@ -57,6 +58,9 @@ function addStation(x) {
 };
 
 function removeStation(x) {
+	var remove = currentStationList.indexOf(x);
+	currentStationList.splice(remove, 1);
+	
 	map01.removeLayer(x);
 	
 	if (kohlButtonControl == false && mononaButtonControl == false && yaharaButtonControl == false && msnButtonControl == false) {
@@ -66,13 +70,57 @@ function removeStation(x) {
 
 
 
-
 function addBuffers(x) {
-	// check which stations are activated, then add buffers for those stations based on x (parameter)
-	var bufferPosition = bufferList.indexOf(x);
-	var bufferCross = bufferListCross[bufferPosition];
 	
-	// check which station is activated, and also check which buffer to activate
+	var bufferPosition = bufferList.indexOf(x); // gets either bus1Button, bus2Button, bike1Button, bike2Button
+	//var bufferCross = bufferListCross[bufferPosition]; 
+	
+	var i;
+	for (i=0; i < currentStationList.length; i++) {
+		var position = stationList.indexOf(currentStationList[i]);
+		
+		if (position == 0) {
+			if (bufferPosition == 0) {
+				console.log('add bus 1km kohl');
+			} else if (bufferPosition == 1) {
+				console.log('add bus 2km kohl');
+			} else if (bufferPosition == 2) {
+				console.log('add bike 1km kohl');
+			} else if (bufferPosition == 3) {
+				console.log('add bike 2km kohl');
+			}
+		} else if (position == 1) {
+			if (bufferPosition == 0) {
+				console.log('add bus 1km monona');
+			} else if (bufferPosition == 1) {
+				console.log('add bus 2km monona');
+			} else if (bufferPosition == 2) {
+				console.log('add bike 1km monona');
+			} else if (bufferPosition == 3) {
+				console.log('add bike 2km monona');
+			}
+		} else if (position == 2) {
+			if (bufferPosition == 0) {
+				console.log('add bus 1km yahara');
+			} else if (bufferPosition == 1) {
+				console.log('add bus 2km yahara');
+			} else if (bufferPosition == 2) {
+				console.log('add bike 1km yahara');
+			} else if (bufferPosition == 3) {
+				console.log('add bike 2km yahara');
+			}
+		} else if (position == 3) {
+			if (bufferPosition == 0) {
+				console.log('add bus 1km msn');
+			} else if (bufferPosition == 1) {
+				console.log('add bus 2km msn');
+			} else if (bufferPosition == 2) {
+				console.log('add bike 1km msn');
+			} else if (bufferPosition == 3) {
+				console.log('add bike 2km msn');
+			}
+		}
+	}
 };
 
 function removeBuffers(x) {

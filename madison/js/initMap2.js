@@ -37,6 +37,7 @@ map02.on('style.load', function () {
 
 
 function addStation2(x) {
+	currentStationList2.push(source);
 	//x = button id
 	//get button id, add layer - filter
 	var stationPosition = stationList2.indexOf(x);
@@ -56,6 +57,9 @@ function addStation2(x) {
 };
 
 function removeStation2(x) {
+	var remove = currentStationList2.indexOf(x);
+	currentStationList2.splice(remove, 1);
+	
 	map02.removeLayer(x);
 	
 	if (kohlButtonControl2 == false && mononaButtonControl2 == false && yaharaButtonControl2 == false && msnButtonControl2 == false) {
