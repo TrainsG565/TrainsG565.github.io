@@ -68,11 +68,15 @@ function removeStation(x) {
 
 
 function addBuffers(x) {
-	// check which stations are activated, then add buffers for those stations
+	// check which stations are activated, then add buffers for those stations based on x (parameter)
+	var bufferPosition = bufferList.indexOf(x);
+	var bufferCross = bufferListCross[bufferPosition];
+	
+	// check which station is activated, and also check which buffer to activate
 };
 
 function removeBuffers(x) {
-
+	
 };
 
 
