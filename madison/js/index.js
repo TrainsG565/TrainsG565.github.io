@@ -591,7 +591,7 @@ function activateBuffers2() {
 	if (buffer2Control == true) {
 		buffer2Control = true;
 	} else if (buffer2Control == false) {
-		buffer1Control = true;
+		buffer2Control = true;
 		document.getElementById('demo1Button').style.background = '#566573';
 		document.getElementById('demo2Button').style.background = '#566573';
 		document.getElementById('parcel1Button').style.background = '#566573';
