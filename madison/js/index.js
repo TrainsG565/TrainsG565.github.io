@@ -378,6 +378,12 @@ function activateBuffers() {
 
 function deactivateBuffers() {
 	buffer1Control = false;
+	
+	bus1ButtonControl = false;
+	bus2ButtonControl = false;
+	bike1ButtonControl = false;
+	bike2ButtonControl = false;
+	
 	document.getElementById('bus1Button').style.background = '#E5E7E9';
 	document.getElementById('bus2Button').style.background = '#E5E7E9';
 	document.getElementById('bike1Button').style.background = '#E5E7E9';
