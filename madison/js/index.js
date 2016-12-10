@@ -618,20 +618,20 @@ function deactivateBuffers2() {
 	parcel1ButtonControl = false;
 	parcel2ButtonControl = false;
 	
-	document.getElementById('bus1Button').style.background = '#E5E7E9';
-	document.getElementById('bus2Button').style.background = '#E5E7E9';
-	document.getElementById('bike1Button').style.background = '#E5E7E9';
-	document.getElementById('bike2Button').style.background = '#E5E7E9';
+	document.getElementById('demo1Button').style.background = '#E5E7E9';
+	document.getElementById('demo2Button').style.background = '#E5E7E9';
+	document.getElementById('parcel1Button').style.background = '#E5E7E9';
+	document.getElementById('parcel2Button').style.background = '#E5E7E9';
 	
-	document.getElementById('bus1Button').style.color = 'black';
-	document.getElementById('bus2Button').style.color = 'black';
-	document.getElementById('bike1Button').style.color = 'black';
-	document.getElementById('bike2Button').style.color = 'black';
+	document.getElementById('demo1Button').style.color = 'black';
+	document.getElementById('demo2Button').style.color = 'black';
+	document.getElementById('parcel1Button').style.color = 'black';
+	document.getElementById('parcel2Button').style.color = 'black';
 	
-	document.getElementById('bus1Button').style.cursor = 'not-allowed';
-	document.getElementById('bus2Button').style.cursor = 'not-allowed';
-	document.getElementById('bike1Button').style.cursor = 'not-allowed';
-	document.getElementById('bike2Button').style.cursor = 'not-allowed';
+	document.getElementById('demo1Button').style.cursor = 'not-allowed';
+	document.getElementById('demo2Button').style.cursor = 'not-allowed';
+	document.getElementById('parcel1Button').style.cursor = 'not-allowed';
+	document.getElementById('parcel2Button').style.cursor = 'not-allowed';
 };
 
 
