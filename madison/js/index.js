@@ -376,6 +376,38 @@ function activateBuffers() {
 	}
 };
 
+function deactivateBuffers() {
+	buffer1Control = false;
+	document.getElementById('bus1Button').style.background = '#E5E7E9';
+	document.getElementById('bus2Button').style.background = '#E5E7E9';
+	document.getElementById('bike1Button').style.background = '#E5E7E9';
+	document.getElementById('bike2Button').style.background = '#E5E7E9';
+	
+	document.getElementById('bus1Button').style.color = 'black';
+	document.getElementById('bus2Button').style.color = 'black';
+	document.getElementById('bike1Button').style.color = 'black';
+	document.getElementById('bike2Button').style.color = 'black';
+	
+	document.getElementById('bus1Button').style.cursor = 'not-allowed';
+	document.getElementById('bus2Button').style.cursor = 'not-allowed';
+	document.getElementById('bike1Button').style.cursor = 'not-allowed';
+	document.getElementById('bike2Button').style.cursor = 'not-allowed';
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

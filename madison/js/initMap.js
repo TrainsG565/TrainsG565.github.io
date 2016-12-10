@@ -68,6 +68,10 @@ function addStation(x) {
 
 function removeStation(x) {
 	map01.removeLayer(x);
+	
+	if (kohlButtonControl == false && mononaButtonControl == false && yaharaButtonControl == false && msnButtonControl == false) {
+		
+	}
 };
 
 
