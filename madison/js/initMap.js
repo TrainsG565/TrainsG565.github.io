@@ -43,37 +43,6 @@ map01.on('style.load', function () {
 	});
 	
 	
-	
-	
-	
-	/*
-	map01.addLayer({
-		'id': 'busKohl01',
-		'type': 'fill',
-		'source': 'busKohl01',
-		'layout': {},
-		'paint': {
-			'fill-color': 'orange',
-			'fill-opacity': 0.5
-		}
-	});
-	*/
-	
-	
-	/*
-	map01.addLayer({
-		'id': 'madisonStations',
-		'type': 'circle',
-		'source': 'madisonStations',
-		'layout': {},
-		'paint': {
-			'circle-color': 'black',
-			'circle-radius': 10
-		}
-	});
-	*/
-	
-	
 });
 
 

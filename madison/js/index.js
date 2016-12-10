@@ -302,11 +302,30 @@ function bike2Button(source) {
 };
 
 
-
-
 function activateBuffers() {
+	document.getElementById('demo1Button').style.background = '#566573';
+	document.getElementById('demo2Button').style.background = '#566573';
+	document.getElementById('parcel1Button').style.background = '#566573';
+	document.getElementById('parcel2Button').style.background = '#566573';
+	
+	document.getElementById('demo1Button').style.color = '#fff';
+	document.getElementById('demo2Button').style.color = '#fff';
+	document.getElementById('parcel1Button').style.color = '#fff';
+	document.getElementById('parcel2Button').style.color = '#fff';
+	
+	document.getElementById('demo1Button').style.cursor = 'pointer';
+	document.getElementById('demo2Button').style.cursor = 'pointer';
+	document.getElementById('parcel1Button').style.cursor = 'pointer';
+	document.getElementById('parcel2Button').style.cursor = 'pointer';
 	
 };
+
+
+
+
+
+
+
 
 
 
