@@ -303,20 +303,20 @@ function bike2Button(source) {
 
 
 function activateBuffers() {
-	document.getElementById('demo1Button').style.background = '#566573';
-	document.getElementById('demo2Button').style.background = '#566573';
-	document.getElementById('parcel1Button').style.background = '#566573';
-	document.getElementById('parcel2Button').style.background = '#566573';
+	document.getElementById('bus1Button').style.background = '#566573';
+	document.getElementById('bus2Button').style.background = '#566573';
+	document.getElementById('bike1Button').style.background = '#566573';
+	document.getElementById('bike2Button').style.background = '#566573';
 	
-	document.getElementById('demo1Button').style.color = '#fff';
-	document.getElementById('demo2Button').style.color = '#fff';
-	document.getElementById('parcel1Button').style.color = '#fff';
-	document.getElementById('parcel2Button').style.color = '#fff';
+	document.getElementById('bus1Button').style.color = '#fff';
+	document.getElementById('bus2Button').style.color = '#fff';
+	document.getElementById('bike1Button').style.color = '#fff';
+	document.getElementById('bike2Button').style.color = '#fff';
 	
-	document.getElementById('demo1Button').style.cursor = 'pointer';
-	document.getElementById('demo2Button').style.cursor = 'pointer';
-	document.getElementById('parcel1Button').style.cursor = 'pointer';
-	document.getElementById('parcel2Button').style.cursor = 'pointer';
+	document.getElementById('bus1Button').style.cursor = 'pointer';
+	document.getElementById('bus2Button').style.cursor = 'pointer';
+	document.getElementById('bike1Button').style.cursor = 'pointer';
+	document.getElementById('bike2Button').style.cursor = 'pointer';
 	
 };
 
