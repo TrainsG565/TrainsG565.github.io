@@ -356,7 +356,7 @@ function bike2Button(source) {
 var buffer1Control = false;
 function activateBuffers() {
 	if (buffer1Control == true) {
-		return;
+		buffer1Control = true;
 	} else if (buffer1Control == false) {
 		buffer1Control = true;
 		document.getElementById('bus1Button').style.background = '#566573';
