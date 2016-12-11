@@ -60,7 +60,6 @@ var popup = new mapboxgl.Popup({
 
 map01.on('mousemove', function(e) {
     var features = map01.queryRenderedFeatures(e.point, { layers: trackBufferLayers });
-    // Change the cursor style as a UI indicator.
     map01.getCanvas().style.cursor = (features.length) ? 'pointer' : '';
 
     if (!features.length) {
@@ -70,8 +69,7 @@ map01.on('mousemove', function(e) {
 
     var feature = features[0];
 
-    // Populate the popup and set its coordinates
-    // based on the feature found.
+   
     popup.setLngLat(feature.geometry.coordinates)
         .setHTML('test popup')
         .addTo(map01);
