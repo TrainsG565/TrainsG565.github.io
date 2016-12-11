@@ -79,7 +79,7 @@ map01.on('mousemove', function(e) {
         	.addTo(map01);
     } else if (feature.layer.id == 'bikeKohl1km' || feature.layer.id == 'bikeKohl2km' || feature.layer.id == 'bikeMonona1km' || feature.layer.id == 'bikeMonona2km' ||
     feature.layer.id == 'bikeYahara1km' || feature.layer.id == 'bikeYahara2km' || feature.layer.id == 'bikeMSN1km' || feature.layer.id == 'bikeMSN2km') {
-    	var setHTML = "Name: " + feature.properties.Name + "<br>" + "Location: " + features.properties.Location;
+    	var setHTML = "Name: " + feature.properties.Name;
     	popup.setLngLat(feature.geometry.coordinates)
         	.setHTML(setHTML)
         	.addTo(map01);
