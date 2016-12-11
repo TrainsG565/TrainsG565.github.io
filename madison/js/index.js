@@ -705,6 +705,12 @@ function deactivateBuffers2() {
 	parcel2ButtonControl = false;
 	
 	console.log('remove all buffer layers');
+	/*
+	var i;
+	for (i=0; i < trackBufferLayers2.length; i++) {
+		map02.removeLayer(trackBufferLayers2[i]);
+	}
+	*/
 	
 	
 	document.getElementById('demo1Button').style.background = '#E5E7E9';
