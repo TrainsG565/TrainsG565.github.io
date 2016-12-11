@@ -70,11 +70,53 @@ function addStation(x) {
 		},
 		'filter': ['==', 'Name', stationCross]
 	});
+	
+	var buffer1kmName = x + "1km";
+	// add 1km buffer circle
+	map01.addLayer({
+		'id': buffer1kmName,
+		'type': 'fill',
+		'source': 'circmerged1km',
+		'layout': {},
+		'paint': {
+			'fill-color': 'black',
+			'fill-opacity': 0.25
+		},
+		'filter': ['==', 'GID', stationPosition]
+	});
+	trackCircleLayers.push(buffer1kmName);
+	
+	
+	var buffer2kmName = x + "2km";
+	// add 2km buffer circle
+	map01.addLayer({
+		'id': buffer2kmName,
+		'type': 'fill',
+		'source': 'circmerged2km',
+		'layout': {},
+		'paint': {
+			'fill-color': 'orange',
+			'fill-opacity': 0.25
+		},
+		'filter': ['==', 'GID', stationPosition]
+	});
+	trackCircleLayers.push(buffer2kmName);
 };
 
 function removeStation(x) {
 	var remove = currentStationList.indexOf(x);
 	currentStationList.splice(remove, 1);
+	
+	var circRemove1km = x + "1km";
+	var circRemove2km = x + "2km";
+	map01.removeLayer(circRemove1km);
+	map01.removeLayer(circRemove2km);
+	
+	var remove1km = trackCircleLayers.indexOf(circRemove1km);
+	var remove2km = trackCircleLayers.indexOf(circRemove2km);
+	trackCircleLayers.splice(remove1km, 1);
+	trackCircleLayers.splice(remove2km, 1);
+	
 	
 	map01.removeLayer(x);
 	

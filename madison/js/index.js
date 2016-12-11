@@ -227,6 +227,8 @@ var currentStationList2 = [];
 
 var trackBufferLayers = [];
 
+var trackCircleLayers = [];
+
 
 
 
