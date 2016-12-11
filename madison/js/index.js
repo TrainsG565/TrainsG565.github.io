@@ -226,8 +226,10 @@ var currentStationList = [];
 var currentStationList2 = [];
 
 var trackBufferLayers = [];
+var trackBufferLayers2 = [];
 
 var trackCircleLayers = [];
+var trackCircleLayers2 = [];
 
 
 
