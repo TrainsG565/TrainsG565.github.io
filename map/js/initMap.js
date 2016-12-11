@@ -220,6 +220,49 @@ map01.on('load', function() {
 	});
 	
 	
+	var toggleableLayerIds = [
+		'amtrak',
+		'cityPolys',
+		'msnRails',
+		'parking',
+		'wisconsinStops',
+		'allRailWI',
+		'amtrakAreasWI',
+		'amtrakCitiesIL',
+		'amtrakCitiesMN',
+		'kohlRail'
+	];
+
+	for (var i = 0; i < toggleableLayerIds.length; i++) {
+    	var id = toggleableLayerIds[i];
+
+    	var link = document.createElement('a');
+    	link.href = '#';
+    	link.className = 'active';
+    	link.textContent = id;
+
+    	link.onclick = function (e) {
+        	var clickedLayer = this.textContent;
+        	e.preventDefault();
+        	e.stopPropagation();
+
+        	var visibility = map01.getLayoutProperty(clickedLayer, 'visibility');
+
+        	if (visibility === 'visible') {
+            	map01.setLayoutProperty(clickedLayer, 'visibility', 'none');
+            	this.className = '';
+        	} else {
+            	this.className = 'active';
+            	map01.setLayoutProperty(clickedLayer, 'visibility', 'visible');
+        	}
+    	};
+
+    	var layers = document.getElementById('menu');
+    	layers.appendChild(link);
+	}
+
+	
+	
 	
 });
 
