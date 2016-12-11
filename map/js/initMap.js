@@ -261,10 +261,6 @@ map01.on('load', function() {
     	var layers = document.getElementById('menu');
     	layers.appendChild(link);
 	}
-
-	
-	
-	
 });
 
 
