@@ -49,6 +49,32 @@ map01.on('style.load', function () {
 		'type': 'geojson',
 		'data': '/madison/data/circmerged2km.geojson'
 	});
+	
+});
+
+// Create a popup, but don't add it to the map yet.
+var popup = new mapboxgl.Popup({
+    closeButton: false,
+    closeOnClick: false
+});
+
+map01.on('mousemove', function(e) {
+    var features = map01.queryRenderedFeatures(e.point, { layers: trackBufferLayers });
+    // Change the cursor style as a UI indicator.
+    map01.getCanvas().style.cursor = (features.length) ? 'pointer' : '';
+
+    if (!features.length) {
+        popup.remove();
+        return;
+    }
+
+    var feature = features[0];
+
+    // Populate the popup and set its coordinates
+    // based on the feature found.
+    popup.setLngLat(feature.geometry.coordinates)
+        .setHTML('test popup')
+        .addTo(map01);
 });
 
 
