@@ -85,7 +85,7 @@ function addStation2(x) {
 	
 	var buffer2kmName = x + "2km2";
 	// add 2km buffer circle
-	map01.addLayer({
+	map02.addLayer({
 		'id': buffer2kmName,
 		'type': 'fill',
 		'source': 'circmerged2km',
