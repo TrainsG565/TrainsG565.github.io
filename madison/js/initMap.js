@@ -147,8 +147,8 @@ function addBuffers(x) {
 					'source': 'bbmerged1km',
 					'layout': {},
 					'paint': {
-						'circle-color': 'black',
-						'circle-radius': 8
+						'circle-color': '#2980B9',
+						'circle-radius': 4
 					},
 					'filter': ['==', 'GID', 4]
 				});
@@ -161,8 +161,8 @@ function addBuffers(x) {
 					'source': 'bbmerged2km',
 					'layout': {},
 					'paint': {
-						'circle-color': 'black',
-						'circle-radius': 8
+						'circle-color': '#2980B9',
+						'circle-radius': 4
 					},
 					'filter': ['==', 'GID', 4]
 				});
@@ -175,8 +175,8 @@ function addBuffers(x) {
 					'source': 'bbmerged1km',
 					'layout': {},
 					'paint': {
-						'circle-color': 'black',
-						'circle-radius': 8
+						'circle-color': '#D35400',
+						'circle-radius': 4
 					},
 					'filter': ['==', 'GID', 7]
 				});
@@ -189,8 +189,8 @@ function addBuffers(x) {
 					'source': 'bbmerged2km',
 					'layout': {},
 					'paint': {
-						'circle-color': 'black',
-						'circle-radius': 8
+						'circle-color': '#D35400',
+						'circle-radius': 4
 					},
 					'filter': ['==', 'GID', 7]
 				});
@@ -205,8 +205,8 @@ function addBuffers(x) {
 					'source': 'bbmerged1km',
 					'layout': {},
 					'paint': {
-						'circle-color': 'black',
-						'circle-radius': 8
+						'circle-color': '#2980B9',
+						'circle-radius': 4
 					},
 					'filter': ['==', 'GID', 3]
 				});
@@ -219,8 +219,8 @@ function addBuffers(x) {
 					'source': 'bbmerged2km',
 					'layout': {},
 					'paint': {
-						'circle-color': 'black',
-						'circle-radius': 8
+						'circle-color': '#2980B9',
+						'circle-radius': 4
 					},
 					'filter': ['==', 'GID', 3]
 				});
@@ -233,8 +233,8 @@ function addBuffers(x) {
 					'source': 'bbmerged1km',
 					'layout': {},
 					'paint': {
-						'circle-color': 'black',
-						'circle-radius': 8
+						'circle-color': '#D35400',
+						'circle-radius': 4
 					},
 					'filter': ['==', 'GID', 6]
 				});
@@ -247,8 +247,8 @@ function addBuffers(x) {
 					'source': 'bbmerged2km',
 					'layout': {},
 					'paint': {
-						'circle-color': 'black',
-						'circle-radius': 8
+						'circle-color': '#D35400',
+						'circle-radius': 4
 					},
 					'filter': ['==', 'GID', 6]
 				});
@@ -263,8 +263,8 @@ function addBuffers(x) {
 					'source': 'bbmerged1km',
 					'layout': {},
 					'paint': {
-						'circle-color': 'black',
-						'circle-radius': 8
+						'circle-color': '#2980B9',
+						'circle-radius': 4
 					},
 					'filter': ['==', 'GID', 1]
 				});
@@ -277,8 +277,8 @@ function addBuffers(x) {
 					'source': 'bbmerged2km',
 					'layout': {},
 					'paint': {
-						'circle-color': 'black',
-						'circle-radius': 8
+						'circle-color': '#2980B9',
+						'circle-radius': 4
 					},
 					'filter': ['==', 'GID', 1]
 				});
@@ -291,8 +291,8 @@ function addBuffers(x) {
 					'source': 'bbmerged1km',
 					'layout': {},
 					'paint': {
-						'circle-color': 'black',
-						'circle-radius': 8
+						'circle-color': '#D35400',
+						'circle-radius': 4
 					},
 					'filter': ['==', 'GID', 5]
 				});
@@ -305,8 +305,8 @@ function addBuffers(x) {
 					'source': 'bbmerged2km',
 					'layout': {},
 					'paint': {
-						'circle-color': 'black',
-						'circle-radius': 8
+						'circle-color': '#D35400',
+						'circle-radius': 4
 					},
 					'filter': ['==', 'GID', 5]
 				});
@@ -321,8 +321,8 @@ function addBuffers(x) {
 					'source': 'bbmerged1km',
 					'layout': {},
 					'paint': {
-						'circle-color': 'black',
-						'circle-radius': 8
+						'circle-color': '#2980B9',
+						'circle-radius': 4
 					},
 					'filter': ['==', 'GID', 2]
 				});
@@ -335,8 +335,8 @@ function addBuffers(x) {
 					'source': 'bbmerged2km',
 					'layout': {},
 					'paint': {
-						'circle-color': 'black',
-						'circle-radius': 8
+						'circle-color': '#2980B9',
+						'circle-radius': 4
 					},
 					'filter': ['==', 'GID', 2]
 				});
