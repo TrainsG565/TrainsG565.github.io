@@ -110,7 +110,15 @@ body p {
 }
 
 
-
+#testImage {
+	height: 50vh;
+	width: 100%;
+	background: url(train_03_bw5.jpeg) no-repeat center center fixed; 
+  	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+}
 
 
 
