@@ -11,16 +11,18 @@ var map02 = new mapboxgl.Map({
 });
 
 map02.on('style.load', function () {
+	/*
 	map02.setPaintProperty('taxparcels', 'fill-extrude-height', {
 		'property': 'height',
 		'type': 'identity'
 	});
+	*/
 	
-	map02.setPaintProperty('taxparcels', 'fill-extrude-base', 0);
-	map02.setPaintProperty('taxparcels', 'fill-opacity', 0.5);
+	//map02.setPaintProperty('taxparcels', 'fill-extrude-base', 0);
+	//map02.setPaintProperty('taxparcels', 'fill-opacity', 0.5);
 	
-	map02.setLayoutProperty('busstops', 'visibility', 'none');
-	map02.setLayoutProperty('bikeshare', 'visibility', 'none');
+	//map02.setLayoutProperty('busstops', 'visibility', 'none');
+	//map02.setLayoutProperty('bikeshare', 'visibility', 'none');
 	map02.setLayoutProperty('busroute', 'visibility', 'none');
 	map02.setLayoutProperty('bikepath', 'visibility', 'none');
 	
