@@ -245,7 +245,7 @@ map01.on('load', function() {
         	var clickedLayer = this.textContent;
         	
         	//e.preventDefault();
-        	e.stopPropagation();
+        	//e.stopPropagation();
 
         	var visibility = map01.getLayoutProperty(clickedLayer, 'visibility');
 
