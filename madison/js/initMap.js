@@ -51,7 +51,7 @@ map01.on('style.load', function () {
 	});
 	
 	map01.addLayer({
-		'id': 'test01,
+		'id': 'test01',
 		'type': 'fill',
 		'source': 'circmerged1km',
 		'layout': {},
@@ -62,7 +62,7 @@ map01.on('style.load', function () {
 	});
 	
 	map01.addLayer({
-		'id': 'test02,
+		'id': 'test02',
 		'type': 'fill',
 		'source': 'circmerged2km',
 		'layout': {},

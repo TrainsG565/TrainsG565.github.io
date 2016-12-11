@@ -216,7 +216,7 @@ map01.on('load', function() {
     	// based on the feature found.
     	popup.setLngLat(feature.geometry.coordinates)
         	.setHTML('This is a popup.')
-        	.addTo(map);
+        	.addTo(map01);
 	});
 	
 	
