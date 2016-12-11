@@ -49,28 +49,6 @@ map01.on('style.load', function () {
 		'type': 'geojson',
 		'data': '/madison/data/circmerged2km.geojson'
 	});
-	
-	map01.addLayer({
-		'id': 'test01',
-		'type': 'fill',
-		'source': 'circmerged1km',
-		'layout': {},
-		'paint': {
-			'fill-color': 'black',
-			'fill-opacity': 0.25
-		}
-	});
-	
-	map01.addLayer({
-		'id': 'test02',
-		'type': 'fill',
-		'source': 'circmerged2km',
-		'layout': {},
-		'paint': {
-			'fill-color': 'orange',
-			'fill-opacity': 0.25
-		}
-	});
 });
 
 
@@ -80,6 +58,8 @@ function addStation(x) {
 	//get button id, add layer - filter
 	var stationPosition = stationList.indexOf(x);
 	var stationCross = stationListCross[stationPosition];
+	
+	var circlePosition = stationPosition + 1;
 	
 	map01.addLayer({
 		'id': x,
@@ -94,7 +74,6 @@ function addStation(x) {
 	});
 	
 	var buffer1kmName = x + "1km";
-	console.log(buffer1kmName);
 	// add 1km buffer circle
 	map01.addLayer({
 		'id': buffer1kmName,
@@ -105,13 +84,12 @@ function addStation(x) {
 			'fill-color': 'black',
 			'fill-opacity': 0.25
 		},
-		'filter': ['==', 'GID', stationPosition]
+		'filter': ['==', 'GID', circlePosition]
 	});
 	trackCircleLayers.push(buffer1kmName);
 	
 	
 	var buffer2kmName = x + "2km";
-	console.log(buffer2kmName);
 	// add 2km buffer circle
 	map01.addLayer({
 		'id': buffer2kmName,
@@ -122,7 +100,7 @@ function addStation(x) {
 			'fill-color': 'orange',
 			'fill-opacity': 0.25
 		},
-		'filter': ['==', 'GID', stationPosition]
+		'filter': ['==', 'GID', circlePosition]
 	});
 	trackCircleLayers.push(buffer2kmName);
 };
