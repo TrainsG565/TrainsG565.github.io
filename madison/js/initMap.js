@@ -67,9 +67,11 @@ map01.on('mousemove', function(e) {
         return;
     }
     
-    console.log(features);
 
     var feature = features[0];
+    
+    console.log(features);
+    console.log(feature);
 
    
     popup.setLngLat(feature.geometry.coordinates)
