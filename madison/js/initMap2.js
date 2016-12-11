@@ -43,6 +43,11 @@ map02.on('style.load', function () {
 		'type': 'geojson',
 		'data': '/madison/data/parcels1km2km.geojson'
 	});
+	
+	map02.addSource('demo1km2km', {
+		'type': 'geojson',
+		'data': '/madison/data/demo1km2km.geojson'
+	});
 });
 
 // Create a popup, but don't add it to the map yet.
@@ -159,10 +164,32 @@ function addBuffers2(x) {
 		if (position == 0) {
 			if (bufferPosition == 0) {
 				console.log('add demo 1km kohl');
-				// trackBufferLayers2.push('id');
+				map02.addLayer({
+					'id': 'demoKohl1km',
+					'type': 'circle',
+					'source': 'demo1km2km',
+					'layout': {},
+					'paint': {
+						'circle-color': 'black',
+						'circle-radius': 1
+					},
+					'filter': ['==', 'GID', 1]
+				});
+				trackBufferLayers2.push('demoKohl1km');
 			} else if (bufferPosition == 1) {
 				console.log('add demo 2km kohl');
-				// trackBufferLayers2.push('id');
+				map02.addLayer({
+					'id': 'demoKohl2km',
+					'type': 'circle',
+					'source': 'demo1km2km',
+					'layout': {},
+					'paint': {
+						'circle-color': 'black',
+						'circle-radius': 1
+					},
+					'filter': ['==', 'GID', 5]
+				});
+				trackBufferLayers2.push('demoKohl2km');
 			} else if (bufferPosition == 2) {
 				console.log('add parcel 1km kohl');
 				map02.addLayer({
@@ -195,10 +222,32 @@ function addBuffers2(x) {
 		} else if (position == 1) {
 			if (bufferPosition == 0) {
 				console.log('add demo 1km monona');
-				// trackBufferLayers2.push('id');
+				map02.addLayer({
+					'id': 'demoMonona1km',
+					'type': 'circle',
+					'source': 'demo1km2km',
+					'layout': {},
+					'paint': {
+						'circle-color': 'black',
+						'circle-radius': 1
+					},
+					'filter': ['==', 'GID', 2]
+				});
+				trackBufferLayers2.push('demoMonona1km');
 			} else if (bufferPosition == 1) {
 				console.log('add demo 2km monona');
-				// trackBufferLayers2.push('id');
+				map02.addLayer({
+					'id': 'demoMonona2km',
+					'type': 'circle',
+					'source': 'demo1km2km',
+					'layout': {},
+					'paint': {
+						'circle-color': 'black',
+						'circle-radius': 1
+					},
+					'filter': ['==', 'GID', 6]
+				});
+				trackBufferLayers2.push('demoMonona2km');
 			} else if (bufferPosition == 2) {
 				console.log('add parcel 1km monona');
 				map02.addLayer({
@@ -231,10 +280,32 @@ function addBuffers2(x) {
 		} else if (position == 2) {
 			if (bufferPosition == 0) {
 				console.log('add demo 1km yahara');
-				// trackBufferLayers2.push('id');
+				map02.addLayer({
+					'id': 'demoYahara1km',
+					'type': 'circle',
+					'source': 'demo1km2km',
+					'layout': {},
+					'paint': {
+						'circle-color': 'black',
+						'circle-radius': 1
+					},
+					'filter': ['==', 'GID', 3]
+				});
+				trackBufferLayers2.push('demoYahara1km');
 			} else if (bufferPosition == 1) {
 				console.log('add demo 2km yahara');
-				// trackBufferLayers2.push('id');
+				map02.addLayer({
+					'id': 'demoYahara2km',
+					'type': 'circle',
+					'source': 'demo1km2km',
+					'layout': {},
+					'paint': {
+						'circle-color': 'black',
+						'circle-radius': 1
+					},
+					'filter': ['==', 'GID', 7]
+				});
+				trackBufferLayers2.push('demoYahara2km');
 			} else if (bufferPosition == 2) {
 				console.log('add parcel 1km yahara');
 				map02.addLayer({
@@ -267,10 +338,32 @@ function addBuffers2(x) {
 		} else if (position == 3) {
 			if (bufferPosition == 0) {
 				console.log('add demo 1km msn');
-				// trackBufferLayers2.push('id');
+				map02.addLayer({
+					'id': 'demoMSN1km',
+					'type': 'circle',
+					'source': 'demo1km2km',
+					'layout': {},
+					'paint': {
+						'circle-color': 'black',
+						'circle-radius': 1
+					},
+					'filter': ['==', 'GID', 4]
+				});
+				trackBufferLayers2.push('demoMSN1km');
 			} else if (bufferPosition == 1) {
 				console.log('add demo 2km msn');
-				// trackBufferLayers2.push('id');
+				map02.addLayer({
+					'id': 'demoMSN2km',
+					'type': 'circle',
+					'source': 'demo1km2km',
+					'layout': {},
+					'paint': {
+						'circle-color': 'black',
+						'circle-radius': 1
+					},
+					'filter': ['==', 'GID', 8]
+				});
+				trackBufferLayers2.push('demoMSN2km');
 			} else if (bufferPosition == 2) {
 				console.log('add parcel 1km msn');
 				map02.addLayer({
@@ -315,14 +408,14 @@ function removeBuffers2(x) {
 		if (position == 0) {
 			if (bufferPosition == 0) {
 				console.log('remove demo 1km kohl');
-				// var spot = trackBufferLayers2.indexOf('id');
-				// trackBufferLayers2.splice(spot, 1);
-				// map02.removeLayer('id');
+				var spot = trackBufferLayers2.indexOf('demoKohl1km');
+				trackBufferLayers2.splice(spot, 1);
+				map02.removeLayer('demoKohl1km');
 			} else if (bufferPosition == 1) {
 				console.log('remove demo 2km kohl');
-				// var spot = trackBufferLayers2.indexOf('id');
-				// trackBufferLayers2.splice(spot, 1);
-				// map02.removeLayer('id');
+				var spot = trackBufferLayers2.indexOf('demoKohl2km');
+				trackBufferLayers2.splice(spot, 1);
+				map02.removeLayer('demoKohl2km');
 			} else if (bufferPosition == 2) {
 				console.log('remove parcel 1km kohl');
 				var spot = trackBufferLayers2.indexOf('parcelKohl1km');
@@ -337,14 +430,14 @@ function removeBuffers2(x) {
 		} else if (position == 1) {
 			if (bufferPosition == 0) {
 				console.log('remove demo 1km monona');
-				// var spot = trackBufferLayers2.indexOf('id');
-				// trackBufferLayers2.splice(spot, 1);
-				// map02.removeLayer('id');
+				var spot = trackBufferLayers2.indexOf('demoMonona1km');
+				trackBufferLayers2.splice(spot, 1);
+				map02.removeLayer('demoMonona1km');
 			} else if (bufferPosition == 1) {
 				console.log('remove demo 2km monona');
-				// var spot = trackBufferLayers2.indexOf('id');
-				// trackBufferLayers2.splice(spot, 1);
-				// map02.removeLayer('id');
+				var spot = trackBufferLayers2.indexOf('demoMonona2km');
+				trackBufferLayers2.splice(spot, 1);
+				map02.removeLayer('demoMonona2km');
 			} else if (bufferPosition == 2) {
 				console.log('remove parcel 1km monona');
 				var spot = trackBufferLayers2.indexOf('parcelMonona1km');
@@ -359,14 +452,14 @@ function removeBuffers2(x) {
 		} else if (position == 2) {
 			if (bufferPosition == 0) {
 				console.log('remove demo 1km yahara');
-				// var spot = trackBufferLayers2.indexOf('id');
-				// trackBufferLayers2.splice(spot, 1);
-				// map02.removeLayer('id');
+				var spot = trackBufferLayers2.indexOf('demoYahara1km');
+				trackBufferLayers2.splice(spot, 1);
+				map02.removeLayer('demoYahara1km');
 			} else if (bufferPosition == 1) {
 				console.log('remove demo 2km yahara');
-				// var spot = trackBufferLayers2.indexOf('id');
-				// trackBufferLayers2.splice(spot, 1);
-				// map02.removeLayer('id');
+				var spot = trackBufferLayers2.indexOf('demoYahara2km');
+				trackBufferLayers2.splice(spot, 1);
+				map02.removeLayer('demoYahara2km');
 			} else if (bufferPosition == 2) {
 				console.log('remove parcel 1km yahara');
 				var spot = trackBufferLayers2.indexOf('parcelYahara1km');
@@ -381,14 +474,14 @@ function removeBuffers2(x) {
 		} else if (position == 3) {
 			if (bufferPosition == 0) {
 				console.log('remove demo 1km msn');
-				// var spot = trackBufferLayers2.indexOf('id');
-				// trackBufferLayers2.splice(spot, 1);
-				// map02.removeLayer('id');
+				var spot = trackBufferLayers2.indexOf('demoMSN1km');
+				trackBufferLayers2.splice(spot, 1);
+				map02.removeLayer('demoMSN1km');
 			} else if (bufferPosition == 1) {
 				console.log('remove demo 2km msn');
-				// var spot = trackBufferLayers2.indexOf('id');
-				// trackBufferLayers2.splice(spot, 1);
-				// map02.removeLayer('id');
+				var spot = trackBufferLayers2.indexOf('demoMSN2km');
+				trackBufferLayers2.splice(spot, 1);
+				map02.removeLayer('demoMSN2km');
 			} else if (bufferPosition == 2) {
 				console.log('remove parcel 1km msn');
 				var spot = trackBufferLayers2.indexOf('parcelMSN1km');
