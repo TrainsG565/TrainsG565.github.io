@@ -30,9 +30,24 @@ map01.on('style.load', function () {
 		'data': '/madison/data/stations_v2.geojson'
 	});
 	
-	map01.addSource('busKohl01', {
+	map01.addSource('bbmerged1km', {
 		'type': 'geojson',
-		'data': '/madison/data/upload/1km/busKohl_1.geojson'
+		'data': '/madison/data/bbmerged1km.geojson'
+	});
+	
+	map01.addSource('bbmerged2km', {
+		'type': 'geojson',
+		'data': '/madison/data/bbmerged2km.geojson'
+	});
+	
+	map01.addSource('circmerged1km', {
+		'type': 'geojson',
+		'data': '/madison/data/circmerged1km.geojson'
+	});
+	
+	map01.addSource('circmerged2km', {
+		'type': 'geojson',
+		'data': '/madison/data/circmerged2km.geojson'
 	});
 });
 
