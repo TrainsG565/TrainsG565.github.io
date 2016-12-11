@@ -66,6 +66,8 @@ map01.on('mousemove', function(e) {
         popup.remove();
         return;
     }
+    
+    console.log(features);
 
     var feature = features[0];
 
