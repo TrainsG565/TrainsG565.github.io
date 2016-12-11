@@ -72,6 +72,7 @@ function addStation(x) {
 	});
 	
 	var buffer1kmName = x + "1km";
+	console.log(buffer1kmName);
 	// add 1km buffer circle
 	map01.addLayer({
 		'id': buffer1kmName,
@@ -88,6 +89,7 @@ function addStation(x) {
 	
 	
 	var buffer2kmName = x + "2km";
+	console.log(buffer2kmName);
 	// add 2km buffer circle
 	map01.addLayer({
 		'id': buffer2kmName,
