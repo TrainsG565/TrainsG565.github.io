@@ -49,6 +49,28 @@ map01.on('style.load', function () {
 		'type': 'geojson',
 		'data': '/madison/data/circmerged2km.geojson'
 	});
+	
+	map01.addLayer({
+		'id': 'test01,
+		'type': 'fill',
+		'source': 'circmerged1km',
+		'layout': {},
+		'paint': {
+			'fill-color': 'black',
+			'fill-opacity': 0.25
+		}
+	});
+	
+	map01.addLayer({
+		'id': 'test02,
+		'type': 'fill',
+		'source': 'circmerged2km',
+		'layout': {},
+		'paint': {
+			'fill-color': 'orange',
+			'fill-opacity': 0.25
+		}
+	});
 });
 
 
