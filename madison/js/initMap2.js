@@ -45,6 +45,31 @@ map02.on('style.load', function () {
 	});
 });
 
+// Create a popup, but don't add it to the map yet.
+var popup2 = new mapboxgl.Popup({
+    closeButton: false,
+    closeOnClick: false
+});
+
+map02.on('mousemove', function(e) {
+    var features = map02.queryRenderedFeatures(e.point, { layers: trackBufferLayers2 });
+    // Change the cursor style as a UI indicator.
+    map02.getCanvas().style.cursor = (features.length) ? 'pointer' : '';
+
+    if (!features.length) {
+        popup2.remove();
+        return;
+    }
+
+    var feature = features[0];
+
+    // Populate the popup and set its coordinates
+    // based on the feature found.
+    popup2.setLngLat(feature.geometry.coordinates)
+        .setHTML('test popup')
+        .addTo(map02);
+});
+
 
 function addStation2(x) {
 	currentStationList2.push(x);
