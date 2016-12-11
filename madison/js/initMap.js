@@ -140,7 +140,7 @@ function addBuffers(x) {
 			} else if (bufferPosition == 3) {
 				console.log('add bike 2km kohl');
 				map01.addLayer({
-					'id': 'busKohl2km',
+					'id': 'bikeKohl2km',
 					'type': 'circle',
 					'source': 'bbmerged2km',
 					'layout': {},
@@ -150,7 +150,7 @@ function addBuffers(x) {
 					},
 					'filter': ['==', 'GID', 7]
 				});
-				trackBufferLayers.push('busKohl2km');
+				trackBufferLayers.push('bikeKohl2km');
 			}
 		} else if (position == 1) {
 			if (bufferPosition == 0) {
