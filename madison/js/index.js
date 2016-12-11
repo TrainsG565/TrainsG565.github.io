@@ -225,6 +225,8 @@ var parcel2List = [];
 var currentStationList = [];
 var currentStationList2 = [];
 
+var trackBufferLayers = [];
+
 
 
 
@@ -435,6 +437,10 @@ function deactivateBuffers() {
 	bike2ButtonControl = false;
 	
 	console.log('remove all buffer layers');
+	var i;
+	for (i=0; i < trackBufferLayers.length; i++) {
+		map01.removeLayer(trackBufferLayers[i]);
+	}
 	
 	document.getElementById('bus1Button').style.background = '#E5E7E9';
 	document.getElementById('bus2Button').style.background = '#E5E7E9';
@@ -695,6 +701,7 @@ function deactivateBuffers2() {
 	parcel2ButtonControl = false;
 	
 	console.log('remove all buffer layers');
+	
 	
 	document.getElementById('demo1Button').style.background = '#E5E7E9';
 	document.getElementById('demo2Button').style.background = '#E5E7E9';
