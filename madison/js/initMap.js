@@ -70,13 +70,20 @@ map01.on('mousemove', function(e) {
 
     var feature = features[0];
     
-    console.log(features);
-    console.log(feature);
-
-   
-    popup.setLngLat(feature.geometry.coordinates)
-        .setHTML('test popup')
-        .addTo(map01);
+    if (feature.layer.id == 'busKohl1km' || feature.layer.id == 'busKohl2km' || feature.layer.id == 'busMonona1km' || feature.layer.id == 'busMonona2km' ||
+    feature.layer.id == 'busYahara1km' || feature.layer.id == 'busYahara2km' || feature.layer.id == 'busMSN1km' || feature.layer.id == 'busMSN2km') {
+    	var setHTML = "Stop Name: " + feature.properties.stop_name + "<br>" + "Stop Description: " + feature.properties.stop_desc + "<br>" + "Direction: " + feature.properties.direction +
+    		"<br>" + "Route: " + feature.properties.Route;
+    	popup.setLngLat(feature.geometry.coordinates)
+        	.setHTML(setHTML);
+        	.addTo(map01);
+    } else if (feature.layer.id == 'bikeKohl1km' || feature.layer.id == 'bikeKohl2km' || feature.layer.id == 'bikeMonona1km' || feature.layer.id == 'bikeMonona2km' ||
+    feature.layer.id == 'bikeYahara1km' || feature.layer.id == 'bikeYahara2km' || feature.layer.id == 'bikeMSN1km' || feature.layer.id == 'bikeMSN2km') {
+    	var setHTML = "Name: " + feature.properties.Name + "<br>" + "Location: " + features.properties.Location;
+    	popup.setLngLat(feature.geometry.coordinates)
+        	.setHTML(setHTML);
+        	.addTo(map01);
+    }
 });
 
 
