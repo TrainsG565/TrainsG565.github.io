@@ -72,7 +72,10 @@ map01.on('mousemove', function(e) {
 
     if (!features.length) {
         popup.remove();
+        map01.setLayoutProperty('busroute', 'visibility', 'none');
+        map01.setLayoutProperty('bikepath', 'visibility', 'none');
         return;
+        
     }
     
 
@@ -80,17 +83,10 @@ map01.on('mousemove', function(e) {
     
     if (feature.layer.id == 'busKohl1km' || feature.layer.id == 'busKohl2km' || feature.layer.id == 'busMonona1km' || feature.layer.id == 'busMonona2km' ||
     feature.layer.id == 'busYahara1km' || feature.layer.id == 'busYahara2km' || feature.layer.id == 'busMSN1km' || feature.layer.id == 'busMSN2km') {
-    	var setHTML = "<b>Stop Name: </b>" + feature.properties.stop_name + "<br>" + "<b>Stop Description: </b>" + feature.properties.stop_desc + "<br>" + "<b>Direction: </b>" + feature.properties.direction +
-    		"<br>" + "<b>Route: </b>" + feature.properties.Route + "<br>" + "<b>Click to display routes</b>";
-    	popup.setLngLat(feature.geometry.coordinates)
-        	.setHTML(setHTML)
-        	.addTo(map01);
+    	map01.setLayoutProperty('busroute', 'visibility', 'visible');
     } else if (feature.layer.id == 'bikeKohl1km' || feature.layer.id == 'bikeKohl2km' || feature.layer.id == 'bikeMonona1km' || feature.layer.id == 'bikeMonona2km' ||
     feature.layer.id == 'bikeYahara1km' || feature.layer.id == 'bikeYahara2km' || feature.layer.id == 'bikeMSN1km' || feature.layer.id == 'bikeMSN2km') {
-    	var setHTML = "<b>Name: </b>" + feature.properties.Name + "<br>" + "<b>Click to display routes</b>";
-    	popup.setLngLat(feature.geometry.coordinates)
-        	.setHTML(setHTML)
-        	.addTo(map01);
+    	map01.setLayoutProperty('bikepath', 'visibility', 'visible');
     } else if (feature.layer.id == 'kohlButton') {
     	// add popup for option to click for info and buffers
     	var setHTML = "<b>Click for Kohl buffer info</b>";
@@ -116,6 +112,7 @@ map01.on('mousemove', function(e) {
         	.setHTML(setHTML)
         	.addTo(map01);
     }
+    	
 });
 
 map01.on('click', function(e) {
@@ -132,10 +129,17 @@ map01.on('click', function(e) {
     
     if (feature.layer.id == 'busKohl1km' || feature.layer.id == 'busKohl2km' || feature.layer.id == 'busMonona1km' || feature.layer.id == 'busMonona2km' ||
     feature.layer.id == 'busYahara1km' || feature.layer.id == 'busYahara2km' || feature.layer.id == 'busMSN1km' || feature.layer.id == 'busMSN2km') {
-    	// show bus routes connected with these bus stations
+    	var setHTML = "<b>Stop Name: </b>" + feature.properties.stop_name + "<br>" + "<b>Stop Description: </b>" + feature.properties.stop_desc + "<br>" + "<b>Direction: </b>" + feature.properties.direction +
+    		"<br>" + "<b>Route: </b>" + feature.properties.Route;
+    	popupClick.setLngLat(feature.geometry.coordinates)
+        	.setHTML(setHTML)
+        	.addTo(map01);
     } else if (feature.layer.id == 'bikeKohl1km' || feature.layer.id == 'bikeKohl2km' || feature.layer.id == 'bikeMonona1km' || feature.layer.id == 'bikeMonona2km' ||
     feature.layer.id == 'bikeYahara1km' || feature.layer.id == 'bikeYahara2km' || feature.layer.id == 'bikeMSN1km' || feature.layer.id == 'bikeMSN2km') {
-    	// show bike routes
+    	var setHTML = "<b>Name: </b>" + feature.properties.Name;
+    	popupClick.setLngLat(feature.geometry.coordinates)
+        	.setHTML(setHTML)
+        	.addTo(map01);
     } else if (feature.layer.id == 'kohlButton') {
     	// add popup for option to click for info and buffers
     	var setHTML = "<b>Kohl buffer info</b>";
