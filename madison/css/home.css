@@ -172,6 +172,7 @@ body p {
 	display: flex;
     justify-content: center;
     align-items: center;
+    border: 1px solid #fff;
 }
 
 
@@ -218,6 +219,7 @@ body p {
 	display: flex;
     justify-content: center;
     align-items: center;
+    border: 1px solid #fff;
 }
 
 
@@ -279,15 +281,6 @@ body p {
 	color: black;
 	top:60vh;
 	cursor: not-allowed;
-}
-
-.mapButton2 {
-	width:75px;
-	height:20vh;
-	z-index:10;
-	position: absolute;
-	text-align:center;
-	right:0;
 }
 
 
