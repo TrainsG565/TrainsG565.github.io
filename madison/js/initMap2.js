@@ -47,8 +47,8 @@ map02.on('style.load', function () {
 	});
 	
 	map02.addSource('demo1km2km', {
-		'type': 'geojson',
-		'data': '/madison/data/demo1km2km.geojson'
+		'type': 'vector',
+		'url': 'mapbox://styles/skywilliams.96hkl5a7'
 	});
 });
 
@@ -166,6 +166,8 @@ function addBuffers2(x) {
 		if (position == 0) {
 			if (bufferPosition == 0) {
 				console.log('add demo 1km kohl');
+				//map02.setLayoutProperty('demo1km2km', 'visibility', 'visible');
+				//map02.setFilter('demo1km2km', ['==', 'GID', 1]);
 				map02.addLayer({
 					'id': 'demoKohl1km',
 					'type': 'circle',
