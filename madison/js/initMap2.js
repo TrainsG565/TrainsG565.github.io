@@ -309,8 +309,23 @@ function addBuffers2(x) {
 					'source': 'parcels1km2km',
 					'layout': {},
 					'paint': {
-						'fill-color': 'black',
-						'fill-opacity': 0.75
+						'fill-color': {
+							property: 'NetTaxes',
+							type: 'interval',
+							stops: [
+								[500, '#EAF2F8'],
+								[5000, '#D4E6F1'],
+								[10000, '#A9CCE3'],
+								[15000, '#7FB3D5'],
+								[20000, '#5499C7'],
+								[50000, '#2980B9'],
+								[75000, '#2471A3'],
+								[100000, '#1F618D'],
+								[150000, '#1A5276'],
+								[1925391, '#154360']
+							]
+						},
+						'fill-opacity': 1
 					},
 					'filter': ['==', 'GID', 1]
 				});
@@ -339,7 +354,7 @@ function addBuffers2(x) {
 								[1925391, '#6E2C00']
 							]
 						},
-						'fill-opacity': 0.75
+						'fill-opacity': 1
 					},
 					'filter': ['==', 'GID', 5]
 				});
