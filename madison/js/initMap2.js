@@ -90,8 +90,14 @@ map02.on('mousemove', function(e) {
     	popup2.setLngLat(map02.unproject(e.point))
         	.setHTML(setHTML)
         	.addTo(map02);
-    } else {
-    	return;
+    } else if (feature.layer.id == 'kohlButton2') {
+    	// add popup for option to click for info and buffers
+    } else if (feature.layer.id == 'mononaButton2') {
+    	// add popup for option to click for info and buffers
+    } else if (feature.layer.id == 'yaharaButton2') {
+    	// add popup for option to click for info and buffers
+    } else if (feature.layer.id == 'msnButton2') {
+    	// add popup for option to click for info and buffer
     }
 });
 

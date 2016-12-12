@@ -85,6 +85,14 @@ map01.on('mousemove', function(e) {
     	popup.setLngLat(feature.geometry.coordinates)
         	.setHTML(setHTML)
         	.addTo(map01);
+    } else if (feature.layer.id == 'kohlButton') {
+    	// add popup for option to click for info and buffers
+    } else if (feature.layer.id == 'mononaButton') {
+    	// add popup for option to click for info and buffers
+    } else if (feature.layer.id == 'yaharaButton') {
+    	// add popup for option to click for info and buffers
+    } else if (feature.layer.id == 'msnButton') {
+    	// add popup for option to click for info and buffer
     }
 });
 
