@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<!-- check meta tags with bootstrap -->
+    <meta charset="utf-8" />
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Rail Games: Visualizing High Speed Rail in Wisconsin - Documentation</title>
+	
+
+	
+    <!-- Bootstrap & Font-Awesome CSS & owl-carousel -->
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link href="lib/owl_carousel_2/assets/owl.theme.default.css" rel="stylesheet" type="text/css" />
+    <link href="lib/owl_carousel_2/assets/owl.carousel.css" rel="stylesheet" type="text/css" />
+    
+    <!-- google fonts -->
+    <!--<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">-->
+    <link href="https://fonts.googleapis.com/css?family=Catamaran" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Droid+Serif" rel="stylesheet">
+    <!--<link href="https://fonts.googleapis.com/css?family=Crimson+Text" rel="stylesheet">-->
+    <!--<link href="https://fonts.googleapis.com/css?family=David+Libre" rel="stylesheet">-->
+    <!--<link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">-->
+    <!--<link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">-->
+    <!--<link href="https://fonts.googleapis.com/css?family=Quattrocento" rel="stylesheet">-->
+    <link href="https://fonts.googleapis.com/css?family=Cardo" rel="stylesheet">
+    
+    <!-- Link mapbox GL css -->
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.26.0/mapbox-gl.css' rel='stylesheet' />
+    
+    <!-- Custom CSS -->
+    <link href="css/home.css" rel="stylesheet" type="text/css" />
+    
+    
+    <!-- ********** -->
+    <!-- CSS Styling -->
+    <style>
+    	
+    	.affix {
+      		top: 0px;
+  		}
+  		
+  		.navShadow {
+  			-webkit-box-shadow: 0 5px 5px -5px grey;
+  			-moz-box-shadow: 0 5px 5px -5px grey;
+  			box-shadow: 0 5px 5px -5px grey;
+  		}
+  		
+  		.blockRow {
+  			margin-top: 30px;
+  		}
+  		
+
+    </style>
+    <!-- ********** -->
+    <!-- /CSS Styling -->
+    
+
+</head>
+<body id="myBody">
+	
+	<!-- NAVBAR -->
+	<!--
+	<nav class="navbar navbar-default navbar-fixed-top navShadow" style="z-index: 101; background: #FBFCFC;">
+  		<ul class="nav navbar-nav" style="margin-left:20px;">
+    		<li><a href="#" style="font-size: 18px; font-family: 'Cardo', serif;">Rail Games</a></li>
+    	</ul>
+    	
+    	<ul id ="headerMenus" class="nav navbar-nav" style="margin-right: 10%;">
+    		<li><a class="navText" href="/index.html">BACKGROUND</a></li>
+    		<li><a class="navText" href="/connectivity">CONNECTIVITY</a></li>
+    		<li><a class="navText" href="/environment">ENVIRONMENT</a></li>
+    		<li><a class="navText" href="/stations">STATIONS</a></li>
+    		<li style="border-right: 1px solid #BDC3C7;"><a class="navText" href="/madison">VISUALIZING MADISON</a></li>
+    		<li><a class="navText" href="/map">STATE MAP</a></li>
+    		<li><a class="navText" href="/bibliography">BIBLIOGRAPHY</a></li>
+    		<li><a class="navText highlight" href="/documentation">DOCUMENTATION</a></li>
+  		</ul>
+	</nav>
+	-->
+	<nav class="navbar navbar-default navbar-fixed-top navShadow" style="z-index: 101; background: #FBFCFC;">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#headerMenus">
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>                        
+      			</button>
+      			<a class="navbar-brand" href="/index.html" style="font-size: 18px; font-family: 'Cardo', serif;">Home</a>
+      		</div>
+      		
+      		<div id="headerMenus" class="collapse navbar-collapse">
+      			<ul class="nav navbar-nav">
+    				<!--<li><a class="navText" href="/index.html">BACKGROUND</a></li>-->
+    				<li><a class="navText" href="/connectivity">Connectivity</a></li>
+    				<li><a class="navText" href="/environment">Environment</a></li>
+    				<li><a class="navText" href="/stations">Stations</a></li>
+    				<li><a class="navText" href="/madison">Visualizing Madison</a></li>
+    				<li style="border-right: 1px solid #BDC3C7;"><a class="navText highlight" href="/conclusion">Conclusion</a></li>
+    				<li><a class="navText" href="/map">State Map</a></li>
+    				<li class="dropdown navText">
+        				<a class="dropdown-toggle" data-toggle="dropdown" href="#" style="margin-top:-1.9px;">Notes
+        					<span class="caret"></span></a>
+        					<ul class="dropdown-menu navText" style="background: #FBFCFC;">
+          						<li><a href="/bibliography">Bibliography</a></li>
+          						<li><a href="/documentation">Documentation</a></li>
+        					</ul>
+      				</li>
+  				</ul>
+  			</div>
+  		</div>
+  	</nav>
+	
+	<!--
+	<div id="menuButton" onclick="testFunction()" style="z-index: 101; position: fixed; background:black; border:0; top:10px; right:25px; width:auto; height:auto; padding: 12.5px; transform:translate(150%); -webkit-transition: transform .5s; transition: transform .5s;">
+		<i class="fa fa-map fa-3x" style="color: white; cursor: pointer;"></i>
+	</div>
+	-->
+	<!-- /NAVBAR -->
+	
+	
+	
+	
+	<!-- VIDEO HEADER -->
+    
+		
+		<div class="container" style="font-family: 'Cardo', serif; font-size: 16px;">
+			<div class="row">
+				<div class="col-sm-8">
+					<h2 style="margin-bottom: 30px; margin-top: 80px;">Conclusion</h2>
+					<hr>
+				</div>
+			</div>
+			
+			<div class="row blockRow">
+				<div class="col-sm-8">
+					placeholder
+				</div>
+			</div>
+			
+		</div>
+	
+	
+	
+    <!-- jQuery -->
+    <script type="text/javascript" src="lib/jquery/jquery-1.12.1.min.js"></script>
+    
+	<!-- Link lazy load jQuery plugin -->
+	<script type="text/javascript" src="lib/jquery/jquery.lazyload.min.js"></script>
+	
+    <!-- Bootstrap Core JavaScript -->
+    <script type="text/javascript" src="lib/bootstrap/js/bootstrap.min.js"></script>
+    
+    <!-- Owl-carousel -->
+    <script type="text/javascript" src="lib/owl_carousel_2/owl.carousel.min.js"></script>
+    
+    <!-- Link mapbox GL js -->
+	<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.26.0/mapbox-gl.js'></script>
+	
+	<!-- Link custom js script -->
+	<script type="text/javascript" src="js/index.js"></script>
+	
+	<script type="text/javascript" src="js/initMap.js"></script>
+    
+   
+    
+  
+
+</body>
+</html>

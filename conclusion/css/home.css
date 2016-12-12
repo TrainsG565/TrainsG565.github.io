@@ -1,0 +1,200 @@
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    /*font-family: 'Raleway', sans-serif;*/
+    /*font-family: 'Crimson Text', serif;*/
+}
+
+
+body p {
+
+}
+
+.navText {
+	font-family: 'Catamaran', sans-serif;
+	font-size: 12px;
+	padding-top:2px;
+	padding-bottom:2px;
+	padding-left:2px;
+	padding-right:2px;
+}
+
+.highlight {
+	background: #E5E7E9;
+	border-radius: 100px;
+}
+
+#headerMenus {
+	visibility: visible;
+}
+
+#first b {
+	font-size: 80px;
+	line-height: 1;
+}
+
+
+#titleText {
+	/*font-family: 'Droid Serif', serif;*/
+	/*font-family: 'David Libre', serif;*/
+	/*font-family: 'Playfair Display', serif;*/
+	/*font-family: 'PT Serif', serif;*/
+	/*font-family: 'Quattrocento', serif;*/
+	font-family: 'Cardo', serif;
+}
+
+.carrotFloat {
+	position:absolute;
+	bottom: -100px;
+	right: 10px;
+	width: auto;
+	height: auto;
+	cursor: pointer;
+}
+
+.textCarrotFloat {
+	position: absolute;
+	bottom: -100px;
+	right: 50px;
+	width:auto;
+	height:auto;
+}
+
+
+
+.carrotFloatL {
+	position:absolute;
+	bottom: -100px;
+	left: 10px;
+	width: auto;
+	height: auto;
+	cursor: pointer;
+}
+
+.textCarrotFloatL {
+	position: absolute;
+	bottom: -100px;
+	left: 50px;
+	width:auto;
+	height:auto;
+}
+
+
+
+
+#map01 { 
+	width: 100%;
+	height: 100vh;
+	margin-bottom: 75px;
+}
+
+#map02 {
+	width: 100%;
+	height: 100vh;
+	margin-bottom: 75px;
+}
+
+
+
+#blocker {
+	position: absolute;
+	top: 50vh;
+	left:0;
+	width: 100%;
+	height: auto;
+	background: #fff;
+	z-index: 0;
+	font-family: 'Cardo', serif;
+	font-size: 16px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+header {
+    position: fixed;
+    width: 100%;
+    min-height: 50%;
+    text-align: center;
+    color: #fff;
+    z-index: 0;
+}
+
+@media(min-width:768px) {
+    header {
+        min-height: 50%;
+    }
+}
+
+/* VIDEO BACKGROUND */
+
+
+.fullscreen-bg {
+	position: absolute;
+ 	top: 0;
+ 	right: 0;
+  	bottom: 0;
+  	left: 0;
+  	overflow: hidden;
+  	background-color: rgba(255, 255, 255, .25); /*overlay*/
+}
+
+.fullscreen-bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  z-index: -100;
+  background: black;
+}
+
+
+@media (min-aspect-ratio: 16/9) {
+  .fullscreen-bg-video {
+    height: 300%;
+    top: -100%;
+  }
+}
+
+@media (max-aspect-ratio: 16/9) {
+  .fullscreen-bg-video {
+    width: 300%;
+    left: -100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .fullscreen-bg {
+    background: url('assets/images/preview/slider/vision.jpg') center center / cover no-repeat;
+  }
+
+  .fullscreen-bg__video {
+    display: none;
+  }
+
+/* /VIDEO BACKGROUND */
+
+
+
+
+
+
+
+
