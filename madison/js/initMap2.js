@@ -86,9 +86,9 @@ map02.on('mousemove', function(e) {
     if (feature.layer.id == 'parcelKohl1km' || feature.layer.id == 'parcelKohl2km' || feature.layer.id == 'parcelMonona1km' || feature.layer.id == 'parcelMonona2km' ||
     feature.layer.id == 'parcelYahara1km' || feature.layer.id == 'parcelYahara2km' || feature.layer.id == 'parcelMSN1km' || feature.layer.id == 'parcelMSN2km') {
     	var setHTML = "test popup.";
-    	popup.setLngLat(feature.geometry.coordinates)
+    	popup2.setLngLat(map.unproject(e.point))
         	.setHTML(setHTML)
-        	.addTo(map01);
+        	.addTo(map02);
     } else {
     	return;
     }
