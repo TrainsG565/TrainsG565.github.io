@@ -7,7 +7,7 @@ var map02 = new mapboxgl.Map({
     center: [-89.396691603682072, 43.068686375866029],
     zoom: 11,
     pitch: 0.1,
-    attributionControl: false
+    attributionControl: true
 });
 
 map02.on('style.load', function () {
@@ -342,16 +342,16 @@ function addBuffers2(x) {
 							property: 'NetTaxes',
 							type: 'interval',
 							stops: [
-								[500, '#FBEEE6'],
-								[5000, '#F6DDCC'],
-								[10000, '#EDBB99'],
-								[15000, '#E59866'],
-								[20000, '#DC7633'],
-								[50000, '#D35400'],
-								[75000, '#BA4A00'],
-								[100000, '#A04000'],
-								[150000, '#873600'],
-								[1925391, '#6E2C00']
+								[500, '#EAF2F8'],
+								[5000, '#D4E6F1'],
+								[10000, '#A9CCE3'],
+								[15000, '#7FB3D5'],
+								[20000, '#5499C7'],
+								[50000, '#2980B9'],
+								[75000, '#2471A3'],
+								[100000, '#1F618D'],
+								[150000, '#1A5276'],
+								[1925391, '#154360']
 							]
 						},
 						'fill-opacity': 1
@@ -407,7 +407,24 @@ function addBuffers2(x) {
 					'source': 'parcels1km2km',
 					'layout': {},
 					'paint': {
-						'fill-color': 'black',
+						'fill-color': {
+							property: 'NetTaxes',
+							type: 'interval',
+							stops: [
+								[500, '#EAF2F8'],
+								[5000, '#D4E6F1'],
+								[10000, '#A9CCE3'],
+								[15000, '#7FB3D5'],
+								[20000, '#5499C7'],
+								[50000, '#2980B9'],
+								[75000, '#2471A3'],
+								[100000, '#1F618D'],
+								[150000, '#1A5276'],
+								[1925391, '#154360']
+							]
+						},
+						'fill-opacity': 1
+						},
 						'fill-opacity': 0.75
 					},
 					'filter': ['==', 'GID', 2]
@@ -421,7 +438,24 @@ function addBuffers2(x) {
 					'source': 'parcels1km2km',
 					'layout': {},
 					'paint': {
-						'fill-color': 'black',
+						'fill-color': {
+							property: 'NetTaxes',
+							type: 'interval',
+							stops: [
+								[500, '#EAF2F8'],
+								[5000, '#D4E6F1'],
+								[10000, '#A9CCE3'],
+								[15000, '#7FB3D5'],
+								[20000, '#5499C7'],
+								[50000, '#2980B9'],
+								[75000, '#2471A3'],
+								[100000, '#1F618D'],
+								[150000, '#1A5276'],
+								[1925391, '#154360']
+							]
+						},
+						'fill-opacity': 1
+						},
 						'fill-opacity': 0.75
 					},
 					'filter': ['==', 'GID', 6]
@@ -475,7 +509,24 @@ function addBuffers2(x) {
 					'source': 'parcels1km2km',
 					'layout': {},
 					'paint': {
-						'fill-color': 'black',
+						'fill-color': {
+							property: 'NetTaxes',
+							type: 'interval',
+							stops: [
+								[500, '#EAF2F8'],
+								[5000, '#D4E6F1'],
+								[10000, '#A9CCE3'],
+								[15000, '#7FB3D5'],
+								[20000, '#5499C7'],
+								[50000, '#2980B9'],
+								[75000, '#2471A3'],
+								[100000, '#1F618D'],
+								[150000, '#1A5276'],
+								[1925391, '#154360']
+							]
+						},
+						'fill-opacity': 1
+						},
 						'fill-opacity': 0.75
 					},
 					'filter': ['==', 'GID', 3]
@@ -489,7 +540,24 @@ function addBuffers2(x) {
 					'source': 'parcels1km2km',
 					'layout': {},
 					'paint': {
-						'fill-color': 'black',
+						'fill-color': {
+							property: 'NetTaxes',
+							type: 'interval',
+							stops: [
+								[500, '#EAF2F8'],
+								[5000, '#D4E6F1'],
+								[10000, '#A9CCE3'],
+								[15000, '#7FB3D5'],
+								[20000, '#5499C7'],
+								[50000, '#2980B9'],
+								[75000, '#2471A3'],
+								[100000, '#1F618D'],
+								[150000, '#1A5276'],
+								[1925391, '#154360']
+							]
+						},
+						'fill-opacity': 1
+						},
 						'fill-opacity': 0.75
 					},
 					'filter': ['==', 'GID', 7]
@@ -543,7 +611,24 @@ function addBuffers2(x) {
 					'source': 'parcels1km2km',
 					'layout': {},
 					'paint': {
-						'fill-color': 'black',
+						'fill-color': {
+							property: 'NetTaxes',
+							type: 'interval',
+							stops: [
+								[500, '#EAF2F8'],
+								[5000, '#D4E6F1'],
+								[10000, '#A9CCE3'],
+								[15000, '#7FB3D5'],
+								[20000, '#5499C7'],
+								[50000, '#2980B9'],
+								[75000, '#2471A3'],
+								[100000, '#1F618D'],
+								[150000, '#1A5276'],
+								[1925391, '#154360']
+							]
+						},
+						'fill-opacity': 1
+						},
 						'fill-opacity': 0.75
 					},
 					'filter': ['==', 'GID', 4]
@@ -557,7 +642,24 @@ function addBuffers2(x) {
 					'source': 'parcels1km2km',
 					'layout': {},
 					'paint': {
-						'fill-color': 'black',
+						'fill-color': {
+							property: 'NetTaxes',
+							type: 'interval',
+							stops: [
+								[500, '#EAF2F8'],
+								[5000, '#D4E6F1'],
+								[10000, '#A9CCE3'],
+								[15000, '#7FB3D5'],
+								[20000, '#5499C7'],
+								[50000, '#2980B9'],
+								[75000, '#2471A3'],
+								[100000, '#1F618D'],
+								[150000, '#1A5276'],
+								[1925391, '#154360']
+							]
+						},
+						'fill-opacity': 1
+						},
 						'fill-opacity': 0.75
 					},
 					'filter': ['==', 'GID', 8]
