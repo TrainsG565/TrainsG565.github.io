@@ -163,6 +163,7 @@ function addBuffers2(x) {
 				console.log('add demo 1km kohl');
 				map02.setLayoutProperty('demo1km2km', 'visibility', 'visible');
 				trackDemoBufferLayers2.push(['==', 'GID', 1]);
+				console.log(trackDemoBufferLayers2);
 				
 				map02.setFilter('demo1km2km', ['all', trackDemoBufferLayers2]);
 				/*
