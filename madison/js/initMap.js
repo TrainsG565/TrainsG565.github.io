@@ -52,62 +52,6 @@ map01.on('style.load', function () {
 		'data': '/madison/data/circmerged2km.geojson'
 	});
 	
-	map01.addLayer({
-		'id': 'kohlButton',
-		'type': 'circle',
-		'source': 'madisonStations',
-		'layout': {
-			'visibility': 'none'
-		},
-		'paint': {
-			'circle-color': 'black',
-			'circle-radius': 8
-		},
-		'filter': ['==', 'Name', 'Kohl_station']
-	});
-	
-	map01.addLayer({
-		'id': 'mononaButton',
-		'type': 'circle',
-		'source': 'madisonStations',
-		'layout': {
-			'visibility': 'none'
-		},
-		'paint': {
-			'circle-color': 'black',
-			'circle-radius': 8
-		},
-		'filter': ['==', 'Name', 'Monona_station']
-	});
-	
-	map01.addLayer({
-		'id': 'yaharaButton',
-		'type': 'circle',
-		'source': 'madisonStations',
-		'layout': {
-			'visibility': 'none'
-		},
-		'paint': {
-			'circle-color': 'black',
-			'circle-radius': 8
-		},
-		'filter': ['==', 'Name', 'Yahara_station']
-	});
-	
-	map01.addLayer({
-		'id': 'msnButton',
-		'type': 'circle',
-		'source': 'madisonStations',
-		'layout': {
-			'visibility': 'none'
-		},
-		'paint': {
-			'circle-color': 'black',
-			'circle-radius': 8
-		},
-		'filter': ['==', 'Name', 'MSN_station']
-	});
-	
 });
 
 // Create a popup, but don't add it to the map yet.
@@ -170,7 +114,6 @@ map01.on('mousemove', function(e) {
 
 
 function addStation(x) {
-	console.log(x);
 	currentStationList.push(x);
 	//x = button id
 	//get button id, add layer - filter
@@ -178,7 +121,9 @@ function addStation(x) {
 	var stationCross = stationListCross[stationPosition];
 	
 	var circlePosition = stationPosition + 1;
-	/*
+	
+	trackBufferLayers.push(x);
+	
 	map01.addLayer({
 		'id': x,
 		'type': 'circle',
@@ -190,13 +135,12 @@ function addStation(x) {
 		},
 		'filter': ['==', 'Name', stationCross]
 	});
-	*/
-	map01.setLayoutProperty(x, 'visibility', 'visible');
+	
 	
 	var buffer1kmName = x + "1km";
 	
 	// add 1km buffer circle
-	/*
+	
 	map01.addLayer({
 		'id': buffer1kmName,
 		'type': 'fill',
@@ -225,7 +169,7 @@ function addStation(x) {
 		'filter': ['==', 'GID', circlePosition]
 	});
 	trackCircleLayers.push(buffer2kmName);
-	*/
+	
 };
 
 function removeStation(x) {
@@ -248,6 +192,9 @@ function removeStation(x) {
 	if (kohlButtonControl == false && mononaButtonControl == false && yaharaButtonControl == false && msnButtonControl == false) {
 		deactivateBuffers();
 	}
+	
+	var removeAgain = trackBufferLayers.indexOf(x);
+	trackBufferLayers.splice(remove,1);
 };
 
 
