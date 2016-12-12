@@ -30,7 +30,6 @@ map02.on('style.load', function () {
 		property: 'type',
 		type: 'categorical',
 		stops: [
-			['2', '#fbb03b'],
 			['6', 'black'],
 			['3', '#223b53'],
 			['4', 'brown'],
