@@ -354,13 +354,14 @@ map01.on('load', function() {
         	
         	e.preventDefault();
         	e.stopPropagation();
-        	console.log('clicked1');
+        	
 
         	var visibility = map01.getLayoutProperty(clickedLayer, 'visibility');
 
         	if (visibility === 'visible') {
             	map01.setLayoutProperty(clickedLayer, 'visibility', 'none');
             	this.className = '';
+            	console.log('clicked1');
         	} else {
             	this.className = 'active';
             	map01.setLayoutProperty(clickedLayer, 'visibility', 'visible');
