@@ -173,21 +173,20 @@
 		<div class="container">
 			<div class="row">
 				<div id="first" class="col-sm-8">
-					<p><b>L</b>orem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel dolor dui. Vestibulum faucibus massa sit amet enim fermentum, eget bibendum felis iaculis. Duis auctor pharetra leo. Etiam tincidunt tincidunt aliquam. Nullam ac rutrum erat, consectetur malesuada nisi. In orci velit, dictum vel lorem vel, auctor lacinia erat. Proin turpis eros, mollis in enim vel, auctor rhoncus diam. Morbi sed luctus libero. Nulla tempor nunc lacus, sit amet accumsan sapien consectetur eget. Suspendisse at feugiat mi. Nam nisl diam, sagittis eget nibh rutrum, sagittis condimentum odio. In pulvinar vestibulum libero in euismod.</p>
+					<p><b>O</b>ur case study on HSR involves looking specifically at station placement in Madison, WI. We have developed two different mapping applications for this case study; both can be found on this page. When looking at station placement in Madison, we are focused on four locations; the Kohl Center, the Monona Terrace, Yahara & 1st Street stop, and the Dane County Regional Airport. These locations were chosen based on a previous analysis of station accessibility and factor scores???</p>
 				</div>
 			</div>
 		
 			
-			
-			<div class="row">
-				<div class="col-sm-8">
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel dolor dui. Vestibulum faucibus massa sit amet enim fermentum, eget bibendum felis iaculis. Duis auctor pharetra leo. Etiam tincidunt tincidunt aliquam. Nullam ac rutrum erat, consectetur malesuada nisi. In orci velit, dictum vel lorem vel, auctor lacinia erat. Proin turpis eros, mollis in enim vel, auctor rhoncus diam. Morbi sed luctus libero. Nulla tempor nunc lacus, sit amet accumsan sapien consectetur eget. Suspendisse at feugiat mi. Nam nisl diam, sagittis eget nibh rutrum, sagittis condimentum odio. In pulvinar vestibulum libero in euismod.</p>
-				</div>
-			</div>
-			
 			<div id="section06" class="row">
 				<div class="col-sm-8">
 					<h2 style="margin-bottom: 30px; margin-top: 80px;">Bike - Bus</h2>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-sm-8">
+					<p>Our first map displays all four stations mentioned above as well as data layers for bus stops, bus routes, bikes share locations, and bike paths. The data layers are available as 1km and 2km buffers around the station; these distances were used to demonstrate optimal walking distances to the station as well as general accessibility around the station (we did not want to include features that were very far from the station in question). Click on a station location to the left of the map to bring it up on the map itself; doing this will activate the ability to toggle on or off the various data layers and their corresponding distance buffers. Clicking on a station on the map will reveal overall statistics for those data layers, and hovering over a bus station or bike share location will reveal the bus routes and bike paths available.</p>
 				</div>
 			</div>
 			
@@ -206,16 +205,20 @@
 		
 			
 			<div class="row">
-				<div class="col-sm-7">
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel dolor dui. Vestibulum faucibus massa sit amet enim fermentum, eget bibendum felis iaculis. Duis auctor pharetra leo. Etiam tincidunt tincidunt aliquam. Nullam ac rutrum erat, consectetur malesuada nisi. In orci velit, dictum vel lorem vel, auctor lacinia erat. Proin turpis eros, mollis in enim vel, auctor rhoncus diam. Morbi sed luctus libero. Nulla tempor nunc lacus, sit amet accumsan sapien consectetur eget. Suspendisse at feugiat mi. Nam nisl diam, sagittis eget nibh rutrum, sagittis condimentum odio. In pulvinar vestibulum libero in euismod.</p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel dolor dui. Vestibulum faucibus massa sit amet enim fermentum, eget bibendum felis iaculis. Duis auctor pharetra leo. Etiam tincidunt tincidunt aliquam. Nullam ac rutrum erat, consectetur malesuada nisi. In orci velit, dictum vel lorem vel, auctor lacinia erat. Proin turpis eros, mollis in enim vel, auctor rhoncus diam. Morbi sed luctus libero. Nulla tempor nunc lacus, sit amet accumsan sapien consectetur eget. Suspendisse at feugiat mi. Nam nisl diam, sagittis eget nibh rutrum, sagittis condimentum odio. In pulvinar vestibulum libero in euismod.</p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel dolor dui. Vestibulum faucibus massa sit amet enim fermentum, eget bibendum felis iaculis. Duis auctor pharetra leo. Etiam tincidunt tincidunt aliquam. Nullam ac rutrum erat, consectetur malesuada nisi. In orci velit, dictum vel lorem vel, auctor lacinia erat. Proin turpis eros, mollis in enim vel, auctor rhoncus diam. Morbi sed luctus libero. Nulla tempor nunc lacus, sit amet accumsan sapien consectetur eget. Suspendisse at feugiat mi. Nam nisl diam, sagittis eget nibh rutrum, sagittis condimentum odio. In pulvinar vestibulum libero in euismod.</p>
+				<div class="col-sm-8">
+					<p>Analysis of bike - bus map</p>
 				</div>
 			</div>
 			
 			<div id="section06" class="row">
 				<div class="col-sm-8">
 					<h2 style="margin-bottom: 30px; margin-top: 80px;">Demographics - Parcels</h2>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-sm-8">
+					<p>Our second map displays all four stations mentioned above as well as data layers for demographics/population and tax parcels. The data layers are also available as 1km and 2km buffers, for the same reasons mentioned above. The demographic layer is displayed as individual dots - 1 dot equals 1 person. The dots were generated from Census Block shapefiles - points were randomly generated within these blocks based on the 2010 Racial Census data for the corresponding block. Tax parcels are color coded on a gradual scale based on Net Taxes for that parcel - the darker the blue of each parcel, the higher the net taxes for that parcel. Instructions for button to either side of the map work the same as above, however clicking on a tax parcel instead converts the map to a 3D viewpoint and extrudes the polygon of the tax parcel based on net taxes.</p>
 				</div>
 			</div>
 			
@@ -232,6 +235,12 @@
 						<div id="parcel1Button" class="mapButton2" onclick="parcel1Button(this.id)">Parcel 1km buffer</div>
 						<div id="parcel2Button" class="mapButton2" onclick="parcel2Button(this.id)">Parcel 2km buffer</div>
 					</div>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-sm-8">
+					<p>Analysis of demo - parcel map</p>
 				</div>
 			</div>
 			<!--
