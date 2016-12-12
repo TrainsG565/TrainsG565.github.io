@@ -169,6 +169,9 @@ body p {
 	position: absolute;
 	text-align:center;
 	cursor:pointer;
+	display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -212,6 +215,9 @@ body p {
 	position: absolute;
 	text-align:center;
 	right:0;
+	display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
