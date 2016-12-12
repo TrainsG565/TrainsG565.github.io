@@ -227,6 +227,7 @@ var currentStationList2 = [];
 
 var trackBufferLayers = [];
 var trackBufferLayers2 = [];
+var trackDemoBufferLayers2 = [];
 
 var trackCircleLayers = [];
 var trackCircleLayers2 = [];
@@ -445,6 +446,7 @@ function deactivateBuffers() {
 	for (i=0; i < trackBufferLayers.length; i++) {
 		map01.removeLayer(trackBufferLayers[i]);
 	}
+	
 	
 	document.getElementById('bus1Button').style.background = '#E5E7E9';
 	document.getElementById('bus2Button').style.background = '#E5E7E9';
@@ -711,6 +713,11 @@ function deactivateBuffers2() {
 		map02.removeLayer(trackBufferLayers2[i]);
 	}
 	
+	var m;
+	for (m=0; m < trackDemoBufferLayers2.length; m++) {
+		map02.setLayoutProperty('demo1km2km', 'visibility', 'none');
+		map02.setFilter('demo1km2km', ['==', 'GID', '']);
+	}
 	
 	
 	document.getElementById('demo1Button').style.background = '#E5E7E9';
