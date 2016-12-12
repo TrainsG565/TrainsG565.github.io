@@ -139,6 +139,9 @@ body p {
 
 
 
+
+
+
 #kohlButton {
 	background: #566573;
 	color: white;
@@ -289,8 +292,11 @@ body p {
     font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
 }
 
-
-
+/*
+.mapboxgl-popup b {
+	
+}
+*/
 
 
 
