@@ -85,7 +85,8 @@ map02.on('mousemove', function(e) {
     
     if (feature.layer.id == 'parcelKohl1km' || feature.layer.id == 'parcelKohl2km' || feature.layer.id == 'parcelMonona1km' || feature.layer.id == 'parcelMonona2km' ||
     feature.layer.id == 'parcelYahara1km' || feature.layer.id == 'parcelYahara2km' || feature.layer.id == 'parcelMSN1km' || feature.layer.id == 'parcelMSN2km') {
-    	var setHTML = "test popup.";
+    	var setHTML = "<b>Property Type: </b>" + feature.properties.PropertyCl + "<br>" + "<b>Property Description: </b>" + feature.properties.PropertyUs + "<br>" +
+    		"<b>Net Taxes: </b>" + feature.properties.NetTaxes + "<br>" + "<b>Click for 3D view</b>";
     	popup2.setLngLat(map02.unproject(e.point))
         	.setHTML(setHTML)
         	.addTo(map02);
