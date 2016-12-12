@@ -27,6 +27,7 @@ map02.on('style.load', function () {
 	map02.setLayoutProperty('bikepath', 'visibility', 'none');
 	
 	// demo1km is style layer
+	// and demo2km
 	/*
 	map02.setPaintProperty('demo1km2km', 'circle-color', {
 		property: 'type',
