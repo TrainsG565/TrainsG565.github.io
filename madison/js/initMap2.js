@@ -26,6 +26,18 @@ map02.on('style.load', function () {
 	map02.setLayoutProperty('busroute', 'visibility', 'none');
 	map02.setLayoutProperty('bikepath', 'visibility', 'none');
 	
+	map02.setPaintProperty('demo1km2km', 'circle-color', {
+		property: 'type',
+		type: 'categorical',
+		stops: [
+			['2', '#fbb03b'],
+			['6', 'black'],
+			['3', '#223b53'],
+			['4', 'black'],
+			['5', '#3bb2d0']
+		]
+	});
+	
 	map02.addSource('madisonStations', {
 		'type': 'geojson',
 		'data': '/madison/data/stations_v2.geojson'
