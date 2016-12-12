@@ -1,6 +1,6 @@
 // Access Token
 mapboxgl.accessToken = 'pk.eyJ1Ijoic2t5d2lsbGlhbXMiLCJhIjoibUI4TlByNCJ9.9UuhBU3ElNiesrd-BcTdPQ';
-		
+
 // Initialize the map
 var map01 = new mapboxgl.Map({
     container: 'map01',
@@ -18,7 +18,6 @@ var hoverLayers = [
 	'cityPolys',
 	'msnRails',
 	'parking', // do we need this in the state-wide map?
-	'wisconsinStops', // convert to clusters of points instead of individual dots
 	'allRailWI',
 	'amtrakAreasWI',
 	'amtrakCitiesIL', // do we need this?
