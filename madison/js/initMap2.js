@@ -71,6 +71,12 @@ var popup2 = new mapboxgl.Popup({
     closeOnClick: false
 });
 
+// Create a popup, but don't add it to the map yet.
+var popupClick2 = new mapboxgl.Popup({
+    closeButton: true,
+    closeOnClick: true
+});
+
 map02.on('mousemove', function(e) {
     var features = map02.queryRenderedFeatures(e.point, { layers: trackBufferLayers2 });
     // Change the cursor style as a UI indicator.
@@ -112,6 +118,48 @@ map02.on('mousemove', function(e) {
     	// add popup for option to click for info and buffer
     	var setHTML = "<b>Click for MSN buffer info</b>";
     	popup2.setLngLat(feature.geometry.coordinates)
+        	.setHTML(setHTML)
+        	.addTo(map02);
+    }
+});
+
+map02.on('click', function(e) {
+    var features = map02.queryRenderedFeatures(e.point, { layers: trackBufferLayers2 });
+    map02.getCanvas().style.cursor = (features.length) ? 'pointer' : '';
+
+    if (!features.length) {
+        popupClick2.remove();
+        return;
+    }
+    
+
+    var feature = features[0];
+    
+    if (feature.layer.id == 'parcelKohl1km' || feature.layer.id == 'parcelKohl2km' || feature.layer.id == 'parcelMonona1km' || feature.layer.id == 'parcelMonona2km' ||
+    feature.layer.id == 'parcelYahara1km' || feature.layer.id == 'parcelYahara2km' || feature.layer.id == 'parcelMSN1km' || feature.layer.id == 'parcelMSN2km') {
+    	// show 3D extruded parcels
+    } else if (feature.layer.id == 'kohlButton2') {
+    	// add popup for option to click for info and buffers
+    	var setHTML = "<b>Kohl buffer info</b>";
+    	popupClick2.setLngLat(feature.geometry.coordinates)
+        	.setHTML(setHTML)
+        	.addTo(map02);
+    } else if (feature.layer.id == 'mononaButton2') {
+    	// add popup for option to click for info and buffers
+    	var setHTML = "<b>Monona buffer info</b>";
+    	popupClick2.setLngLat(feature.geometry.coordinates)
+        	.setHTML(setHTML)
+        	.addTo(map02);
+    } else if (feature.layer.id == 'yaharaButton2') {
+    	// add popup for option to click for info and buffers
+    	var setHTML = "<b>Yahara buffer info</b>";
+    	popupClick2.setLngLat(feature.geometry.coordinates)
+        	.setHTML(setHTML)
+        	.addTo(map02);
+    } else if (feature.layer.id == 'msnButton2') {
+    	// add popup for option to click for info and buffer
+    	var setHTML = "<b>MSN buffer info</b>";
+    	popupClick2.setLngLat(feature.geometry.coordinates)
         	.setHTML(setHTML)
         	.addTo(map02);
     }
