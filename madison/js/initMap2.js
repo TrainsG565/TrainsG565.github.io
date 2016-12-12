@@ -127,6 +127,8 @@ function addStation2(x) {
 	
 	var circlePosition = stationPosition + 1;
 	
+	trackBufferLayers2.push(x);
+	
 	map02.addLayer({
 		'id': x,
 		'type': 'circle',
@@ -174,6 +176,9 @@ function addStation2(x) {
 function removeStation2(x) {
 	var remove = currentStationList2.indexOf(x);
 	currentStationList2.splice(remove, 1);
+	
+	var removeAgain = trackBufferLayers2.indexOf(x);
+	trackBufferLayers2.splice(removeAgain,1);
 	
 	var circRemove1km = x + "1km2";
 	var circRemove2km = x + "2km2";

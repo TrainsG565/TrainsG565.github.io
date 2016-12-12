@@ -228,10 +228,6 @@ var currentStationList2 = [];
 var trackBufferLayers = [
 ];
 var trackBufferLayers2 = [
-	'kohlButton2',
-	'mononaButton2',
-	'yaharaButton2',
-	'msnButton2'
 ];
 var trackDemoBufferLayers2 = [];
 
