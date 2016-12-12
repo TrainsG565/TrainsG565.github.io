@@ -357,9 +357,9 @@ map01.on('load', function() {
         	
 
         	var visibility = map01.getLayoutProperty(clickedLayer, 'visibility');
+        	console.log(visibility);
 
         	if (visibility === 'visible') {
-        		console.log('clicked1');
             	map01.setLayoutProperty(clickedLayer, 'visibility', 'none');
             	this.className = '';
             	
