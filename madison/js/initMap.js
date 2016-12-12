@@ -114,6 +114,7 @@ map01.on('mousemove', function(e) {
 
 
 function addStation(x) {
+	console.log(x);
 	currentStationList.push(x);
 	//x = button id
 	//get button id, add layer - filter
