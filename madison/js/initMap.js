@@ -136,6 +136,7 @@ function addStation(x) {
 	
 	var buffer1kmName = x + "1km";
 	// add 1km buffer circle
+	/*
 	map01.addLayer({
 		'id': buffer1kmName,
 		'type': 'fill',
@@ -164,6 +165,7 @@ function addStation(x) {
 		'filter': ['==', 'GID', circlePosition]
 	});
 	trackCircleLayers.push(buffer2kmName);
+	*/
 };
 
 function removeStation(x) {
