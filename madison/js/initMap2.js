@@ -172,6 +172,7 @@ function addBuffers2(x) {
 					'id': 'demoKohl1km',
 					'type': 'circle',
 					'source': 'demo1km2km',
+					'source-layer': 'demo1km2kmgeojson',
 					'layout': {},
 					'paint': {
 						'circle-color': 'black',
