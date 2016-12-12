@@ -608,21 +608,21 @@ function demo1Button(source) {
 
 };
 
-var demo2ButtonControl = false;
+var demo1ButtonControl = false;
 function demo2Button(source) {
 	var button = document.getElementById(source);
 	
-	if (demo2ButtonControl == true && buffer2Control == true) {
+	if (demo1ButtonControl == true && buffer2Control == true) {
 		button.style.background = '#566573';
 		button.style.color = 'white';
-		demo2ButtonControl = false;
+		demo1ButtonControl = false;
 		
 		// remove bus 1km buffers, defined from source (parameter)
 		removeBuffers2(source);
-	} else if (demo2ButtonControl == false && buffer2Control == true) {
+	} else if (demo1ButtonControl == false && buffer2Control == true) {
 		button.style.background = '#2980B9';
 		button.style.color = '#fff';
-		demo2ButtonControl = true;
+		demo1ButtonControl = true;
 		
 		// add bus 1km buffers, defined from source (parameter)
 		addBuffers2(source);
