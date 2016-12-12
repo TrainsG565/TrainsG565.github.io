@@ -81,7 +81,7 @@ map01.on('mousemove', function(e) {
         	.addTo(map01);
     } else if (feature.layer.id == 'bikeKohl1km' || feature.layer.id == 'bikeKohl2km' || feature.layer.id == 'bikeMonona1km' || feature.layer.id == 'bikeMonona2km' ||
     feature.layer.id == 'bikeYahara1km' || feature.layer.id == 'bikeYahara2km' || feature.layer.id == 'bikeMSN1km' || feature.layer.id == 'bikeMSN2km') {
-    	var setHTML = "<b>Name: </b>" + feature.properties.Name;
+    	var setHTML = "<b>Name: </b>" + feature.properties.Name + "<br>" + "<b>Click to display routes</b>";
     	popup.setLngLat(feature.geometry.coordinates)
         	.setHTML(setHTML)
         	.addTo(map01);
