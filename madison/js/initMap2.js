@@ -33,7 +33,7 @@ map02.on('style.load', function () {
 			['2', '#fbb03b'],
 			['6', 'black'],
 			['3', '#223b53'],
-			['4', 'black'],
+			['4', 'brown'],
 			['5', '#3bb2d0']
 		]
 	});
