@@ -294,8 +294,7 @@ map01.on('load', function() {
         		.addTo(map01);
     	} else if (feature.layer.id == 'wisconsinStops') {
     		var setHTML = "<b>Wisconsin Stops</b>" + "<br>" + "<b>Address: </b>" + feature.properties.ADDRESS + "<br>" + "<b>City: </b>" + feature.properties.CITY + "<br>" + 
-    			"<b>Zipcode: </b>" + feature.properties.ZIPCODE + "<br>" + "Metro Area: " + feature.properties.METRO_AREA + "<br>" + 
-    			"<b>Facility Name: </b>" + feature properties.FACILITY_NAME + "<br>" + "look up more in geojson";
+    			"<b>Zipcode: </b>" + feature.properties.ZIPCODE + "<br>" + "Metro Area: " + feature.properties.METRO_AREA + "<br>";
     		popup.setLngLat(feature.geometry.coordinates)
         		.setHTML(setHTML)
         		.addTo(map01);
