@@ -424,8 +424,6 @@ function addBuffers2(x) {
 							]
 						},
 						'fill-opacity': 1
-						},
-						'fill-opacity': 0.75
 					},
 					'filter': ['==', 'GID', 2]
 				});
@@ -455,8 +453,6 @@ function addBuffers2(x) {
 							]
 						},
 						'fill-opacity': 1
-						},
-						'fill-opacity': 0.75
 					},
 					'filter': ['==', 'GID', 6]
 				});
@@ -526,8 +522,6 @@ function addBuffers2(x) {
 							]
 						},
 						'fill-opacity': 1
-						},
-						'fill-opacity': 0.75
 					},
 					'filter': ['==', 'GID', 3]
 				});
@@ -557,8 +551,6 @@ function addBuffers2(x) {
 							]
 						},
 						'fill-opacity': 1
-						},
-						'fill-opacity': 0.75
 					},
 					'filter': ['==', 'GID', 7]
 				});
@@ -628,8 +620,6 @@ function addBuffers2(x) {
 							]
 						},
 						'fill-opacity': 1
-						},
-						'fill-opacity': 0.75
 					},
 					'filter': ['==', 'GID', 4]
 				});
@@ -659,8 +649,6 @@ function addBuffers2(x) {
 							]
 						},
 						'fill-opacity': 1
-						},
-						'fill-opacity': 0.75
 					},
 					'filter': ['==', 'GID', 8]
 				});
