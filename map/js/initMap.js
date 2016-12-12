@@ -14,11 +14,16 @@ var map01 = new mapboxgl.Map({
 
 
 var hoverLayers = [
+	'amtrak',
 	'cityPolys',
-	'wisconsinStops',
+	'msnRails',
+	'parking', // do we need this in the state-wide map?
+	'wisconsinStops', // convert to clusters of points instead of individual dots
+	'allRailWI',
 	'amtrakAreasWI',
-	'amtrakCitiesIL',
-	'amtrakCitiesMN'
+	'amtrakCitiesIL', // do we need this?
+	'amtrakCitiesMN', // do we need this?
+	'kohlRail'	
 ];
 
 
@@ -211,12 +216,48 @@ map01.on('load', function() {
     	}
 
     	var feature = features[0];
-
-    	// Populate the popup and set its coordinates
-    	// based on the feature found.
-    	popup.setLngLat(feature.geometry.coordinates)
-        	.setHTML('This is a popup.')
-        	.addTo(map01);
+    	
+    	if (feature.layer.id == 'amtrak') {
+    		popup.setLngLat(map01.unproject(e.point))
+        		.setHTML('amtrak layer')
+        		.addTo(map01);
+    	} else if (feature.layer.id == 'cityPolys') {
+    		popup.setLngLat(map01.unproject(e.point))
+        		.setHTML('cityPolys layer')
+        		.addTo(map01);
+    	} else if (feature.layer.id == 'msnRails') {
+    		popup.setLngLat(map01.unproject(e.point))
+        		.setHTML('msnRails layer')
+        		.addTo(map01);
+    	} else if (feature.layer.id == 'parking') {
+    		popup.setLngLat(map01.unproject(e.point))
+        		.setHTML('parking layer')
+        		.addTo(map01);
+    	} else if (feature.layer.id == 'wisconsinStops') {
+    		popup.setLngLat(feature.geometry.coordinates)
+        		.setHTML('wisconsinStops layer')
+        		.addTo(map01);
+    	} else if (feature.layer.id == 'allRailWI') {
+    		popup.setLngLat(map01.unproject(e.point))
+        		.setHTML('allRailWI layer')
+        		.addTo(map01);
+    	} else if (feature.layer.id == 'amtrakAreasWI') {
+    		popup.setLngLat(map01.unproject(e.point))
+        		.setHTML('amtrakAreasWI layer')
+        		.addTo(map01);
+    	} else if (feature.layer.id == 'amtrakCitiesIL') {
+    		popup.setLngLat(map01.unproject(e.point))
+        		.setHTML('amtrakCitiesIL layer')
+        		.addTo(map01);
+    	} else if (feature.layer.id == 'amtrakCitiesMN') {
+    		popup.setLngLat(map01.unproject(e.point))
+        		.setHTML('amtrakCitiesMN layer')
+        		.addTo(map01);
+    	} else if (feature.layer.id == 'kohlRail') {
+    		popup.setLngLat(map01.unproject(e.point))
+        		.setHTML('kohlRail layer')
+        		.addTo(map01);
+    	}
 	});
 	
 	
@@ -242,6 +283,7 @@ map01.on('load', function() {
     	link.textContent = id;
 
     	link.onclick = function (e) {
+    		console.log('clicked');
         	var clickedLayer = this.textContent;
         	
         	e.preventDefault();
