@@ -605,7 +605,7 @@ function demo1Button(source) {
 		if (demo2ButtonControl == true) {
 			demo2Button('demo2Button');
 		} else {
-			return;
+			
 		}
 		
 		// add bus 1km buffers, defined from source (parameter)
@@ -633,7 +633,7 @@ function demo2Button(source) {
 		if (demo1ButtonControl == true) {
 			demo1Button('demo1Button');
 		} else {
-			return;
+			
 		}
 		
 		// add bus 1km buffers, defined from source (parameter)
