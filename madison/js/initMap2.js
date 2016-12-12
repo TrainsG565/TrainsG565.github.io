@@ -327,12 +327,12 @@ function addBuffers2(x) {
 							property: 'NetTaxes',
 							type: 'interval',
 							stops: [
-								[144, 'black'],
+								[144, 'yellow'],
 								[478, 'blue'],
 								[3675, 'orange'],
 								[4977, 'grey'],
 								[6599, 'red'],
-								[9711, 'yellow'],
+								[9711, 'black'],
 								[1925391, 'purple']
 							]
 						},
