@@ -26,10 +26,12 @@ map02.on('style.load', function () {
 	map02.setLayoutProperty('busroute', 'visibility', 'none');
 	map02.setLayoutProperty('bikepath', 'visibility', 'none');
 	
+	// demo1km is style layer
 	map02.setPaintProperty('demo1km2km', 'circle-color', {
 		property: 'type',
 		type: 'categorical',
 		stops: [
+			['2', '#fbb03b'],
 			['6', 'black'],
 			['3', '#223b53'],
 			['4', 'brown'],
