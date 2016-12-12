@@ -60,6 +60,12 @@ var popup = new mapboxgl.Popup({
     closeOnClick: false
 });
 
+// Create a popup, but don't add it to the map yet.
+var popupClick = new mapboxgl.Popup({
+    closeButton: true,
+    closeOnClick: true
+});
+
 map01.on('mousemove', function(e) {
     var features = map01.queryRenderedFeatures(e.point, { layers: trackBufferLayers });
     map01.getCanvas().style.cursor = (features.length) ? 'pointer' : '';
@@ -111,6 +117,52 @@ map01.on('mousemove', function(e) {
         	.addTo(map01);
     }
 });
+
+map01.on('click', function(e) {
+    var features = map01.queryRenderedFeatures(e.point, { layers: trackBufferLayers });
+    map01.getCanvas().style.cursor = (features.length) ? 'pointer' : '';
+
+    if (!features.length) {
+        popupClick.remove();
+        return;
+    }
+    
+
+    var feature = features[0];
+    
+    if (feature.layer.id == 'busKohl1km' || feature.layer.id == 'busKohl2km' || feature.layer.id == 'busMonona1km' || feature.layer.id == 'busMonona2km' ||
+    feature.layer.id == 'busYahara1km' || feature.layer.id == 'busYahara2km' || feature.layer.id == 'busMSN1km' || feature.layer.id == 'busMSN2km') {
+    	// show bus routes connected with these bus stations
+    } else if (feature.layer.id == 'bikeKohl1km' || feature.layer.id == 'bikeKohl2km' || feature.layer.id == 'bikeMonona1km' || feature.layer.id == 'bikeMonona2km' ||
+    feature.layer.id == 'bikeYahara1km' || feature.layer.id == 'bikeYahara2km' || feature.layer.id == 'bikeMSN1km' || feature.layer.id == 'bikeMSN2km') {
+    	// show bike routes
+    } else if (feature.layer.id == 'kohlButton') {
+    	// add popup for option to click for info and buffers
+    	var setHTML = "<b>Kohl buffer info</b>";
+    	popupClick.setLngLat(feature.geometry.coordinates)
+        	.setHTML(setHTML)
+        	.addTo(map01);
+    } else if (feature.layer.id == 'mononaButton') {
+    	// add popup for option to click for info and buffers
+    	var setHTML = "<b>Monona buffer info</b>";
+    	popupClick.setLngLat(feature.geometry.coordinates)
+        	.setHTML(setHTML)
+        	.addTo(map01);
+    } else if (feature.layer.id == 'yaharaButton') {
+    	// add popup for option to click for info and buffers
+    	var setHTML = "<b>Yahara buffer info</b>";
+    	popupClick.setLngLat(feature.geometry.coordinates)
+        	.setHTML(setHTML)
+        	.addTo(map01);
+    } else if (feature.layer.id == 'msnButton') {
+    	// add popup for option to click for info and buffer
+    	var setHTML = "<b>MSN buffer info</b>";
+    	popupClick.setLngLat(feature.geometry.coordinates)
+        	.setHTML(setHTML)
+        	.addTo(map01);
+    }
+});
+
 
 
 function addStation(x) {
