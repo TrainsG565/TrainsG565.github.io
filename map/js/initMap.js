@@ -218,44 +218,56 @@ map01.on('load', function() {
     	var feature = features[0];
     	
     	if (feature.layer.id == 'amtrak') {
+    		var setHTML = "<b>Amtrak Layer</b>";
     		popup.setLngLat(map01.unproject(e.point))
-        		.setHTML('amtrak layer')
+        		.setHTML(setHTML)
         		.addTo(map01);
     	} else if (feature.layer.id == 'cityPolys') {
+    		var setHTML = "<b>City Polygons</b>" + "<br>" + "<b>Name: </b>" + feature.properties.name;
     		popup.setLngLat(map01.unproject(e.point))
-        		.setHTML('cityPolys layer')
+        		.setHTML(setHTML)
         		.addTo(map01);
     	} else if (feature.layer.id == 'msnRails') {
+    		var setHTML = "<b>msnRails</b>";
     		popup.setLngLat(map01.unproject(e.point))
-        		.setHTML('msnRails layer')
+        		.setHTML(setHTML)
         		.addTo(map01);
     	} else if (feature.layer.id == 'parking') {
+    		var setHTML = "<b>parking</b>";
     		popup.setLngLat(map01.unproject(e.point))
-        		.setHTML('parking layer')
+        		.setHTML(setHTML)
         		.addTo(map01);
     	} else if (feature.layer.id == 'wisconsinStops') {
+    		var setHTML = "<b>Wisconsin Stops</b>" + "<br>" + "<b>Address: </b>" + feature.properties.ADDRESS + "<br>" + "<b>City: </b>" + feature.properties.CITY + "<br>" + 
+    			"<b>Zipcode: </b>" + feature.properties.ZIPCODE + "<br>" + "Metro Area: " + feature.properties.METRO_AREA + "<br>" + 
+    			"<b>Facility Name: </b>" + feature properties.FACILITY_NAME + "<br>" + "look up more in geojson";
     		popup.setLngLat(feature.geometry.coordinates)
-        		.setHTML('wisconsinStops layer')
+        		.setHTML(setHTML)
         		.addTo(map01);
     	} else if (feature.layer.id == 'allRailWI') {
+    		var setHTML = "All Rail WI";
     		popup.setLngLat(map01.unproject(e.point))
-        		.setHTML('allRailWI layer')
+        		.setHTML(setHTML)
         		.addTo(map01);
     	} else if (feature.layer.id == 'amtrakAreasWI') {
+    		var setHTML = "<b>Amtrak Areas Wisconsin</b>" + "<br>" + "<b>Name: </b>" + feature.properties.name;
     		popup.setLngLat(map01.unproject(e.point))
-        		.setHTML('amtrakAreasWI layer')
+        		.setHTML(setHTML)
         		.addTo(map01);
     	} else if (feature.layer.id == 'amtrakCitiesIL') {
+    		var setHTML = "<b>Amtrak Cities IL</b>" + "<br>" + "<b>Name: </b>" + feature.properties.name;
     		popup.setLngLat(map01.unproject(e.point))
-        		.setHTML('amtrakCitiesIL layer')
+        		.setHTML(setHTML)
         		.addTo(map01);
     	} else if (feature.layer.id == 'amtrakCitiesMN') {
+    		var setHTML = "<b>Amtrak Cities MN</b>" + "<br>" + "<b>Name: </b>" + feature.properties.name;
     		popup.setLngLat(map01.unproject(e.point))
-        		.setHTML('amtrakCitiesMN layer')
+        		.setHTML(setHTML)
         		.addTo(map01);
     	} else if (feature.layer.id == 'kohlRail') {
+    		var setHTML = "<b>kohlRail</b>";
     		popup.setLngLat(map01.unproject(e.point))
-        		.setHTML('kohlRail layer')
+        		.setHTML(setHTML)
         		.addTo(map01);
     	}
 	});
@@ -283,11 +295,12 @@ map01.on('load', function() {
     	link.textContent = id;
 
     	link.onclick = function (e) {
-    		console.log('clicked');
+    		
         	var clickedLayer = this.textContent;
         	
         	e.preventDefault();
         	e.stopPropagation();
+        	console.log('clicked');
 
         	var visibility = map01.getLayoutProperty(clickedLayer, 'visibility');
 
