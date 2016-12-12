@@ -602,27 +602,39 @@ function demo1Button(source) {
 		button.style.color = '#fff';
 		demo1ButtonControl = true;
 		
+		if (demo2ButtonControl == true) {
+			demo2Button('demo2Button');
+		} else {
+			return;
+		}
+		
 		// add bus 1km buffers, defined from source (parameter)
 		addBuffers2(source);
 	}
 
 };
 
-var demo1ButtonControl = false;
+var demo2ButtonControl = false;
 function demo2Button(source) {
 	var button = document.getElementById(source);
 	
-	if (demo1ButtonControl == true && buffer2Control == true) {
+	if (demo2ButtonControl == true && buffer2Control == true) {
 		button.style.background = '#566573';
 		button.style.color = 'white';
-		demo1ButtonControl = false;
+		demo2ButtonControl = false;
 		
 		// remove bus 1km buffers, defined from source (parameter)
 		removeBuffers2(source);
-	} else if (demo1ButtonControl == false && buffer2Control == true) {
+	} else if (demo2ButtonControl == false && buffer2Control == true) {
 		button.style.background = '#2980B9';
 		button.style.color = '#fff';
-		demo1ButtonControl = true;
+		demo2ButtonControl = true;
+		
+		if (demo1ButtonControl == true) {
+			demo1Button('demo1Button');
+		} else {
+			return;
+		}
 		
 		// add bus 1km buffers, defined from source (parameter)
 		addBuffers2(source);
