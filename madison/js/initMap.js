@@ -142,25 +142,29 @@ map01.on('click', function(e) {
         	.addTo(map01);
     } else if (feature.layer.id == 'kohlButton') {
     	// add popup for option to click for info and buffers
-    	var setHTML = "<b>Kohl buffer info</b>";
+    	var setHTML = "<b>Kohl Buffer Info</b>" + "<br>" + "<b>Number of Bus Stations 1km: </b>" + "<br>" + "<b>Number of bicycle shares 1km: </b>" + "<br>" + 
+    		"<b>Number of Bus Stations 2km: </b>" + "<br>" + "<b>Number of bicycle shares 2km: ";
     	popupClick.setLngLat(feature.geometry.coordinates)
         	.setHTML(setHTML)
         	.addTo(map01);
     } else if (feature.layer.id == 'mononaButton') {
     	// add popup for option to click for info and buffers
-    	var setHTML = "<b>Monona buffer info</b>";
+    	var setHTML = "<b>Monona Buffer Info</b>" + "<br>" + "<b>Number of Bus Stations 1km: </b>" + "<br>" + "<b>Number of bicycle shares 1km: </b>" + "<br>" + 
+    		"<b>Number of Bus Stations 2km: </b>" + "<br>" + "<b>Number of bicycle shares 2km: ";
     	popupClick.setLngLat(feature.geometry.coordinates)
         	.setHTML(setHTML)
         	.addTo(map01);
     } else if (feature.layer.id == 'yaharaButton') {
     	// add popup for option to click for info and buffers
-    	var setHTML = "<b>Yahara buffer info</b>";
+    	var setHTML = "<b>Yahara Buffer Info</b>" + "<br>" + "<b>Number of Bus Stations 1km: </b>" + "<br>" + "<b>Number of bicycle shares 1km: </b>" + "<br>" + 
+    		"<b>Number of Bus Stations 2km: </b>" + "<br>" + "<b>Number of bicycle shares 2km: ";
     	popupClick.setLngLat(feature.geometry.coordinates)
         	.setHTML(setHTML)
         	.addTo(map01);
     } else if (feature.layer.id == 'msnButton') {
     	// add popup for option to click for info and buffer
-    	var setHTML = "<b>MSN buffer info</b>";
+    	var setHTML = "<b>MSN Buffer Info</b>" + "<br>" + "<b>Number of Bus Stations 1km: </b>" + "<br>" + "<b>Number of bicycle shares 1km: </b>" + "<br>" + 
+    		"<b>Number of Bus Stations 2km: </b>" + "<br>" + "<b>Number of bicycle shares 2km: ";
     	popupClick.setLngLat(feature.geometry.coordinates)
         	.setHTML(setHTML)
         	.addTo(map01);
