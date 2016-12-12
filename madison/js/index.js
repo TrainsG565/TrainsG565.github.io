@@ -226,9 +226,16 @@ var currentStationList = [];
 var currentStationList2 = [];
 
 var trackBufferLayers = [
-	'kohlButton'
+	'kohlButton',
+	'mononaButton',
+	'yaharahButton',
+	'msnButton'
 ];
 var trackBufferLayers2 = [
+	'kohlButton2',
+	'mononaButton2',
+	'yaharaButton2',
+	'msnButton2'
 ];
 var trackDemoBufferLayers2 = [];
 
