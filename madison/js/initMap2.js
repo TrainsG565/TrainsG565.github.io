@@ -27,6 +27,7 @@ map02.on('style.load', function () {
 	map02.setLayoutProperty('bikepath', 'visibility', 'none');
 	
 	// demo1km is style layer
+	/*
 	map02.setPaintProperty('demo1km2km', 'circle-color', {
 		property: 'type',
 		type: 'categorical',
@@ -37,6 +38,35 @@ map02.on('style.load', function () {
 			['4', 'brown'],
 			['5', '#3bb2d0']
 		]
+	});
+	*/
+	
+	// test
+	map02.addSource('demo1km', {
+		'type': 'vector',
+		'data': '/madison/data/test/demo1km.mbtiles'
+	});
+	
+	map02.addLayer({
+		'id': 'demo1km',
+		'type': 'circle',
+		'source': 'demo1km',
+		'source-layer': 'demo1kmgeojson',
+		'layout': {},
+		'paint': {
+			'circle-color': {
+				property: 'DID',
+				type: 'categorical',
+				stops: [
+					['2', '#fbb03b'],
+					['6', 'black'],
+					['3', '#223b53'],
+					['4', 'brown'],
+					['5', '#3bb2d0']
+				]
+			},
+			'circle-radius': 1
+		}
 	});
 	
 	map02.addSource('madisonStations', {
@@ -58,6 +88,8 @@ map02.on('style.load', function () {
 		'type': 'geojson',
 		'data': '/madison/data/parcels1km2km.geojson'
 	});
+	
+	
 });
 
 // Create a popup, but don't add it to the map yet.
