@@ -323,7 +323,19 @@ function addBuffers2(x) {
 					'source': 'parcels1km2km',
 					'layout': {},
 					'paint': {
-						'fill-color': 'black',
+						'fill-color': {
+							property: 'NetTaxes',
+							type: 'interval',
+							stops: [
+								[144, 'black'],
+								[478, 'blue'],
+								[3675, 'orange'],
+								[4977, 'grey'],
+								[6599, 'red'],
+								[9711, 'yellow'],
+								[1925391, 'purple']
+							]
+						},
 						'fill-opacity': 0.75
 					},
 					'filter': ['==', 'GID', 5]
