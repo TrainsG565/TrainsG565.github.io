@@ -176,6 +176,9 @@ function removeStation(x) {
 	var remove = currentStationList.indexOf(x);
 	currentStationList.splice(remove, 1);
 	
+	var removeAgain = trackBufferLayers.indexOf(x);
+	trackBufferLayers.splice(removeAgain,1);
+	
 	var circRemove1km = x + "1km";
 	var circRemove2km = x + "2km";
 	map01.removeLayer(circRemove1km);
@@ -192,9 +195,6 @@ function removeStation(x) {
 	if (kohlButtonControl == false && mononaButtonControl == false && yaharaButtonControl == false && msnButtonControl == false) {
 		deactivateBuffers();
 	}
-	
-	var removeAgain = trackBufferLayers.indexOf(x);
-	trackBufferLayers.splice(remove,1);
 };
 
 
