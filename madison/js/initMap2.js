@@ -492,17 +492,16 @@ function removeBuffers2(x) {
 		if (position == 0) {
 			if (bufferPosition == 0) {
 				console.log('remove demo 1km kohl');
-				map02.setLayoutProperty('demo1km', 'visibility', 'none');
-				map02.setFilter('demo1km', ['==', 'GID', '']);
-				console.log('test');
+				map02.setLayoutProperty('demo1km2km', 'visibility', 'none');
+				map02.setFilter('demo1km2km', ['==', 'GID', '']);
 				var spot = trackDemoBufferLayers2.indexOf(['==', 'GID', 1]);
 				trackDemoBufferLayers2.splice(spot, 1);
 			} else if (bufferPosition == 1) {
 				console.log('remove demo 2km kohl');
 				var spot = trackDemoBufferLayers2.indexOf(['==', 'GID', 5]);
 				trackDemoBufferLayers2.splice(spot, 1);
-				map02.setLayoutProperty('demo2km', 'visibility', 'none');
-				map02.setFilter('demo2km', ['==', 'GID', '']);
+				map02.setLayoutProperty('demo1km2km', 'visibility', 'none');
+				map02.setFilter('demo1km2km', ['==', 'GID', '']);
 			} else if (bufferPosition == 2) {
 				console.log('remove parcel 1km kohl');
 				var spot = trackBufferLayers2.indexOf('parcelKohl1km');
