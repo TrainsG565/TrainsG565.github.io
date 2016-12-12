@@ -82,12 +82,16 @@ map02.on('mousemove', function(e) {
     }
 
     var feature = features[0];
-
-    // Populate the popup and set its coordinates
-    // based on the feature found.
-    popup2.setLngLat(feature.geometry.coordinates)
-        .setHTML('test popup')
-        .addTo(map02);
+    
+    if (feature.layer.id == 'parcelKohl1km' || feature.layer.id == 'parcelKohl2km' || feature.layer.id == 'parcelMonona1km' || feature.layer.id == 'parcelMonona2km' ||
+    feature.layer.id == 'parcelYahara1km' || feature.layer.id == 'parcelYahara2km' || feature.layer.id == 'parcelMSN1km' || feature.layer.id == 'parcelMSN2km') {
+    	var setHTML = "test popup.";
+    	popup.setLngLat(feature.geometry.coordinates)
+        	.setHTML(setHTML)
+        	.addTo(map01);
+    } else {
+    	return;
+    }
 });
 
 
