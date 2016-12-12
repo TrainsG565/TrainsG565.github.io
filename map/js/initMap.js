@@ -346,9 +346,6 @@ map01.on('load', function() {
     	link.href = '#';
     	link.className = 'active';
     	link.textContent = id;
-    	
-    	// add
-    	map01.getLayoutProperty(id, 'visibility', 'visible');
 
     	link.onclick = function (e) {
     		
@@ -360,15 +357,8 @@ map01.on('load', function() {
 
         	var visibility = map01.getLayoutProperty(clickedLayer, 'visibility');
         	
-        	// add
-        	console.log(visibility);
-        	if (link.classList.contains('active') == true) {
-        		console.log('active');
-        	} else {
-        	
-        	}
 
-        	if (visibility === 'visible') {
+        	if (link.classList.contains('active') == true) {
             	map01.setLayoutProperty(clickedLayer, 'visibility', 'none');
             	this.className = '';
             	
