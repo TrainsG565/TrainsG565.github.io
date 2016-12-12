@@ -360,10 +360,10 @@ map01.on('load', function() {
 
         	if (link.classList.contains('active') == true) {
             	map01.setLayoutProperty(clickedLayer, 'visibility', 'none');
-            	this.className = '';
+            	this.classList.remove('active');
             	
-        	} else {
-            	this.className = 'active';
+        	} else if (link.classList.contains('active') == false) {
+            	this.classList.add('active');
             	map01.setLayoutProperty(clickedLayer, 'visibility', 'visible');
         	}
     	};
