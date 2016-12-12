@@ -358,11 +358,11 @@ map01.on('load', function() {
         	var visibility = map01.getLayoutProperty(clickedLayer, 'visibility');
         	
 
-        	if (link.classList.contains('active') == true) {
+        	if (this.classList.contains('active') == true) {
             	map01.setLayoutProperty(clickedLayer, 'visibility', 'none');
             	this.classList.remove('active');
             	
-        	} else if (link.classList.contains('active') == false) {
+        	} else if (this.classList.contains('active') == false) {
             	this.classList.add('active');
             	map01.setLayoutProperty(clickedLayer, 'visibility', 'visible');
         	}
