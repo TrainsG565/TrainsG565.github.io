@@ -28,10 +28,19 @@ map02.on('style.load', function () {
 	
 	// demo1km is style layer
 	// and demo2km
-	
-	map02.setPaintProperty('demo1km', 'circle-color', 'black');
-	map02.setPaintProperty('demo2km', 'circle-color', 'orange');
-	
+	/*
+	map02.setPaintProperty('demo1km2km', 'circle-color', {
+		property: 'type',
+		type: 'categorical',
+		stops: [
+			['2', '#fbb03b'],
+			['6', 'black'],
+			['3', '#223b53'],
+			['4', 'brown'],
+			['5', '#3bb2d0']
+		]
+	});
+	*/
 	
 	map02.addSource('madisonStations', {
 		'type': 'geojson',
@@ -170,10 +179,10 @@ function addBuffers2(x) {
 		if (position == 0) {
 			if (bufferPosition == 0) {
 				console.log('add demo 1km kohl');
-				map02.setLayoutProperty('demo1km', 'visibility', 'visible');
+				map02.setLayoutProperty('demo1km2km', 'visibility', 'visible');
 				trackDemoBufferLayers2.push(['==', 'GID', 1]);
 				
-				map02.setFilter('demo1km', ['==', 'GID', 1]);
+				map02.setFilter('demo1km2km', ['==', 'GID', 1]);
 				/*
 				map02.addLayer({
 					'id': 'demoKohl1km',
@@ -190,9 +199,10 @@ function addBuffers2(x) {
 				*/
 			} else if (bufferPosition == 1) {
 				console.log('add demo 2km kohl');
-				map02.setLayoutProperty('demo2km', 'visibility', 'visible');
+				// 'demo2km' works, but zoom = 13
+				map02.setLayoutProperty('demo1km2km', 'visibility', 'visible');
 				trackDemoBufferLayers2.push(['==', 'GID', 5]);
-				map02.setFilter('demo2km', ['==', 'GID', 5]);
+				map02.setFilter('demo1km2km', ['==', 'GID', 5]);
 				/*
 				map02.addLayer({
 					'id': 'demoKohl2km',
