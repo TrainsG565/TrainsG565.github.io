@@ -92,12 +92,28 @@ map02.on('mousemove', function(e) {
         	.addTo(map02);
     } else if (feature.layer.id == 'kohlButton2') {
     	// add popup for option to click for info and buffers
+    	var setHTML = "<b>Click for Kohl buffer info</b>";
+    	popup2.setLngLat(feature.geometry.coordinates)
+        	.setHTML(setHTML)
+        	.addTo(map02);
     } else if (feature.layer.id == 'mononaButton2') {
     	// add popup for option to click for info and buffers
+    	var setHTML = "<b>Click for Monona buffer info</b>";
+    	popup2.setLngLat(feature.geometry.coordinates)
+        	.setHTML(setHTML)
+        	.addTo(map02);
     } else if (feature.layer.id == 'yaharaButton2') {
     	// add popup for option to click for info and buffers
+    	var setHTML = "<b>Click for Yahara buffer info</b>";
+    	popup2.setLngLat(feature.geometry.coordinates)
+        	.setHTML(setHTML)
+        	.addTo(map02);
     } else if (feature.layer.id == 'msnButton2') {
     	// add popup for option to click for info and buffer
+    	var setHTML = "<b>Click for MSN buffer info</b>";
+    	popup2.setLngLat(feature.geometry.coordinates)
+        	.setHTML(setHTML)
+        	.addTo(map02);
     }
 });
 
@@ -478,6 +494,7 @@ function removeBuffers2(x) {
 				console.log('remove demo 1km kohl');
 				map02.setLayoutProperty('demo1km', 'visibility', 'none');
 				map02.setFilter('demo1km', ['==', 'GID', '']);
+				console.log('test');
 				var spot = trackDemoBufferLayers2.indexOf(['==', 'GID', 1]);
 				trackDemoBufferLayers2.splice(spot, 1);
 			} else if (bufferPosition == 1) {

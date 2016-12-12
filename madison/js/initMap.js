@@ -87,12 +87,28 @@ map01.on('mousemove', function(e) {
         	.addTo(map01);
     } else if (feature.layer.id == 'kohlButton') {
     	// add popup for option to click for info and buffers
+    	var setHTML = "<b>Click for Kohl buffer info</b>";
+    	popup.setLngLat(feature.geometry.coordinates)
+        	.setHTML(setHTML)
+        	.addTo(map01);
     } else if (feature.layer.id == 'mononaButton') {
     	// add popup for option to click for info and buffers
+    	var setHTML = "<b>Click for Monona buffer info</b>";
+    	popup.setLngLat(feature.geometry.coordinates)
+        	.setHTML(setHTML)
+        	.addTo(map01);
     } else if (feature.layer.id == 'yaharaButton') {
     	// add popup for option to click for info and buffers
+    	var setHTML = "<b>Click for Yahara buffer info</b>";
+    	popup.setLngLat(feature.geometry.coordinates)
+        	.setHTML(setHTML)
+        	.addTo(map01);
     } else if (feature.layer.id == 'msnButton') {
     	// add popup for option to click for info and buffer
+    	var setHTML = "<b>Click for MSN buffer info</b>";
+    	popup.setLngLat(feature.geometry.coordinates)
+        	.setHTML(setHTML)
+        	.addTo(map01);
     }
 });
 
