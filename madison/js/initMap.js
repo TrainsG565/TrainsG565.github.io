@@ -75,7 +75,7 @@ map01.on('mousemove', function(e) {
     if (feature.layer.id == 'busKohl1km' || feature.layer.id == 'busKohl2km' || feature.layer.id == 'busMonona1km' || feature.layer.id == 'busMonona2km' ||
     feature.layer.id == 'busYahara1km' || feature.layer.id == 'busYahara2km' || feature.layer.id == 'busMSN1km' || feature.layer.id == 'busMSN2km') {
     	var setHTML = "<b>Stop Name: </b>" + feature.properties.stop_name + "<br>" + "<b>Stop Description: </b>" + feature.properties.stop_desc + "<br>" + "<b>Direction: </b>" + feature.properties.direction +
-    		"<br>" + "<b>Route: </b>" + feature.properties.Route;
+    		"<br>" + "<b>Route: </b>" + feature.properties.Route + "<br>" + "<b>Click to display routes</b>";
     	popup.setLngLat(feature.geometry.coordinates)
         	.setHTML(setHTML)
         	.addTo(map01);
