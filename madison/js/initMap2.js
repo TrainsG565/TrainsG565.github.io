@@ -45,11 +45,6 @@ map02.on('style.load', function () {
 		'type': 'geojson',
 		'data': '/madison/data/parcels1km2km.geojson'
 	});
-	
-	map02.addSource('demo1km2km', {
-		'type': 'vector',
-		'url': 'mapbox://styles/skywilliams.96hkl5a7'
-	});
 });
 
 // Create a popup, but don't add it to the map yet.
@@ -166,8 +161,9 @@ function addBuffers2(x) {
 		if (position == 0) {
 			if (bufferPosition == 0) {
 				console.log('add demo 1km kohl');
-				//map02.setLayoutProperty('demo1km2km', 'visibility', 'visible');
-				//map02.setFilter('demo1km2km', ['==', 'GID', 1]);
+				map02.setLayoutProperty('demo1km2km', 'visibility', 'visible');
+				map02.setFilter('demo1km2km', ['==', 'GID', 1]);
+				/*
 				map02.addLayer({
 					'id': 'demoKohl1km',
 					'type': 'circle',
@@ -180,6 +176,7 @@ function addBuffers2(x) {
 					},
 					'filter': ['==', 'GID', 1]
 				});
+				*/
 				trackBufferLayers2.push('demoKohl1km');
 			} else if (bufferPosition == 1) {
 				console.log('add demo 2km kohl');
