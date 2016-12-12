@@ -52,7 +52,10 @@ map01.on('load', function() {
 	
 	map01.addSource('wisconsinStops', {
 		'type': 'geojson',
-		'data': '/map/data/wisconsinStops.geojson'
+		'data': '/map/data/wisconsinStops.geojson',
+		'cluster': true,
+		'clusterMaxZoom': 14,
+		'clusterRadius': 50
 	});
 	
 	map01.addSource('allRailWI', {
@@ -132,6 +135,7 @@ map01.on('load', function() {
 		}
 	});
 	
+	/*
 	map01.addLayer({
 		'id': 'wisconsinStops',
 		'type': 'circle',
@@ -142,6 +146,57 @@ map01.on('load', function() {
 			'circle-radius': 4
 		}
 	});
+	*/
+	
+	map01.addLayer({
+        "id": "unclustered-points-wi",
+        "type": "symbol",
+        "source": "wisconsinStops",
+        "filter": ["!has", "point_count"],
+        "layout": {
+            "icon-image": "marker-15"
+        }
+    });
+    
+    var layers = [
+        [150, '#f28cb1'],
+        [20, '#f1f075'],
+        [0, '#51bbd6']
+    ];
+    
+    layers.forEach(function (layer, i) {
+        map01.addLayer({
+            "id": "cluster-" + i,
+            "type": "circle",
+            "source": "wisconsinStops",
+            "paint": {
+                "circle-color": layer[1],
+                "circle-radius": 18
+            },
+            "filter": i === 0 ?
+                [">=", "point_count", layer[0]] :
+                ["all",
+                    [">=", "point_count", layer[0]],
+                    ["<", "point_count", layers[i - 1][0]]]
+        });
+    });
+    
+    // Add a layer for the clusters' count labels
+    map01.addLayer({
+        "id": "cluster-count",
+        "type": "symbol",
+        "source": "wisconsinStops",
+        "layout": {
+            "text-field": "{point_count}",
+            "text-font": [
+                "DIN Offc Pro Medium",
+                "Arial Unicode MS Bold"
+            ],
+            "text-size": 12
+        }
+    });
+    
+    
 	
 	map01.addLayer({
 		'id': 'allRailWI',
@@ -300,7 +355,7 @@ map01.on('load', function() {
         	
         	e.preventDefault();
         	e.stopPropagation();
-        	console.log('clicked');
+        	console.log('clicked1');
 
         	var visibility = map01.getLayoutProperty(clickedLayer, 'visibility');
 
