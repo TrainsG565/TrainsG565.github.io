@@ -735,8 +735,8 @@ function deactivateBuffers2() {
 	
 	var m;
 	for (m=0; m < trackDemoBufferLayers2.length; m++) {
-		map02.setLayoutProperty('demo1km2km', 'visibility', 'none');
-		map02.setFilter('demo1km2km', ['==', 'GID', '']);
+		map02.setLayoutProperty('dots1km2kmgeojson', 'visibility', 'none');
+		map02.setFilter('dots1km2kmgeojson', ['==', 'GID', '']);
 	}
 	
 	

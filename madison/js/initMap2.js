@@ -181,7 +181,7 @@ map02.on('click', function(e) {
     	}
     
     	
-    } else if (feature.layer.id == 'demo1km2km') {
+    } else if (feature.layer.id == 'dots1km2kmgeojson') {
     	// test click demographics
     	console.log(feature.properties.type);
     } else if (feature.layer.id == 'kohlButton2') {
@@ -309,18 +309,18 @@ function addBuffers2(x) {
 		if (position == 0) {
 			if (bufferPosition == 0) {
 				console.log('add demo 1km kohl');
-				map02.setLayoutProperty('demo1km2km', 'visibility', 'visible');
+				map02.setLayoutProperty('dots1km2kmgeojson', 'visibility', 'visible');
 				
-				trackBufferLayers2.push('demo1km2km');
+				//trackBufferLayers2.push('dots1km2kmgeojson');
 				
 				
 				
 				trackDemoBufferLayers2.push(['==', 'GID', 1]);
 				
 				
-				map02.setFilter('demo1km2km', ['==', 'GID', 1]);
+				map02.setFilter('dots1km2kmgeojson', ['==', 'GID', 1]);
 				
-				map02.setPaintProperty('demo1km2km', 'circle-color', {
+				map02.setPaintProperty('dots1km2kmgeojson', 'circle-color', {
                 	property: 'type',
                 	type: 'categorical',
                 	stops: [
@@ -328,7 +328,8 @@ function addBuffers2(x) {
                     	[3, '#223b53'],
                     	[4, '#e55e5e'],
                     	[5, '#3bb2d0'],
-                    	[6, '#ccc']]
+                    	[6, '#ccc'],
+                    	[7, 'black']]
             	});
 				
 				/*
@@ -348,9 +349,9 @@ function addBuffers2(x) {
 			} else if (bufferPosition == 1) {
 				console.log('add demo 2km kohl');
 				// 'demo2km' works, but zoom = 13
-				map02.setLayoutProperty('demo1km2km', 'visibility', 'visible');
+				map02.setLayoutProperty('dots1km2kmgeojson', 'visibility', 'visible');
 				trackDemoBufferLayers2.push(['==', 'GID', 5]);
-				map02.setFilter('demo1km2km', ['==', 'GID', 5]);
+				map02.setFilter('dots1km2kmgeojson', ['==', 'GID', 5]);
 				/*
 				map02.addLayer({
 					'id': 'demoKohl2km',
@@ -427,9 +428,9 @@ function addBuffers2(x) {
 		} else if (position == 1) {
 			if (bufferPosition == 0) {
 				console.log('add demo 1km monona');
-				map02.setLayoutProperty('demo1km2km', 'visibility', 'visible');
+				map02.setLayoutProperty('dots1km2kmgeojson', 'visibility', 'visible');
 				trackDemoBufferLayers2.push(['==', 'GID', 2]);
-				map02.setFilter('demo1km2km', ['==', 'GID', 2]);
+				map02.setFilter('dots1km2kmgeojson', ['==', 'GID', 2]);
 				/*
 				map02.addLayer({
 					'id': 'demoMonona1km',
@@ -446,9 +447,9 @@ function addBuffers2(x) {
 				
 			} else if (bufferPosition == 1) {
 				console.log('add demo 2km monona');
-				map02.setLayoutProperty('demo1km2km', 'visibility', 'visible');
+				map02.setLayoutProperty('dots1km2kmgeojson', 'visibility', 'visible');
 				trackDemoBufferLayers2.push(['==', 'GID', 6]);
-				map02.setFilter('demo1km2km', ['==', 'GID', 6]);
+				map02.setFilter('dots1km2kmgeojson', ['==', 'GID', 6]);
 				/*
 				map02.addLayer({
 					'id': 'demoMonona2km',
@@ -525,9 +526,9 @@ function addBuffers2(x) {
 		} else if (position == 2) {
 			if (bufferPosition == 0) {
 				console.log('add demo 1km yahara');
-				map02.setLayoutProperty('demo1km2km', 'visibility', 'visible');
+				map02.setLayoutProperty('dots1km2kmgeojson', 'visibility', 'visible');
 				trackDemoBufferLayers2.push(['==', 'GID', 3]);
-				map02.setFilter('demo1km2km', ['==', 'GID', 3]);
+				map02.setFilter('dots1km2kmgeojson', ['==', 'GID', 3]);
 				/*
 				map02.addLayer({
 					'id': 'demoYahara1km',
@@ -544,9 +545,9 @@ function addBuffers2(x) {
 	
 			} else if (bufferPosition == 1) {
 				console.log('add demo 2km yahara');
-				map02.setLayoutProperty('demo1km2km', 'visibility', 'visible');
+				map02.setLayoutProperty('dots1km2kmgeojson', 'visibility', 'visible');
 				trackDemoBufferLayers2.push(['==', 'GID', 7]);
-				map02.setFilter('demo1km2km', ['==', 'GID', 7]);
+				map02.setFilter('dots1km2kmgeojson', ['==', 'GID', 7]);
 				/*
 				map02.addLayer({
 					'id': 'demoYahara2km',
@@ -623,9 +624,9 @@ function addBuffers2(x) {
 		} else if (position == 3) {
 			if (bufferPosition == 0) {
 				console.log('add demo 1km msn');
-				map02.setLayoutProperty('demo1km2km', 'visibility', 'visible');
+				map02.setLayoutProperty('dots1km2kmgeojson', 'visibility', 'visible');
 				trackDemoBufferLayers2.push(['==', 'GID', 4]);
-				map02.setFilter('demo1km2km', ['==', 'GID', 4]);
+				map02.setFilter('dots1km2kmgeojson', ['==', 'GID', 4]);
 				/*
 				map02.addLayer({
 					'id': 'demoMSN1km',
@@ -642,9 +643,9 @@ function addBuffers2(x) {
 				
 			} else if (bufferPosition == 1) {
 				console.log('add demo 2km msn');
-				map02.setLayoutProperty('demo1km2km', 'visibility', 'visible');
+				map02.setLayoutProperty('dots1km2kmgeojson', 'visibility', 'visible');
 				trackDemoBufferLayers2.push(['==', 'GID', 8]);
-				map02.setFilter('demo1km2km', ['==', 'GID', 8]);
+				map02.setFilter('dots1km2kmgeojson', ['==', 'GID', 8]);
 				/*
 				map02.addLayer({
 					'id': 'demoMSN2km',
@@ -733,16 +734,16 @@ function removeBuffers2(x) {
 		if (position == 0) {
 			if (bufferPosition == 0) {
 				console.log('remove demo 1km kohl');
-				map02.setLayoutProperty('demo1km2km', 'visibility', 'none');
-				map02.setFilter('demo1km2km', ['==', 'GID', '']);
+				map02.setLayoutProperty('dots1km2kmgeojson', 'visibility', 'none');
+				map02.setFilter('dots1km2kmgeojson', ['==', 'GID', '']);
 				var spot = trackDemoBufferLayers2.indexOf(['==', 'GID', 1]);
 				trackDemoBufferLayers2.splice(spot, 1);
 			} else if (bufferPosition == 1) {
 				console.log('remove demo 2km kohl');
 				var spot = trackDemoBufferLayers2.indexOf(['==', 'GID', 5]);
 				trackDemoBufferLayers2.splice(spot, 1);
-				map02.setLayoutProperty('demo1km2km', 'visibility', 'none');
-				map02.setFilter('demo1km2km', ['==', 'GID', '']);
+				map02.setLayoutProperty('dots1km2kmgeojson', 'visibility', 'none');
+				map02.setFilter('dots1km2kmgeojson', ['==', 'GID', '']);
 			} else if (bufferPosition == 2) {
 				console.log('remove parcel 1km kohl');
 				var spot = trackBufferLayers2.indexOf('parcelKohl1km');
@@ -759,14 +760,14 @@ function removeBuffers2(x) {
 				console.log('remove demo 1km monona');
 				var spot = trackDemoBufferLayers2.indexOf(['==', 'GID', 2]);
 				trackDemoBufferLayers2.splice(spot, 1);
-				map02.setLayoutProperty('demo1km2km', 'visibility', 'none');
-				map02.setFilter('demo1km2km', ['==', 'GID', '']);
+				map02.setLayoutProperty('dots1km2kmgeojson', 'visibility', 'none');
+				map02.setFilter('dots1km2kmgeojson', ['==', 'GID', '']);
 			} else if (bufferPosition == 1) {
 				console.log('remove demo 2km monona');
 				var spot = trackDemoBufferLayers2.indexOf(['==', 'GID', 6]);
 				trackDemoBufferLayers2.splice(spot, 1);
-				map02.setLayoutProperty('demo1km2km', 'visibility', 'none');
-				map02.setFilter('demo1km2km', ['==', 'GID', '']);
+				map02.setLayoutProperty('dots1km2kmgeojson', 'visibility', 'none');
+				map02.setFilter('dots1km2kmgeojson', ['==', 'GID', '']);
 			} else if (bufferPosition == 2) {
 				console.log('remove parcel 1km monona');
 				var spot = trackBufferLayers2.indexOf('parcelMonona1km');
@@ -783,14 +784,14 @@ function removeBuffers2(x) {
 				console.log('remove demo 1km yahara');
 				var spot = trackDemoBufferLayers2.indexOf(['==', 'GID', 3]);
 				trackDemoBufferLayers2.splice(spot, 1);
-				map02.setLayoutProperty('demo1km2km', 'visibility', 'none');
-				map02.setFilter('demo1km2km', ['==', 'GID', '']);
+				map02.setLayoutProperty('dots1km2kmgeojson', 'visibility', 'none');
+				map02.setFilter('dots1km2kmgeojson', ['==', 'GID', '']);
 			} else if (bufferPosition == 1) {
 				console.log('remove demo 2km yahara');
 				var spot = trackDemoBufferLayers2.indexOf(['==', 'GID', 7]);
 				trackDemoBufferLayers2.splice(spot, 1);
-				map02.setLayoutProperty('demo1km2km', 'visibility', 'none');
-				map02.setFilter('demo1km2km', ['==', 'GID', '']);
+				map02.setLayoutProperty('dots1km2kmgeojson', 'visibility', 'none');
+				map02.setFilter('dots1km2kmgeojson', ['==', 'GID', '']);
 			} else if (bufferPosition == 2) {
 				console.log('remove parcel 1km yahara');
 				var spot = trackBufferLayers2.indexOf('parcelYahara1km');
@@ -807,14 +808,14 @@ function removeBuffers2(x) {
 				console.log('remove demo 1km msn');
 				var spot = trackDemoBufferLayers2.indexOf(['==', 'GID', 4]);
 				trackDemoBufferLayers2.splice(spot, 1);
-				map02.setLayoutProperty('demo1km2km', 'visibility', 'none');
-				map02.setFilter('demo1km2km', ['==', 'GID', '']);
+				map02.setLayoutProperty('dots1km2kmgeojson', 'visibility', 'none');
+				map02.setFilter('dots1km2kmgeojson', ['==', 'GID', '']);
 			} else if (bufferPosition == 1) {
 				console.log('remove demo 2km msn');
 				var spot = trackDemoBufferLayers2.indexOf(['==', 'GID', 8]);
 				trackDemoBufferLayers2.splice(spot, 1);
-				map02.setLayoutProperty('demo1km2km', 'visibility', 'none');
-				map02.setFilter('demo1km2km', ['==', 'GID', '']);
+				map02.setLayoutProperty('dots1km2kmgeojson', 'visibility', 'none');
+				map02.setFilter('dots1km2kmgeojson', ['==', 'GID', '']);
 			} else if (bufferPosition == 2) {
 				console.log('remove parcel 1km msn');
 				var spot = trackBufferLayers2.indexOf('parcelMSN1km');
