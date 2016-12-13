@@ -69,7 +69,9 @@ var popupClick = new mapboxgl.Popup({
 });
 
 var testArr = [];
-var testFilterArr = [];
+var testFilterArr = [
+	'any'
+];
 
 map01.on('mousemove', function(e) {
     var features = map01.queryRenderedFeatures(e.point, { layers: trackBufferLayers });
@@ -144,8 +146,15 @@ map01.on('click', function(e) {
     	testArr.push(feature.properties.Route);
     	var energy = testArr.join();
     	var prime = energy.split(", ");
-    	console.log(prime.length);
-    	console.log(testArr.length);
+    	
+    	for (var x=0; x < prime.length; x++) {
+    		var code = prime[x];
+    		for (var y=0; y < code.length; y++) {
+    			testFilterArr.push(prime[x][y]);
+    		}
+    	}
+    	console.log(testFilterArr);
+    	
     	
     	//map01.setLayoutProperty('busroute', 'visibility', 'visible');
     	//map01.setFilter('busroute', ['in', 'route_shor', energy]);
