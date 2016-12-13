@@ -145,11 +145,11 @@ map01.on('click', function(e) {
     	var prime = energy.split(", ");
     	
     	
-    	/*
+    	
     	for (var x=0; x < prime.length; x++) {
     		testFilterArr.push(['==', 'route_shor', prime[x]]);
     	}
-    	*/
+    	console.log(testFilterArr);
     	
     	
     	map01.setLayoutProperty('busroute', 'visibility', 'visible');
