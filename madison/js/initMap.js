@@ -146,10 +146,17 @@ map01.on('click', function(e) {
     	testArr.push(feature.properties.Route);
     	var energy = testArr.join();
     	var prime = energy.split(", ");
+    	console.log(prime);
+    	console.log(prime.length);
+    	console.log(prime[0][0]);
+    	console.log(prime[0][1]);
+    	console.log(prime[0][2]);
     	
+    	/*
     	for (var x=0; x < prime.length; x++) {
     		console.log(prime[0][x]);
     	}
+    	*/
     	
     	
     	

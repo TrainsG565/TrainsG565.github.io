@@ -183,29 +183,29 @@ map02.on('click', function(e) {
     	
     } else if (feature.layer.id == 'kohlButton2') {
     	// add popup for option to click for info and buffers
-    	var setHTML = "<b>Kohl Buffer Info</b>" + "<br>" + "<b>Major Property Type 1km: </b>" + "<br>" + "<b>Average Net Taxes 1km: </b>" + "<br>" + "<b>Demographics 1km: </b>" + "<br>" +
-    		"<b>Major Property Type 2km: </b>" + "<br>" + "<b>Average Net Taxes 2km: </b>" + "<br>" + "<b>Demographics 2km: </b>";
+    	var setHTML = "<b>Kohl Buffer Information</b>" + "<br>" + "Major Property Type 1km: " + "<br>" + "Average Net Taxes 1km: " + "<br>" + "Demographics 1km: " + "<br>" +
+    		"Major Property Type 2km: " + "<br>" + "Average Net Taxes 2km: " + "<br>" + "Demographics 2km: ";
     	popupClick2.setLngLat(feature.geometry.coordinates)
         	.setHTML(setHTML)
         	.addTo(map02);
     } else if (feature.layer.id == 'mononaButton2') {
     	// add popup for option to click for info and buffers
-    	var setHTML = "<b>Monona Buffer Info</b>" + "<br>" + "<b>Major Property Type 1km: </b>" + "<br>" + "<b>Average Net Taxes 1km: </b>" + "<br>" + "<b>Demographics 1km: </b>" + "<br>" +
-    		"<b>Major Property Type 2km: </b>" + "<br>" + "<b>Average Net Taxes 2km: </b>" + "<br>" + "<b>Demographics 2km: </b>";
+    	var setHTML = "<b>Monona Buffer Information</b>" + "<br>" + "Major Property Type 1km: " + "<br>" + "Average Net Taxes 1km: " + "<br>" + "Demographics 1km: " + "<br>" +
+    		"Major Property Type 2km: " + "<br>" + "Average Net Taxes 2km: " + "<br>" + "Demographics 2km: ";
     	popupClick2.setLngLat(feature.geometry.coordinates)
         	.setHTML(setHTML)
         	.addTo(map02);
     } else if (feature.layer.id == 'yaharaButton2') {
     	// add popup for option to click for info and buffers
-    	var setHTML = "<b>Yahara Buffer Info</b>" + "<br>" + "<b>Major Property Type 1km: </b>" + "<br>" + "<b>Average Net Taxes 1km: </b>" + "<br>" + "<b>Demographics 1km: </b>" + "<br>" +
-    		"<b>Major Property Type 2km: </b>" + "<br>" + "<b>Average Net Taxes 2km: </b>" + "<br>" + "<b>Demographics 2km: </b>";
+    	var setHTML = "<b>Yahara Buffer Information</b>" + "<br>" + "Major Property Type 1km: " + "<br>" + "Average Net Taxes 1km: " + "<br>" + "Demographics 1km: " + "<br>" +
+    		"Major Property Type 2km: " + "<br>" + "Average Net Taxes 2km: " + "<br>" + "Demographics 2km: ";
     	popupClick2.setLngLat(feature.geometry.coordinates)
         	.setHTML(setHTML)
         	.addTo(map02);
     } else if (feature.layer.id == 'msnButton2') {
     	// add popup for option to click for info and buffer
-    	var setHTML = "<b>MSN Buffer Info</b>" + "<br>" + "<b>Major Property Type 1km: </b>" + "<br>" + "<b>Average Net Taxes 1km: </b>" + "<br>" + "<b>Demographics 1km: </b>" + "<br>" +
-    		"<b>Major Property Type 2km: </b>" + "<br>" + "<b>Average Net Taxes 2km: </b>" + "<br>" + "<b>Demographics 2km: </b>";
+    	var setHTML = "<b>MSN Buffer Information</b>" + "<br>" + "Major Property Type 1km: " + "<br>" + "Average Net Taxes 1km: " + "<br>" + "Demographics 1km: " + "<br>" +
+    		"Major Property Type 2km: " + "<br>" + "Average Net Taxes 2km: " + "<br>" + "Demographics 2km: ";
     	popupClick2.setLngLat(feature.geometry.coordinates)
         	.setHTML(setHTML)
         	.addTo(map02);
