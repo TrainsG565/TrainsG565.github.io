@@ -14,6 +14,11 @@ var map01 = new mapboxgl.Map({
 var nav = new mapboxgl.NavigationControl();
 map01.addControl(nav, 'top-left');
 
+// disable map rotation using right click + drag
+map01.dragRotate.disable();
+
+// disable map rotation using touch rotation gesture
+map01.touchZoomRotate.disableRotation();
 
 
 var hoverLayers = [
