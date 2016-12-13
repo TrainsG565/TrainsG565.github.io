@@ -366,8 +366,8 @@ map01.on('load', function() {
     	link.textContent = toggleCross[spot];
 
     	link.onclick = function (e) {
-    		
-        	var clickedLayer = this.textContent;
+    		var spotLayer = toggleCross.indexOf(this.textContent);
+        	var clickedLayer = toggleableLayerIds[spotLayer];
         	
         	e.preventDefault();
         	e.stopPropagation();
