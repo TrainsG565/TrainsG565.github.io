@@ -310,6 +310,9 @@ function addBuffers2(x) {
 			if (bufferPosition == 0) {
 				console.log('add demo 1km kohl');
 				map02.setLayoutProperty('demo1km2km', 'visibility', 'visible');
+				
+				trackBufferLayers2.push('demo1km2km');
+				
 				trackDemoBufferLayers2.push(['==', 'GID', 1]);
 				
 				

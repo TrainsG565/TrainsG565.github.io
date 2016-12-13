@@ -228,7 +228,6 @@ var currentStationList2 = [];
 var trackBufferLayers = [
 ];
 var trackBufferLayers2 = [
-	'demo1k2km'
 ];
 var trackDemoBufferLayers2 = [];
 
