@@ -32,12 +32,12 @@ map02.on('style.load', function () {
         property: 'type',
         type: 'categorical',
         stops: [
-            [2, '#2980B9'],
-            [3, '#E74C3C'],
+            [2, '#fbb03b'],
+            [3, '#223b53'],
             [4, '#A569BD'],
-            [5, '#28B463'],
+            [5, '#3bb2d0'],
             [6, '#9B59B6'],
-            [7, '#F7DC6F']]
+            [7, '#e55e5e']]
     });
 	
 	// demo1km is style layer
