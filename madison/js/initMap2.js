@@ -324,12 +324,12 @@ function addBuffers2(x) {
                 	property: 'type',
                 	type: 'categorical',
                 	stops: [
-                    	[2, '#fbb03b'],
-                    	[3, '#223b53'],
-                    	[4, '#e55e5e'],
-                    	[5, '#3bb2d0'],
-                    	[6, '#ccc'],
-                    	[7, 'black']]
+                    	[2, '#2980B9'],
+                    	[3, '#E74C3C'],
+                    	[4, '#A569BD'],
+                    	[5, '#28B463'],
+                    	[6, '#9B59B6'],
+                    	[7, '#F7DC6F']]
             	});
 				
 				/*
