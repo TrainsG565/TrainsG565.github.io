@@ -148,12 +148,9 @@ map01.on('click', function(e) {
     	var prime = energy.split(", ");
     	
     	for (var x=0; x < prime.length; x++) {
-    		var code = prime[x];
-    		for (var y=0; y < code.length; y++) {
-    			testFilterArr.push(prime[x][y]);
-    		}
+    		console.log(prime[0][x]);
     	}
-    	console.log(testFilterArr);
+    	
     	
     	
     	//map01.setLayoutProperty('busroute', 'visibility', 'visible');
