@@ -28,6 +28,18 @@ map02.on('style.load', function () {
 	map02.setLayoutProperty('busroute', 'visibility', 'none');
 	map02.setLayoutProperty('bikepath', 'visibility', 'none');
 	
+	map02.setPaintProperty('dots1km2kmgeojson', 'circle-color', {
+        property: 'type',
+        type: 'categorical',
+        stops: [
+            [2, '#2980B9'],
+            [3, '#E74C3C'],
+            [4, '#A569BD'],
+            [5, '#28B463'],
+            [6, '#9B59B6'],
+            [7, '#F7DC6F']]
+    });
+	
 	// demo1km is style layer
 	// and demo2km
 	/*
@@ -319,7 +331,7 @@ function addBuffers2(x) {
 				
 				
 				map02.setFilter('dots1km2kmgeojson', ['==', 'GID', 1]);
-				
+				/*
 				map02.setPaintProperty('dots1km2kmgeojson', 'circle-color', {
                 	property: 'type',
                 	type: 'categorical',
@@ -331,6 +343,7 @@ function addBuffers2(x) {
                     	[6, '#9B59B6'],
                     	[7, '#F7DC6F']]
             	});
+            	*/
 				
 				/*
 				map02.addLayer({
