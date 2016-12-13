@@ -65,6 +65,8 @@ map02.on('style.load', function () {
 	
 });
 
+var 3dParcelControl = false;
+
 // Create a popup, but don't add it to the map yet.
 var popup2 = new mapboxgl.Popup({
     closeButton: false,
@@ -91,11 +93,19 @@ map02.on('mousemove', function(e) {
     
     if (feature.layer.id == 'parcelKohl1km' || feature.layer.id == 'parcelKohl2km' || feature.layer.id == 'parcelMonona1km' || feature.layer.id == 'parcelMonona2km' ||
     feature.layer.id == 'parcelYahara1km' || feature.layer.id == 'parcelYahara2km' || feature.layer.id == 'parcelMSN1km' || feature.layer.id == 'parcelMSN2km') {
-    	var setHTML = "<b>Property Type: </b>" + feature.properties.PropertyCl + "<br>" + "<b>Property Description: </b>" + feature.properties.PropertyUs + "<br>" +
-    		"<b>Net Taxes: </b>" + feature.properties.NetTaxes + "<br>" + "<b>Click for 3D view</b>";
-    	popup2.setLngLat(map02.unproject(e.point))
-        	.setHTML(setHTML)
-        	.addTo(map02);
+    	if (3dParcelControl == false) {
+    		var setHTML = "<b>Property Type: </b>" + feature.properties.PropertyCl + "<br>" + "<b>Property Description: </b>" + feature.properties.PropertyUs + "<br>" +
+    			"<b>Net Taxes: </b>" + feature.properties.NetTaxes + "<br>" + "<b>Click for 3D view</b>";
+    		popup2.setLngLat(map02.unproject(e.point))
+        		.setHTML(setHTML)
+        		.addTo(map02);
+        } else if (3dParcelControl == true) {
+        	var setHTML = "<b>Property Type: </b>" + feature.properties.PropertyCl + "<br>" + "<b>Property Description: </b>" + feature.properties.PropertyUs + "<br>" +
+    			"<b>Net Taxes: </b>" + feature.properties.NetTaxes + "<br>" + "<b>Click to reset regular view</b>";
+    		popup2.setLngLat(map02.unproject(e.point))
+        		.setHTML(setHTML)
+        		.addTo(map02);
+        }
     } else if (feature.layer.id == 'kohlButton2') {
     	// add popup for option to click for info and buffers
     	var setHTML = "<b>Click for Kohl buffer info</b>";
@@ -137,22 +147,37 @@ map02.on('click', function(e) {
     
     if (feature.layer.id == 'parcelKohl1km' || feature.layer.id == 'parcelKohl2km' || feature.layer.id == 'parcelMonona1km' || feature.layer.id == 'parcelMonona2km' ||
     feature.layer.id == 'parcelYahara1km' || feature.layer.id == 'parcelYahara2km' || feature.layer.id == 'parcelMSN1km' || feature.layer.id == 'parcelMSN2km') {
-    	// show 3D extruded parcels
-    	map02.setPitch(55);
-    	var g; 
-    	for (g=0; g < trackBufferLayers2.length; g++) {
-    		if (trackBufferLayers2[g] == 'parcelKohl1km' || trackBufferLayers2[g] == 'parcelKohl1km' || trackBufferLayers2[g] == 'parcelMonona1km' || trackBufferLayers2[g] == 'parcelMonona2km' ||
-    		trackBufferLayers2[g] == 'parcelYahara1km' || trackBufferLayers2[g] == 'parcelYahara2km' || trackBufferLayers2[g] == 'parcelMSN1km' || trackBufferLayers2[g] == 'parcelMSN2km') {
-    			map02.setPaintProperty(trackBufferLayers2[g], 'fill-extrude-height', {
-    				'property': 'height2', // maybe change
-    				'type': 'identity'
-    			});
+    	
+    	if (3dParcelControl == false) {
+			map02.setPitch(55);
+    		var g; 
+    		for (g=0; g < trackBufferLayers2.length; g++) {
+    			if (trackBufferLayers2[g] == 'parcelKohl1km' || trackBufferLayers2[g] == 'parcelKohl1km' || trackBufferLayers2[g] == 'parcelMonona1km' || trackBufferLayers2[g] == 'parcelMonona2km' ||
+    			trackBufferLayers2[g] == 'parcelYahara1km' || trackBufferLayers2[g] == 'parcelYahara2km' || trackBufferLayers2[g] == 'parcelMSN1km' || trackBufferLayers2[g] == 'parcelMSN2km') {
+    				map02.setPaintProperty(trackBufferLayers2[g], 'fill-extrude-height', {
+    					'property': 'height2', // maybe change
+    					'type': 'identity'
+    				});
     			
-    			map02.setPaintProperty(trackBufferLayers2[g], 'fill-extrude-base', 0);
-    			map02.setPaintProperty(trackBufferLayers2[g], 'fill-opacity', 0.5);
+    				map02.setPaintProperty(trackBufferLayers2[g], 'fill-extrude-base', 0);
+    				map02.setPaintProperty(trackBufferLayers2[g], 'fill-opacity', 0.5);
+    			}
+    		3dParcelControl = true;
     		}
+    	} else if (3dParcelControl == true) {
+    		map02.setPitch(0.1);
+    		for (g=0; g < trackBufferLayers2.length; g++) {
+    			if (trackBufferLayers2[g] == 'parcelKohl1km' || trackBufferLayers2[g] == 'parcelKohl1km' || trackBufferLayers2[g] == 'parcelMonona1km' || trackBufferLayers2[g] == 'parcelMonona2km' ||
+    			trackBufferLayers2[g] == 'parcelYahara1km' || trackBufferLayers2[g] == 'parcelYahara2km' || trackBufferLayers2[g] == 'parcelMSN1km' || trackBufferLayers2[g] == 'parcelMSN2km') {
+    				map02.setPaintProperty(trackBufferLayers2[g], 'fill-extrude-height', 0);
+    			
+    				map02.setPaintProperty(trackBufferLayers2[g], 'fill-extrude-base', 0);
+    				map02.setPaintProperty(trackBufferLayers2[g], 'fill-opacity', 1);
+    			}
+    		}
+    		3dParcelControl = false;
     	}
-    	// then display a box that resets the 3d display back to regular display
+    
     	
     } else if (feature.layer.id == 'kohlButton2') {
     	// add popup for option to click for info and buffers
