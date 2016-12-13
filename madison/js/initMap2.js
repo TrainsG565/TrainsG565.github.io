@@ -329,7 +329,7 @@ function addBuffers2(x) {
                     	[5, '#e55e5e'],
                     	[4, '#3bb2d0'],
                     	[6, '#ccc']]
-            	}
+            	});
 				
 				/*
 				map02.addLayer({
