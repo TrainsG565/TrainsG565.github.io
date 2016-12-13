@@ -138,6 +138,21 @@ map02.on('click', function(e) {
     if (feature.layer.id == 'parcelKohl1km' || feature.layer.id == 'parcelKohl2km' || feature.layer.id == 'parcelMonona1km' || feature.layer.id == 'parcelMonona2km' ||
     feature.layer.id == 'parcelYahara1km' || feature.layer.id == 'parcelYahara2km' || feature.layer.id == 'parcelMSN1km' || feature.layer.id == 'parcelMSN2km') {
     	// show 3D extruded parcels
+    	map02.setPitch(35);
+    	var g; 
+    	for (g=0; g < trackBufferLayers2.length; g++) {
+    		if (trackBufferLayers2[g] == 'parcelKohl1km' || trackBufferLayers2[g] == 'parcelKohl1km' || trackBufferLayers2[g] == 'parcelMonona1km' || trackBufferLayers2[g] == 'parcelMonona2km' ||
+    		trackBufferLayers2[g] == 'parcelYahara1km' || trackBufferLayers2[g] == 'parcelYahara2km' || trackBufferLayers2[g] == 'parcelMSN1km' || trackBufferLayers2[g] == 'parcelMSN2km') {
+    			map02.setPaintProperty(trackBufferLayers2[g], 'fill-extrude-height', {
+    				'property': 'NetTaxes',
+    				'type': 'identity'
+    			});
+    			
+    			map02.setPaintProperty(trackBufferLayers2[g], 'fill-extrude-base', 0);
+    			map02.setPaintProperty(trackBufferLayers2[g], 'fill-opacity', 0.5);
+    		}
+    	}
+    	
     } else if (feature.layer.id == 'kohlButton2') {
     	// add popup for option to click for info and buffers
     	var setHTML = "<b>Kohl Buffer Info</b>" + "<br>" + "<b>Major Property Type 1km: </b>" + "<br>" + "<b>Average Net Taxes 1km: </b>" + "<br>" + "<b>Demographics 1km: </b>" + "<br>" +
