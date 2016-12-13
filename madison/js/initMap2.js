@@ -138,7 +138,7 @@ map02.on('click', function(e) {
     if (feature.layer.id == 'parcelKohl1km' || feature.layer.id == 'parcelKohl2km' || feature.layer.id == 'parcelMonona1km' || feature.layer.id == 'parcelMonona2km' ||
     feature.layer.id == 'parcelYahara1km' || feature.layer.id == 'parcelYahara2km' || feature.layer.id == 'parcelMSN1km' || feature.layer.id == 'parcelMSN2km') {
     	// show 3D extruded parcels
-    	map02.setPitch(35);
+    	map02.setPitch(55);
     	var g; 
     	for (g=0; g < trackBufferLayers2.length; g++) {
     		if (trackBufferLayers2[g] == 'parcelKohl1km' || trackBufferLayers2[g] == 'parcelKohl1km' || trackBufferLayers2[g] == 'parcelMonona1km' || trackBufferLayers2[g] == 'parcelMonona2km' ||
