@@ -11,6 +11,9 @@ var map01 = new mapboxgl.Map({
     attributionControl: true
 });
 
+var nav = new mapboxgl.NavigationControl();
+map01.addControl(nav, 'top-left');
+
 
 
 var hoverLayers = [
@@ -338,7 +341,6 @@ map01.on('load', function() {
 		'amtrakCitiesIL',
 		'amtrakCitiesMN',
 		'kohlRail',
-		'unclustered-points-wi'
 	];
 	
 	var toggleCross = [
@@ -351,7 +353,6 @@ map01.on('load', function() {
 		'Amtrak Cities IL',
 		'Amtrak Cities MN',
 		'Madison Connection',
-		'Wisconsin Accessibility'
 	];
 
 	for (var i = 0; i < toggleableLayerIds.length; i++) {

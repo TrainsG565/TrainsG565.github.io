@@ -11,6 +11,9 @@ var map01 = new mapboxgl.Map({
     attributionControl: true
 });
 
+var nav = new mapboxgl.NavigationControl();
+map01.addControl(nav, 'top-left');
+
 map01.on('style.load', function () {
 	/*
 	map01.setPaintProperty('taxparcels', 'fill-extrude-height', {
