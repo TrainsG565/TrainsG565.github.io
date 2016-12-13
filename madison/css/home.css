@@ -303,6 +303,9 @@ body p {
 	font-size: 15px;
 }
 
+.mapboxgl-ctrl-bottom-right {
+    right: 75px;
+}
 
 
 

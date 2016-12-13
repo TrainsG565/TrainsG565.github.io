@@ -8,7 +8,7 @@ var map01 = new mapboxgl.Map({
     center: [-89.396691603682072, 43.068686375866029],
     zoom: 11,
     pitch: 0.1,
-    attributionControl: false
+    attributionControl: true
 });
 
 map01.on('style.load', function () {
