@@ -208,7 +208,7 @@ function addStation(x) {
 		'layout': {},
 		'paint': {
 			'fill-color': 'black',
-			'fill-opacity': 0.15
+			'fill-opacity': 0
 		},
 		'filter': ['==', 'GID', circlePosition]
 	});
@@ -224,7 +224,7 @@ function addStation(x) {
 		'layout': {},
 		'paint': {
 			'fill-color': 'orange',
-			'fill-opacity': 0.15
+			'fill-opacity': 0
 		},
 		'filter': ['==', 'GID', circlePosition]
 	});
