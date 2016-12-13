@@ -142,6 +142,7 @@ map01.on('click', function(e) {
         	
         // one for 1km and one for 2km
     	testArr.push(feature.properties.Route);
+    	console.log(testArr);
     	
     	for (var x=0; x < testArr.length; x++) {
     		var spot = testArr[x];
