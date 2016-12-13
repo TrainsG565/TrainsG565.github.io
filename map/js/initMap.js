@@ -22,7 +22,8 @@ var hoverLayers = [
 	'amtrakAreasWI',
 	'amtrakCitiesIL', // do we need this?
 	'amtrakCitiesMN', // do we need this?
-	'kohlRail'	
+	'kohlRail',
+	'unclustered-points-wi'
 ];
 
 
@@ -147,53 +148,7 @@ map01.on('load', function() {
 	});
 	*/
 	
-	map01.addLayer({
-        "id": "unclustered-points-wi",
-        "type": "symbol",
-        "source": "wisconsinStops",
-        "filter": ["!has", "point_count"],
-        "layout": {
-            "icon-image": "marker-15"
-        }
-    });
-    
-    var layers = [
-        [150, '#f28cb1'],
-        [20, '#f1f075'],
-        [0, '#51bbd6']
-    ];
-    
-    layers.forEach(function (layer, i) {
-        map01.addLayer({
-            "id": "cluster-" + i,
-            "type": "circle",
-            "source": "wisconsinStops",
-            "paint": {
-                "circle-color": layer[1],
-                "circle-radius": 18
-            },
-            "filter": i === 0 ?
-                [">=", "point_count", layer[0]] :
-                ["all",
-                    [">=", "point_count", layer[0]],
-                    ["<", "point_count", layers[i - 1][0]]]
-        });
-    });
-    
-    // Add a layer for the clusters' count labels
-    map01.addLayer({
-        "id": "cluster-count",
-        "type": "symbol",
-        "source": "wisconsinStops",
-        "layout": {
-            "text-field": "{point_count}",
-            "text-font": [
-                "DIN Offc Pro Medium",
-                "Arial Unicode MS Bold"
-            ],
-            "text-size": 12
-        }
-    });
+	
     
     
 	
@@ -252,6 +207,53 @@ map01.on('load', function() {
 		}
 	});
 	
+	map01.addLayer({
+        "id": "unclustered-points-wi",
+        "type": "symbol",
+        "source": "wisconsinStops",
+        "filter": ["!has", "point_count"],
+        "layout": {
+            "icon-image": "marker-15"
+        }
+    });
+    
+    var layers = [
+        [150, '#f28cb1'],
+        [20, '#f1f075'],
+        [0, '#51bbd6']
+    ];
+    
+    layers.forEach(function (layer, i) {
+        map01.addLayer({
+            "id": "cluster-" + i,
+            "type": "circle",
+            "source": "wisconsinStops",
+            "paint": {
+                "circle-color": layer[1],
+                "circle-radius": 18
+            },
+            "filter": i === 0 ?
+                [">=", "point_count", layer[0]] :
+                ["all",
+                    [">=", "point_count", layer[0]],
+                    ["<", "point_count", layers[i - 1][0]]]
+        });
+    });
+    
+    // Add a layer for the clusters' count labels
+    map01.addLayer({
+        "id": "cluster-count",
+        "type": "symbol",
+        "source": "wisconsinStops",
+        "layout": {
+            "text-field": "{point_count}",
+            "text-font": [
+                "DIN Offc Pro Medium",
+                "Arial Unicode MS Bold"
+            ],
+            "text-size": 12
+        }
+    });
 	
 	// Create a popup, but don't add it to the map yet.
 	var popup = new mapboxgl.Popup({
@@ -291,7 +293,7 @@ map01.on('load', function() {
     		popup.setLngLat(map01.unproject(e.point))
         		.setHTML(setHTML)
         		.addTo(map01);
-    	} else if (feature.layer.id == 'wisconsinStops') {
+    	} else if (feature.layer.id == 'unclustered-points-wi') {
     		var setHTML = "<b>Wisconsin Stops</b>" + "<br>" + "<b>Address: </b>" + feature.properties.ADDRESS + "<br>" + "<b>City: </b>" + feature.properties.CITY + "<br>" + 
     			"<b>Zipcode: </b>" + feature.properties.ZIPCODE + "<br>" + "Metro Area: " + feature.properties.METRO_AREA + "<br>";
     		popup.setLngLat(feature.geometry.coordinates)
