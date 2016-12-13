@@ -11,7 +11,8 @@ var map01 = new mapboxgl.Map({
     attributionControl: true
 });
 
-map01.addControl(new mapboxgl.NavigationControl());
+var nav = new mapboxgl.NavigationControl();
+map01.addControl(nav, 'top-left');
 
 // disable map rotation using right click + drag
 map01.dragRotate.disable();
