@@ -146,7 +146,7 @@ map01.on('click', function(e) {
     	console.log(energy);
     	
     	map01.setLayoutProperty('busroute', 'visibility', 'visible');
-    	map01.setFilter('busKohl1km', ['in', 'route_shor', energy]);
+    	map01.setFilter('busroute', ['in', 'route_shor', energy]);
     	
     } else if (feature.layer.id == 'bikeKohl1km' || feature.layer.id == 'bikeKohl2km' || feature.layer.id == 'bikeMonona1km' || feature.layer.id == 'bikeMonona2km' ||
     feature.layer.id == 'bikeYahara1km' || feature.layer.id == 'bikeYahara2km' || feature.layer.id == 'bikeMSN1km' || feature.layer.id == 'bikeMSN2km') {
