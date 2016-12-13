@@ -183,7 +183,7 @@ map02.on('click', function(e) {
     	
     } else if (feature.layer.id == 'demo1km2km') {
     	// test click demographics
-    	console.log(feature.properties.DID);
+    	console.log(feature.properties.type);
     } else if (feature.layer.id == 'kohlButton2') {
     	// add popup for option to click for info and buffers
     	var setHTML = "<b>Kohl Buffer Information</b>" + "<br>" + "Major Property Type 1km: " + "<br>" + "Average Net Taxes 1km: " + "<br>" + "Demographics 1km: " + "<br>" +
