@@ -161,29 +161,29 @@ map01.on('click', function(e) {
         	.addTo(map01);
     } else if (feature.layer.id == 'kohlButton') {
     	// add popup for option to click for info and buffers
-    	var setHTML = "<b>Kohl Buffer Info</b>" + "<br>" + "<b>Number of Bus Stations 1km: </b>" + "<br>" + "<b>Number of bicycle shares 1km: </b>" + "<br>" + 
-    		"<b>Number of Bus Stations 2km: </b>" + "<br>" + "<b>Number of bicycle shares 2km: ";
+    	var setHTML = "<b>Kohl Buffer Info</b>" + "<br>" + "<b>Number of Bus Stations 1km: 99</b>" + "<br>" + "<b>Number of bicycle shares 1km: 9</b>" + "<br>" + 
+    		"<b>Number of Bus Stations 2km: 224</b>" + "<br>" + "<b>Number of bicycle shares 2km: 22";
     	popupClick.setLngLat(feature.geometry.coordinates)
         	.setHTML(setHTML)
         	.addTo(map01);
     } else if (feature.layer.id == 'mononaButton') {
     	// add popup for option to click for info and buffers
-    	var setHTML = "<b>Monona Buffer Info</b>" + "<br>" + "<b>Number of Bus Stations 1km: </b>" + "<br>" + "<b>Number of bicycle shares 1km: </b>" + "<br>" + 
-    		"<b>Number of Bus Stations 2km: </b>" + "<br>" + "<b>Number of bicycle shares 2km: ";
+    	var setHTML = "<b>Monona Buffer Info</b>" + "<br>" + "<b>Number of Bus Stations 1km: 59</b>" + "<br>" + "<b>Number of bicycle shares 1km: 10</b>" + "<br>" + 
+    		"<b>Number of Bus Stations 2km: 143</b>" + "<br>" + "<b>Number of bicycle shares 2km: 20</b>";
     	popupClick.setLngLat(feature.geometry.coordinates)
         	.setHTML(setHTML)
         	.addTo(map01);
     } else if (feature.layer.id == 'yaharaButton') {
     	// add popup for option to click for info and buffers
-    	var setHTML = "<b>Yahara Buffer Info</b>" + "<br>" + "<b>Number of Bus Stations 1km: </b>" + "<br>" + "<b>Number of bicycle shares 1km: </b>" + "<br>" + 
-    		"<b>Number of Bus Stations 2km: </b>" + "<br>" + "<b>Number of bicycle shares 2km: ";
+    	var setHTML = "<b>Yahara Buffer Info</b>" + "<br>" + "<b>Number of Bus Stations 1km: 67</b>" + "<br>" + "<b>Number of bicycle shares 1km: 2</b>" + "<br>" + 
+    		"<b>Number of Bus Stations 2km: 156</b>" + "<br>" + "<b>Number of bicycle shares 2km: 5</b>";
     	popupClick.setLngLat(feature.geometry.coordinates)
         	.setHTML(setHTML)
         	.addTo(map01);
     } else if (feature.layer.id == 'msnButton') {
     	// add popup for option to click for info and buffer
-    	var setHTML = "<b>MSN Buffer Info</b>" + "<br>" + "<b>Number of Bus Stations 1km: </b>" + "<br>" + "<b>Number of bicycle shares 1km: </b>" + "<br>" + 
-    		"<b>Number of Bus Stations 2km: </b>" + "<br>" + "<b>Number of bicycle shares 2km: ";
+    	var setHTML = "<b>MSN Buffer Info</b>" + "<br>" + "<b>Number of Bus Stations 1km: 10</b>" + "<br>" + "<b>Number of bicycle shares 1km: 0</b>" + "<br>" + 
+    		"<b>Number of Bus Stations 2km: 57</b>" + "<br>" + "<b>Number of bicycle shares 2km: 0</b>";
     	popupClick.setLngLat(feature.geometry.coordinates)
         	.setHTML(setHTML)
         	.addTo(map01);
