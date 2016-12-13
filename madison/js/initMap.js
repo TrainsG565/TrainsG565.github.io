@@ -91,6 +91,11 @@ map01.on('mousemove', function(e) {
     if (feature.layer.id == 'busKohl1km' || feature.layer.id == 'busKohl2km' || feature.layer.id == 'busMonona1km' || feature.layer.id == 'busMonona2km' ||
     feature.layer.id == 'busYahara1km' || feature.layer.id == 'busYahara2km' || feature.layer.id == 'busMSN1km' || feature.layer.id == 'busMSN2km') {
     	//map01.setLayoutProperty('busroute', 'visibility', 'visible');
+    	var setHTML = "<b>Stop Name: </b>" + feature.properties.stop_name + "<br>" + "<b>Stop Description: </b>" + feature.properties.stop_desc + "<br>" + "<b>Direction: </b>" + feature.properties.direction +
+    		"<br>" + "<b>Route: </b>" + feature.properties.Route + "<br>" + "<b>Click to display route</b>";
+    	popup.setLngLat(feature.geometry.coordinates)
+        	.setHTML(setHTML)
+        	.addTo(map01);
     } else if (feature.layer.id == 'bikeKohl1km' || feature.layer.id == 'bikeKohl2km' || feature.layer.id == 'bikeMonona1km' || feature.layer.id == 'bikeMonona2km' ||
     feature.layer.id == 'bikeYahara1km' || feature.layer.id == 'bikeYahara2km' || feature.layer.id == 'bikeMSN1km' || feature.layer.id == 'bikeMSN2km') {
     	map01.setLayoutProperty('bikepath', 'visibility', 'visible');
@@ -136,11 +141,7 @@ map01.on('click', function(e) {
     
     if (feature.layer.id == 'busKohl1km' || feature.layer.id == 'busKohl2km' || feature.layer.id == 'busMonona1km' || feature.layer.id == 'busMonona2km' ||
     feature.layer.id == 'busYahara1km' || feature.layer.id == 'busYahara2km' || feature.layer.id == 'busMSN1km' || feature.layer.id == 'busMSN2km') {
-    	var setHTML = "<b>Stop Name: </b>" + feature.properties.stop_name + "<br>" + "<b>Stop Description: </b>" + feature.properties.stop_desc + "<br>" + "<b>Direction: </b>" + feature.properties.direction +
-    		"<br>" + "<b>Route: </b>" + feature.properties.Route;
-    	popupClick.setLngLat(feature.geometry.coordinates)
-        	.setHTML(setHTML)
-        	.addTo(map01);
+    	
         	
     	testArr.push(feature.properties.Route);
     	var energy = testArr.join();
