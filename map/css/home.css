@@ -139,6 +139,10 @@ body p {
 	font-size: 15px;
 }
 
+.mapboxgl-ctrl-top-right {
+	top: 50px;
+}
+
 
 
 

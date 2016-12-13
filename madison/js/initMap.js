@@ -77,7 +77,7 @@ map01.on('mousemove', function(e) {
 
     if (!features.length) {
         popup.remove();
-        map01.setLayoutProperty('busroute', 'visibility', 'none');
+        //map01.setLayoutProperty('busroute', 'visibility', 'none');
         map01.setLayoutProperty('bikepath', 'visibility', 'none');
         return;
         
@@ -145,14 +145,8 @@ map01.on('click', function(e) {
     	var energy = testArr.join();
     	console.log(energy);
     	
-    	for (var x=0; x < testArr.length; x++) {
-    		var spot = testArr[x];
-    		for (var y=0; y < spot.length; y++) {
-    			testFilterArr.push(['==', 'route_shor', testArr[x][y]]);
-    		}
-    	}
-    	
-    	console.log(testFilterArr);
+    	map01.setLayoutProperty('busroute', 'visibility', 'visible');
+    	map01.setFilter('busKohl1km', ['in', 'route_shor', energy]);
     	
     } else if (feature.layer.id == 'bikeKohl1km' || feature.layer.id == 'bikeKohl2km' || feature.layer.id == 'bikeMonona1km' || feature.layer.id == 'bikeMonona2km' ||
     feature.layer.id == 'bikeYahara1km' || feature.layer.id == 'bikeYahara2km' || feature.layer.id == 'bikeMSN1km' || feature.layer.id == 'bikeMSN2km') {
