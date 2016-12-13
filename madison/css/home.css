@@ -307,13 +307,10 @@ body p {
     right: 75px;
 }
 
-.top-left {
-	left: 85px;
+.mapboxgl-ctrl-top-right {
+    left: 85px;
 }
 
-.mapboxgl-ctrl-top-left {
-	left: 85px;
-}
 
 
 

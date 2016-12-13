@@ -12,7 +12,7 @@ var map01 = new mapboxgl.Map({
 });
 
 var nav = new mapboxgl.NavigationControl();
-map01.addControl(nav, 'top-left');
+map01.addControl(nav, 'top-right');
 
 map01.on('style.load', function () {
 	/*
