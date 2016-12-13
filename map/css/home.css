@@ -90,7 +90,7 @@ body p {
     position: absolute;
     z-index: 1;
     top: 65px;
-    right: 10px;
+    left: 10px;
     border-radius: 3px;
     width: 120px;
     border: 1px solid rgba(0,0,0,0.4);
@@ -141,7 +141,6 @@ body p {
 
 .mapboxgl-ctrl-top-right {
 	top: 50px;
-	left: 10px;
 }
 
 

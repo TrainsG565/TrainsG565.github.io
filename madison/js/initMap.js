@@ -143,10 +143,11 @@ map01.on('click', function(e) {
         // one for 1km and one for 2km
     	testArr.push(feature.properties.Route);
     	var energy = testArr.join();
-    	console.log(energy);
+    	var prime = energy.split(", ");
+    	console.log(prime);
     	
-    	map01.setLayoutProperty('busroute', 'visibility', 'visible');
-    	map01.setFilter('busroute', ['in', 'route_shor', energy]);
+    	//map01.setLayoutProperty('busroute', 'visibility', 'visible');
+    	//map01.setFilter('busroute', ['in', 'route_shor', energy]);
     	
     } else if (feature.layer.id == 'bikeKohl1km' || feature.layer.id == 'bikeKohl2km' || feature.layer.id == 'bikeMonona1km' || feature.layer.id == 'bikeMonona2km' ||
     feature.layer.id == 'bikeYahara1km' || feature.layer.id == 'bikeYahara2km' || feature.layer.id == 'bikeMSN1km' || feature.layer.id == 'bikeMSN2km') {
