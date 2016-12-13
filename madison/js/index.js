@@ -337,6 +337,7 @@ function bus1Button(source) {
 		
 		// remove bus 1km buffers, defined from source (parameter)
 		removeBuffers(source);
+		map01.setLayoutProperty('busroute', 'visibility', 'none');
 	} else if (bus1ButtonControl == false && buffer1Control == true) {
 		button.style.background = '#2980B9';
 		button.style.color = '#fff';
@@ -344,6 +345,7 @@ function bus1Button(source) {
 		
 		// add bus 1km buffers, defined from source (parameter)
 		addBuffers(source);
+		map01.setLayoutProperty('busroute', 'visibility', 'none');
 	}
 
 };
@@ -359,6 +361,7 @@ function bus2Button(source) {
 		
 		// remove bus 1km buffers, defined from source (parameter)
 		removeBuffers(source);
+		map01.setLayoutProperty('busroute', 'visibility', 'none');
 	} else if (bus2ButtonControl == false && buffer1Control == true) {
 		button.style.background = '#2980B9';
 		button.style.color = '#fff';
@@ -366,6 +369,7 @@ function bus2Button(source) {
 		
 		// add bus 1km buffers, defined from source (parameter)
 		addBuffers(source);
+		map01.setLayoutProperty('busroute', 'visibility', 'none');
 	}
 };
 
@@ -448,6 +452,8 @@ function deactivateBuffers() {
 	for (i=0; i < trackBufferLayers.length; i++) {
 		map01.removeLayer(trackBufferLayers[i]);
 	}
+	
+	map01.setLayoutProperty('busroute', 'visibility', 'none');
 	
 	
 	document.getElementById('bus1Button').style.background = '#E5E7E9';

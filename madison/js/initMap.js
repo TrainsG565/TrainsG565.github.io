@@ -146,6 +146,10 @@ map01.on('click', function(e) {
     	var energy = testArr.join();
     	var prime = energy.split(", ");
     	
+    	testFilterArr.length = 0;
+    	testFilterArr = [
+    		'any'
+    	];
     	
     	
     	for (var x=0; x < prime.length; x++) {
