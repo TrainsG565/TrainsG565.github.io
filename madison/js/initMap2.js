@@ -10,8 +10,7 @@ var map02 = new mapboxgl.Map({
     attributionControl: true
 });
 
-var nav = new mapboxgl.NavigationControl();
-map02.addControl(nav, 'top-right');
+map02.addControl(new mapboxgl.NavigationControl());
 
 map02.on('style.load', function () {
 	/*

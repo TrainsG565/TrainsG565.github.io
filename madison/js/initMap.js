@@ -11,8 +11,7 @@ var map01 = new mapboxgl.Map({
     attributionControl: true
 });
 
-var nav = new mapboxgl.NavigationControl();
-map01.addControl(nav, 'top-right');
+map01.addControl(new mapboxgl.NavigationControl());
 
 map01.on('style.load', function () {
 	/*
@@ -70,6 +69,9 @@ var popupClick = new mapboxgl.Popup({
 });
 
 var testArr = [];
+var testFilterArr = [
+	'any'
+];
 
 map01.on('mousemove', function(e) {
     var features = map01.queryRenderedFeatures(e.point, { layers: trackBufferLayers });
@@ -89,9 +91,6 @@ map01.on('mousemove', function(e) {
     if (feature.layer.id == 'busKohl1km' || feature.layer.id == 'busKohl2km' || feature.layer.id == 'busMonona1km' || feature.layer.id == 'busMonona2km' ||
     feature.layer.id == 'busYahara1km' || feature.layer.id == 'busYahara2km' || feature.layer.id == 'busMSN1km' || feature.layer.id == 'busMSN2km') {
     	map01.setLayoutProperty('busroute', 'visibility', 'visible');
-    	// one for 1km and one for 2km
-    	testArr.push(feature.properties.Route);
-    	console.log(testArr);
     } else if (feature.layer.id == 'bikeKohl1km' || feature.layer.id == 'bikeKohl2km' || feature.layer.id == 'bikeMonona1km' || feature.layer.id == 'bikeMonona2km' ||
     feature.layer.id == 'bikeYahara1km' || feature.layer.id == 'bikeYahara2km' || feature.layer.id == 'bikeMSN1km' || feature.layer.id == 'bikeMSN2km') {
     	map01.setLayoutProperty('bikepath', 'visibility', 'visible');
@@ -142,6 +141,17 @@ map01.on('click', function(e) {
     	popupClick.setLngLat(feature.geometry.coordinates)
         	.setHTML(setHTML)
         	.addTo(map01);
+        	
+        // one for 1km and one for 2km
+    	testArr.push(feature.properties.Route);
+    	for (var x=0; x < testArr.length; x++) {
+    		var spot = testArr[x];
+    		for (var y=0; y < spot.length; y++) {
+    			testFilterArr.push(['==', 'route_shor', testArr[x][y]]);
+    		}
+    	}
+    	console.log(testFilterArr);
+    	
     } else if (feature.layer.id == 'bikeKohl1km' || feature.layer.id == 'bikeKohl2km' || feature.layer.id == 'bikeMonona1km' || feature.layer.id == 'bikeMonona2km' ||
     feature.layer.id == 'bikeYahara1km' || feature.layer.id == 'bikeYahara2km' || feature.layer.id == 'bikeMSN1km' || feature.layer.id == 'bikeMSN2km') {
     	var setHTML = "<b>Name: </b>" + feature.properties.Name;
