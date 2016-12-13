@@ -152,6 +152,7 @@ map02.on('click', function(e) {
     			map02.setPaintProperty(trackBufferLayers2[g], 'fill-opacity', 0.5);
     		}
     	}
+    	// then display a box that resets the 3d display back to regular display
     	
     } else if (feature.layer.id == 'kohlButton2') {
     	// add popup for option to click for info and buffers

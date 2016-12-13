@@ -304,6 +304,23 @@ body p {
 }
 
 
+#3dButton {
+	position: absolute;
+	width: auto;
+	height: auto;
+	padding-top: 2.5px;
+	padding-bottom: 2.5px;
+	padding-left: 2.5px;
+	padding-right: 2.5px;
+	top: 0;
+	left: 45%;
+	background: #fff;
+}
+
+
+
+
+
 
 
 
