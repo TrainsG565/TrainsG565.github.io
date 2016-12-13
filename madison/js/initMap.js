@@ -69,6 +69,8 @@ var popupClick = new mapboxgl.Popup({
     closeOnClick: true
 });
 
+var testArr = [];
+
 map01.on('mousemove', function(e) {
     var features = map01.queryRenderedFeatures(e.point, { layers: trackBufferLayers });
     map01.getCanvas().style.cursor = (features.length) ? 'pointer' : '';
@@ -87,6 +89,9 @@ map01.on('mousemove', function(e) {
     if (feature.layer.id == 'busKohl1km' || feature.layer.id == 'busKohl2km' || feature.layer.id == 'busMonona1km' || feature.layer.id == 'busMonona2km' ||
     feature.layer.id == 'busYahara1km' || feature.layer.id == 'busYahara2km' || feature.layer.id == 'busMSN1km' || feature.layer.id == 'busMSN2km') {
     	map01.setLayoutProperty('busroute', 'visibility', 'visible');
+    	// one for 1km and one for 2km
+    	testArr.push(feature.properties.Route);
+    	console.log(testArr);
     } else if (feature.layer.id == 'bikeKohl1km' || feature.layer.id == 'bikeKohl2km' || feature.layer.id == 'bikeMonona1km' || feature.layer.id == 'bikeMonona2km' ||
     feature.layer.id == 'bikeYahara1km' || feature.layer.id == 'bikeYahara2km' || feature.layer.id == 'bikeMSN1km' || feature.layer.id == 'bikeMSN2km') {
     	map01.setLayoutProperty('bikepath', 'visibility', 'visible');
