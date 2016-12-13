@@ -147,11 +147,20 @@ map01.on('click', function(e) {
     	for (var x=0; x < testArr.length; x++) {
     		var spot = testArr[x];
     		for (var y=0; y < spot.length; y++) {
-    			testFilterArr.push(['==', 'route_shor', testArr[x][y]]);
+    			testFilterArr.push(['==', 'route_shor', testArr[y]]);
     		}
     	}
     	console.log(testFilterArr);
-    	
+    	/*
+    	cubes.forEach(function each(item) {
+  			if (Array.isArray(item)) {
+    			// If is array, continue repeat loop
+    			item.forEach(each);
+  			} else {
+    			console.log(item);
+  			}
+		});
+    	*/
     } else if (feature.layer.id == 'bikeKohl1km' || feature.layer.id == 'bikeKohl2km' || feature.layer.id == 'bikeMonona1km' || feature.layer.id == 'bikeMonona2km' ||
     feature.layer.id == 'bikeYahara1km' || feature.layer.id == 'bikeYahara2km' || feature.layer.id == 'bikeMSN1km' || feature.layer.id == 'bikeMSN2km') {
     	var setHTML = "<b>Name: </b>" + feature.properties.Name;
