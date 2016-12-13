@@ -65,7 +65,7 @@ map02.on('style.load', function () {
 	
 });
 
-var 3dParcelControl = false;
+var specialParcelControl = false;
 
 // Create a popup, but don't add it to the map yet.
 var popup2 = new mapboxgl.Popup({
@@ -93,13 +93,13 @@ map02.on('mousemove', function(e) {
     
     if (feature.layer.id == 'parcelKohl1km' || feature.layer.id == 'parcelKohl2km' || feature.layer.id == 'parcelMonona1km' || feature.layer.id == 'parcelMonona2km' ||
     feature.layer.id == 'parcelYahara1km' || feature.layer.id == 'parcelYahara2km' || feature.layer.id == 'parcelMSN1km' || feature.layer.id == 'parcelMSN2km') {
-    	if (3dParcelControl == false) {
+    	if (specialParcelControl == false) {
     		var setHTML = "<b>Property Type: </b>" + feature.properties.PropertyCl + "<br>" + "<b>Property Description: </b>" + feature.properties.PropertyUs + "<br>" +
     			"<b>Net Taxes: </b>" + feature.properties.NetTaxes + "<br>" + "<b>Click for 3D view</b>";
     		popup2.setLngLat(map02.unproject(e.point))
         		.setHTML(setHTML)
         		.addTo(map02);
-        } else if (3dParcelControl == true) {
+        } else if (specialParcelControl == true) {
         	var setHTML = "<b>Property Type: </b>" + feature.properties.PropertyCl + "<br>" + "<b>Property Description: </b>" + feature.properties.PropertyUs + "<br>" +
     			"<b>Net Taxes: </b>" + feature.properties.NetTaxes + "<br>" + "<b>Click to reset regular view</b>";
     		popup2.setLngLat(map02.unproject(e.point))
@@ -148,7 +148,7 @@ map02.on('click', function(e) {
     if (feature.layer.id == 'parcelKohl1km' || feature.layer.id == 'parcelKohl2km' || feature.layer.id == 'parcelMonona1km' || feature.layer.id == 'parcelMonona2km' ||
     feature.layer.id == 'parcelYahara1km' || feature.layer.id == 'parcelYahara2km' || feature.layer.id == 'parcelMSN1km' || feature.layer.id == 'parcelMSN2km') {
     	
-    	if (3dParcelControl == false) {
+    	if (specialParcelControl == false) {
 			map02.setPitch(55);
     		var g; 
     		for (g=0; g < trackBufferLayers2.length; g++) {
@@ -162,9 +162,9 @@ map02.on('click', function(e) {
     				map02.setPaintProperty(trackBufferLayers2[g], 'fill-extrude-base', 0);
     				map02.setPaintProperty(trackBufferLayers2[g], 'fill-opacity', 0.5);
     			}
-    		3dParcelControl = true;
+    		specialParcelControl = true;
     		}
-    	} else if (3dParcelControl == true) {
+    	} else if (specialParcelControl == true) {
     		map02.setPitch(0.1);
     		for (g=0; g < trackBufferLayers2.length; g++) {
     			if (trackBufferLayers2[g] == 'parcelKohl1km' || trackBufferLayers2[g] == 'parcelKohl1km' || trackBufferLayers2[g] == 'parcelMonona1km' || trackBufferLayers2[g] == 'parcelMonona2km' ||
@@ -175,7 +175,7 @@ map02.on('click', function(e) {
     				map02.setPaintProperty(trackBufferLayers2[g], 'fill-opacity', 1);
     			}
     		}
-    		3dParcelControl = false;
+    		specialParcelControl = false;
     	}
     
     	

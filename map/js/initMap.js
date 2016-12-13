@@ -337,7 +337,21 @@ map01.on('load', function() {
 		'amtrakAreasWI',
 		'amtrakCitiesIL',
 		'amtrakCitiesMN',
-		'kohlRail'
+		'kohlRail',
+		'unclustered-points-wi'
+	];
+	
+	var toggleCross = [
+		'National Amtrak',
+		'City Polygons',
+		'Madison Rail',
+		'Parking',
+		'State-wide Rail',
+		'Amtrak Areas WI',
+		'Amtrak Cities IL',
+		'Amtrak Cities MN',
+		'Madison Connection',
+		'Wisconsin Accessibility'
 	];
 
 	for (var i = 0; i < toggleableLayerIds.length; i++) {
@@ -346,7 +360,9 @@ map01.on('load', function() {
     	var link = document.createElement('a');
     	link.href = '#';
     	link.className = 'active';
-    	link.textContent = id;
+    	
+    	var spot = toggleableLayerIds.indexOf(id);
+    	link.textContent = toggleCross[spot];
 
     	link.onclick = function (e) {
     		
