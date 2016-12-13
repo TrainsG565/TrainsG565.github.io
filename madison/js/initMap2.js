@@ -313,10 +313,23 @@ function addBuffers2(x) {
 				
 				trackBufferLayers2.push('demo1km2km');
 				
+				
+				
 				trackDemoBufferLayers2.push(['==', 'GID', 1]);
 				
 				
 				map02.setFilter('demo1km2km', ['==', 'GID', 1]);
+				
+				map02.setPaintProperty('demo1km2km', 'circle-color', {
+                	property: 'type',
+                	type: 'categorical',
+                	stops: [
+                    	[2, '#fbb03b'],
+                    	[3, '#223b53'],
+                    	[5, '#e55e5e'],
+                    	[4, '#3bb2d0'],
+                    	[6, '#ccc']]
+            	}
 				
 				/*
 				map02.addLayer({
