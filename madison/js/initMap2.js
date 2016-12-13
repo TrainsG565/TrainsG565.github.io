@@ -144,7 +144,7 @@ map02.on('click', function(e) {
     		if (trackBufferLayers2[g] == 'parcelKohl1km' || trackBufferLayers2[g] == 'parcelKohl1km' || trackBufferLayers2[g] == 'parcelMonona1km' || trackBufferLayers2[g] == 'parcelMonona2km' ||
     		trackBufferLayers2[g] == 'parcelYahara1km' || trackBufferLayers2[g] == 'parcelYahara2km' || trackBufferLayers2[g] == 'parcelMSN1km' || trackBufferLayers2[g] == 'parcelMSN2km') {
     			map02.setPaintProperty(trackBufferLayers2[g], 'fill-extrude-height', {
-    				'property': 'height2',
+    				'property': 'height2', // maybe change
     				'type': 'identity'
     			});
     			
