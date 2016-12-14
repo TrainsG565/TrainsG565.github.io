@@ -171,7 +171,7 @@ map01.on('load', function() {
 		'layout': {},
 		'paint': {
 			'circle-color': '#EC7063',
-			'circle-radius': 4
+			'circle-radius': 5
 		}
 	});
 	
@@ -182,7 +182,7 @@ map01.on('load', function() {
 		'layout': {},
 		'paint': {
 			'circle-color': '#EC7063',
-			'circle-radius': 4
+			'circle-radius': 5
 		}
 	});
 	
