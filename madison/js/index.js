@@ -480,7 +480,7 @@ function deactivateBuffers() {
 	bike1ButtonControl = false;
 	bike2ButtonControl = false;
 	
-	console.log('remove all buffer layers');
+	//console.log('remove all buffer layers');
 	var i;
 	for (i=0; i < trackBufferLayers.length; i++) {
 		map01.removeLayer(trackBufferLayers[i]);
@@ -759,7 +759,7 @@ function deactivateBuffers2() {
 	parcel1ButtonControl = false;
 	parcel2ButtonControl = false;
 	
-	console.log('remove all buffer layers');
+	//console.log('remove all buffer layers');
 	
 	var i;
 	for (i=0; i < trackBufferLayers2.length; i++) {
