@@ -197,33 +197,77 @@ map02.on('click', function(e) {
     	// test click demographics
     	console.log(feature.properties.type);
     } else if (feature.layer.id == 'kohlButton2') {
-    	// add popup for option to click for info and buffers
-    	var setHTML = "<b>Kohl Buffer Information</b>" + "<br>" + "Property Types 1km: <b>1,019 Commercial and 2,565 Residential</b>" + "<br>" + "Average Net Taxes 1km: <b>10,523</b>" + "<br>" + "Demographics 1km: <b>20,803 White, 713 Black, 1,111 Hispanic, 2,513 Asian, 90 Other</b>" + "<br>" +
-    		"Property Types 2km: <b>1,710 Commercial, 3 Industrial, and 6,049 Residential</b>" + "<br>" + "Average Net Taxes 2km: <b>10,088</b>" + "<br>" + "Demographics 2km: <b>33,992 White, 1,613 Black, 1,682 Hispanic, 3,281 Asian, 156 Other</b>";
-    	popupClick2.setLngLat(feature.geometry.coordinates)
-        	.setHTML(setHTML)
-        	.addTo(map02);
+    	var open = popupClick2.isOpen();
+    	if (open == false) {
+    		// add popup for option to click for info and buffers
+    		var setHTML = "<b>Kohl Buffer Information</b>" + "<br>" + "Property Types 1km: <b>1,019 Commercial and 2,565 Residential</b>" + "<br>" + "Average Net Taxes 1km: <b>10,523</b>" + "<br>" + "Demographics 1km: <b>20,803 White, 713 Black, 1,111 Hispanic, 2,513 Asian, 90 Other</b>" + "<br>" +
+    			"Property Types 2km: <b>1,710 Commercial, 3 Industrial, and 6,049 Residential</b>" + "<br>" + "Average Net Taxes 2km: <b>10,088</b>" + "<br>" + "Demographics 2km: <b>33,992 White, 1,613 Black, 1,682 Hispanic, 3,281 Asian, 156 Other</b>";
+    		popupClick2.setLngLat(feature.geometry.coordinates)
+        		.setHTML(setHTML)
+        		.addTo(map02);
+        } else if (open == true) {
+        	popupClick2.remove();
+        	// add popup for option to click for info and buffers
+    		var setHTML = "<b>Kohl Buffer Information</b>" + "<br>" + "Property Types 1km: <b>1,019 Commercial and 2,565 Residential</b>" + "<br>" + "Average Net Taxes 1km: <b>10,523</b>" + "<br>" + "Demographics 1km: <b>20,803 White, 713 Black, 1,111 Hispanic, 2,513 Asian, 90 Other</b>" + "<br>" +
+    			"Property Types 2km: <b>1,710 Commercial, 3 Industrial, and 6,049 Residential</b>" + "<br>" + "Average Net Taxes 2km: <b>10,088</b>" + "<br>" + "Demographics 2km: <b>33,992 White, 1,613 Black, 1,682 Hispanic, 3,281 Asian, 156 Other</b>";
+    		popupClick2.setLngLat(feature.geometry.coordinates)
+        		.setHTML(setHTML)
+        		.addTo(map02);
+        }
     } else if (feature.layer.id == 'mononaButton2') {
-    	// add popup for option to click for info and buffers
-    	var setHTML = "<b>Monona Buffer Information</b>" + "<br>" + "Property Types 1km: <b>985 Commercial and 3,301 Residential</b>" + "<br>" + "Average Net Taxes 1km: <b>7,243</b>" + "<br>" + "Demographics 1km: <b>9,171 White, 785 Black, 463 Hispanic, 462 Asian, 37 Other</b>" + "<br>" +
-    		"Property Types 2km: <b>1,639 Commercial, 3 Industrial, and 5,770 Residential</b>" + "<br>" + "Average Net Taxes 2km: <b>9,312</b>" + "<br>" + "Demographics 2km: <b>26,608 White, 1,511 Black, 1,358 Hispanic, 2354 Asian, 123 Other</b>";
-    	popupClick2.setLngLat(feature.geometry.coordinates)
-        	.setHTML(setHTML)
-        	.addTo(map02);
+    	var open = popupClick2.isOpen();
+    	if (open == false) {
+    		// add popup for option to click for info and buffers
+    		var setHTML = "<b>Monona Buffer Information</b>" + "<br>" + "Property Types 1km: <b>985 Commercial and 3,301 Residential</b>" + "<br>" + "Average Net Taxes 1km: <b>7,243</b>" + "<br>" + "Demographics 1km: <b>9,171 White, 785 Black, 463 Hispanic, 462 Asian, 37 Other</b>" + "<br>" +
+    			"Property Types 2km: <b>1,639 Commercial, 3 Industrial, and 5,770 Residential</b>" + "<br>" + "Average Net Taxes 2km: <b>9,312</b>" + "<br>" + "Demographics 2km: <b>26,608 White, 1,511 Black, 1,358 Hispanic, 2354 Asian, 123 Other</b>";
+    		popupClick2.setLngLat(feature.geometry.coordinates)
+        		.setHTML(setHTML)
+        		.addTo(map02);
+        } else if (open == true) {
+        	popupClick2.remove();
+        	// add popup for option to click for info and buffers
+    		var setHTML = "<b>Monona Buffer Information</b>" + "<br>" + "Property Types 1km: <b>985 Commercial and 3,301 Residential</b>" + "<br>" + "Average Net Taxes 1km: <b>7,243</b>" + "<br>" + "Demographics 1km: <b>9,171 White, 785 Black, 463 Hispanic, 462 Asian, 37 Other</b>" + "<br>" +
+    			"Property Types 2km: <b>1,639 Commercial, 3 Industrial, and 5,770 Residential</b>" + "<br>" + "Average Net Taxes 2km: <b>9,312</b>" + "<br>" + "Demographics 2km: <b>26,608 White, 1,511 Black, 1,358 Hispanic, 2354 Asian, 123 Other</b>";
+    		popupClick2.setLngLat(feature.geometry.coordinates)
+        		.setHTML(setHTML)
+        		.addTo(map02);
+        }
     } else if (feature.layer.id == 'yaharaButton2') {
-    	// add popup for option to click for info and buffers
-    	var setHTML = "<b>Yahara Buffer Information</b>" + "<br>" + "Property Types 1km: <b>255 Commercial, 9 Industrial, and 2,118 Residential</b>" + "<br>" + "Average Net Taxes 1km: <b>6,087</b>" + "<br>" + "Demographics 1km: <b>7,879 White, 523 Black, 488 Hispanic, 277 Asian, 55 Other</b>" + "<br>" +
-    		"Property Types 2km: <b>591 Commercial, 28 Industrial, and 5,492 Residential</b>" + "<br>" + "Average Net Taxes 2km: <b>6,304</b>" + "<br>" + "Demographics 2km: <b>17,310 White, 944 Black, 868 Hispanic, 458 Asian, 93 Other</b>";
-    	popupClick2.setLngLat(feature.geometry.coordinates)
-        	.setHTML(setHTML)
-        	.addTo(map02);
+    	var open = popupClick2.isOpen();
+    	if (open == false) {
+    		// add popup for option to click for info and buffers
+    		var setHTML = "<b>Yahara Buffer Information</b>" + "<br>" + "Property Types 1km: <b>255 Commercial, 9 Industrial, and 2,118 Residential</b>" + "<br>" + "Average Net Taxes 1km: <b>6,087</b>" + "<br>" + "Demographics 1km: <b>7,879 White, 523 Black, 488 Hispanic, 277 Asian, 55 Other</b>" + "<br>" +
+    			"Property Types 2km: <b>591 Commercial, 28 Industrial, and 5,492 Residential</b>" + "<br>" + "Average Net Taxes 2km: <b>6,304</b>" + "<br>" + "Demographics 2km: <b>17,310 White, 944 Black, 868 Hispanic, 458 Asian, 93 Other</b>";
+    		popupClick2.setLngLat(feature.geometry.coordinates)
+        		.setHTML(setHTML)
+        		.addTo(map02);
+        } else if (open == true) {
+        	popupClick2.remove();
+        	// add popup for option to click for info and buffers
+    		var setHTML = "<b>Yahara Buffer Information</b>" + "<br>" + "Property Types 1km: <b>255 Commercial, 9 Industrial, and 2,118 Residential</b>" + "<br>" + "Average Net Taxes 1km: <b>6,087</b>" + "<br>" + "Demographics 1km: <b>7,879 White, 523 Black, 488 Hispanic, 277 Asian, 55 Other</b>" + "<br>" +
+    			"Property Types 2km: <b>591 Commercial, 28 Industrial, and 5,492 Residential</b>" + "<br>" + "Average Net Taxes 2km: <b>6,304</b>" + "<br>" + "Demographics 2km: <b>17,310 White, 944 Black, 868 Hispanic, 458 Asian, 93 Other</b>";
+    		popupClick2.setLngLat(feature.geometry.coordinates)
+        		.setHTML(setHTML)
+        		.addTo(map02);
+        }
     } else if (feature.layer.id == 'msnButton2') {
-    	// add popup for option to click for info and buffer
-    	var setHTML = "<b>MSN Buffer Information</b>" + "<br>" + "Property Types 1km: <b>1 Agricultural, 46 Commercial, 1 Industrial, and 143 Residential</b>" + "<br>" + "Average Net Taxes 1km: <b>7,892</b>" + "<br>" + "Demographics 1km: <b>1,150 White, 142 Black, 137 Hispanic, 70 Asian, 9 Other</b>" + "<br>" +
-    		"Property Types 2km: <b>3 Agricultural, 166 Commercial, 5 Industrial, and 2,647 Residential</b>" + "<br>" + "Average Net Taxes 2km: <b>4,177</b>" + "<br>" + "Demographics 2km: <b>5,779 White, 1,118 Black, 730 Hispanic, 463 Asian, 49 Other</b>";
-    	popupClick2.setLngLat(feature.geometry.coordinates)
-        	.setHTML(setHTML)
-        	.addTo(map02);
+    	var open = popupClick2.isOpen();
+    	if (open == false) {
+    		// add popup for option to click for info and buffer
+    		var setHTML = "<b>MSN Buffer Information</b>" + "<br>" + "Property Types 1km: <b>1 Agricultural, 46 Commercial, 1 Industrial, and 143 Residential</b>" + "<br>" + "Average Net Taxes 1km: <b>7,892</b>" + "<br>" + "Demographics 1km: <b>1,150 White, 142 Black, 137 Hispanic, 70 Asian, 9 Other</b>" + "<br>" +
+    			"Property Types 2km: <b>3 Agricultural, 166 Commercial, 5 Industrial, and 2,647 Residential</b>" + "<br>" + "Average Net Taxes 2km: <b>4,177</b>" + "<br>" + "Demographics 2km: <b>5,779 White, 1,118 Black, 730 Hispanic, 463 Asian, 49 Other</b>";
+    		popupClick2.setLngLat(feature.geometry.coordinates)
+        		.setHTML(setHTML)
+        		.addTo(map02);
+        } else if (open == true) {
+        	popupClick2.remove();
+        	// add popup for option to click for info and buffer
+    		var setHTML = "<b>MSN Buffer Information</b>" + "<br>" + "Property Types 1km: <b>1 Agricultural, 46 Commercial, 1 Industrial, and 143 Residential</b>" + "<br>" + "Average Net Taxes 1km: <b>7,892</b>" + "<br>" + "Demographics 1km: <b>1,150 White, 142 Black, 137 Hispanic, 70 Asian, 9 Other</b>" + "<br>" +
+    			"Property Types 2km: <b>3 Agricultural, 166 Commercial, 5 Industrial, and 2,647 Residential</b>" + "<br>" + "Average Net Taxes 2km: <b>4,177</b>" + "<br>" + "Demographics 2km: <b>5,779 White, 1,118 Black, 730 Hispanic, 463 Asian, 49 Other</b>";
+    		popupClick2.setLngLat(feature.geometry.coordinates)
+        		.setHTML(setHTML)
+        		.addTo(map02);
+        }
     }
 });
 
