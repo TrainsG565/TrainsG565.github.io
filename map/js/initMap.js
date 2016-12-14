@@ -301,8 +301,8 @@ map01.on('load', function() {
         		.setHTML(setHTML)
         		.addTo(map01);
     	} else if (feature.layer.id == 'unclustered-points-wi') {
-    		var setHTML = "<b>Wisconsin Stops</b>" + "<br>" + "<b>Address: </b>" + feature.properties.ADDRESS + "<br>" + "<b>City: </b>" + feature.properties.CITY + "<br>" + 
-    			"<b>Zipcode: </b>" + feature.properties.ZIPCODE + "<br>" + "Metro Area: " + feature.properties.METRO_AREA + "<br>";
+    		var setHTML = "<b>Wisconsin Accessibility</b>" + "<br>" + "Address: <b>" + feature.properties.ADDRESS + "</b><br>" + "City: <b>" + feature.properties.CITY + "</b><br>" + 
+    			"Facility Name: <b>" + feature.properties.FACILITY_NAME + "</b><br>" + "Metro Area: <b>" + feature.properties.METRO_AREA + "</b>" + "<br>" + "<b>Click for more info</b>";
     		popup.setLngLat(feature.geometry.coordinates)
         		.setHTML(setHTML)
         		.addTo(map01);
@@ -332,6 +332,40 @@ map01.on('load', function() {
         		.setHTML(setHTML)
         		.addTo(map01);
     	}
+	});
+	
+	map01.on('click', function(e) {
+    	var features = map01.queryRenderedFeatures(e.point, { layers: hoverLayers });
+    	// Change the cursor style as a UI indicator.
+    	map01.getCanvas().style.cursor = (features.length) ? 'pointer' : '';
+
+    	if (!features.length) {
+       		popup.remove();
+     		return;
+    	}
+
+    	var feature = features[0];
+    	
+    	
+    	
+    	
+    	
+    	if (feature.layer.id == 'unclustered-points-wi') {
+    		/*
+    		var setHTML = "Facility Type: <b>" + feature.properties.FACILITY_TYPE + "</b><br>" + "Bus Transit: <b>" + feature.properties.BUS_TRANSIT + "</b><br>" + "Bus Intercity: <b>" + feature.properties.BUS_INTERCITY + "</b><br>" + 
+    			"Rail Intercity: <b>" + feature.properties.RAIL_INTERCITY + "</b><br>" + "Rail Commuter: <b>" + feature.properties.RAIL_COMMUTER + "</b></br>" + "Rail Heavy: <b>" + feature.properties.RAIL_HEAVY + "</b></br>" +
+    			"Rail Light: <b>" + feature.properties.RAIL_LIGHT + "</b><br>" + "Air Service: <b>" + feature.properties.AIR_SERVICE + "</b><br>" + "Bike Share: <b>" + feature.properties.BIKE_SHARE + "</b><br>" +
+    			"Notes: <b>" + feature.properties.NOTES + "</b><br>"
+    		*/
+    		var setHTML = "<b>0 meaning no service available</b>" + "<br>" + "<b>1 meaning service available</b>" + "<br>" + "Facility Type: <b>" + feature.properties.FACILITY_TYPE + "</b><br>" + "Intercity Service: <b>" + feature.properties.INTERCITY_SERVICE + "</b><br>" + "Mode Bus: <b>" + feature.properties.MODE_BUS + "</b><br>" + 
+    			"Mode Air: <b>" + feature.properties.MODE_AIR + "</b><br>" + "Mode Rail: <b>" + feature.properties.MODE_RAIL + "</b></br>" + "Mode Ferry: <b>" + feature.properties.MODE_FERRY + "</b></br>" +
+    			"Mode Bike: <b>" + feature.properties.MODE_BIKE + "Notes: <b>" + feature.properties.NOTES + "</b>";
+    		popup.setLngLat(feature.geometry.coordinates)
+        		.setHTML(setHTML)
+        		.addTo(map01);
+        } else {
+        	return;
+        }
 	});
 	
 	
