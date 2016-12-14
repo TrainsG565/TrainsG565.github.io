@@ -364,7 +364,7 @@ map01.on('load', function() {
     		*/
     		var setHTML = "<b>0 meaning no service available</b>" + "<br>" + "<b>1 meaning service available</b>" + "<br>" + "Facility Type: <b>" + feature.properties.FACILITY_TYPE + "</b><br>" + "Intercity Service: <b>" + feature.properties.INTERCITY_SERVICE + "</b><br>" + "Mode Bus: <b>" + feature.properties.MODE_BUS + "</b><br>" + 
     			"Mode Air: <b>" + feature.properties.MODE_AIR + "</b><br>" + "Mode Rail: <b>" + feature.properties.MODE_RAIL + "</b></br>" + "Mode Ferry: <b>" + feature.properties.MODE_FERRY + "</b></br>" +
-    			"Mode Bike: <b>" + feature.properties.MODE_BIKE + "Notes: <b>" + feature.properties.NOTES + "</b>";
+    			"Mode Bike: <b>" + feature.properties.MODE_BIKE + "</b><br>" + "Notes: <b>" + feature.properties.NOTES + "</b>";
     		popupClick.setLngLat(feature.geometry.coordinates)
         		.setHTML(setHTML)
         		.addTo(map01);
