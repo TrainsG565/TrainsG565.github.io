@@ -24,7 +24,6 @@ var hoverLayers = [
 	'amtrak',
 	'cityPolys',
 	'msnRails',
-	'parking', // do we need this in the state-wide map?
 	'allRailWI',
 	'amtrakAreasWI',
 	'amtrakCitiesIL', // do we need this?
@@ -50,11 +49,6 @@ map01.on('load', function() {
 	map01.addSource('msnRails', {
 		'type': 'geojson',
 		'data': '/map/data/msnRails.geojson'
-	});
-	
-	map01.addSource('parking', {
-		'type': 'geojson',
-		'data': '/map/data/parking.geojson'
 	});
 	
 	map01.addSource('wisconsinStops', {
@@ -128,17 +122,6 @@ map01.on('load', function() {
 		'paint': {
 			'line-color': '#2471A3',
 			'line-width': 2.5
-		}
-	});
-	
-	map01.addLayer({
-		'id': 'parking',
-		'type': 'fill',
-		'source': 'parking',
-		'layout': {},
-		'paint': {
-			'fill-color': '#BB8FCE',
-			'fill-opacity': 0.75
 		}
 	});
 	
@@ -300,11 +283,6 @@ map01.on('load', function() {
     		popup.setLngLat(map01.unproject(e.point))
         		.setHTML(setHTML)
         		.addTo(map01);
-    	} else if (feature.layer.id == 'parking') {
-    		var setHTML = "<b>parking</b>";
-    		popup.setLngLat(map01.unproject(e.point))
-        		.setHTML(setHTML)
-        		.addTo(map01);
     	} else if (feature.layer.id == 'unclustered-points-wi') {
     		var setHTML = "<b>Wisconsin Accessibility</b>" + "<br>" + "Address: <b>" + feature.properties.ADDRESS + "</b><br>" + "City: <b>" + feature.properties.CITY + "</b><br>" + 
     			"Facility Name: <b>" + feature.properties.FACILITY_NAME + "</b><br>" + "Metro Area: <b>" + feature.properties.METRO_AREA + "</b>" + "<br>" + "<b>Click for more info</b>";
@@ -378,7 +356,6 @@ map01.on('load', function() {
 		'amtrak',
 		'cityPolys',
 		'msnRails',
-		'parking',
 		'allRailWI',
 		'amtrakAreasWI',
 		'amtrakCitiesIL',
@@ -390,7 +367,6 @@ map01.on('load', function() {
 		'National Amtrak',
 		'City Polygons',
 		'Madison Rail',
-		'Parking',
 		'State-wide Rail',
 		'Amtrak Areas WI',
 		'Amtrak Cities IL',
