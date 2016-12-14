@@ -124,20 +124,31 @@ body p {
   	background-size: cover;
 }
 
+#chart {
+	margin-bottom: 20px;
+}
+
+#chart2 {
+	margin-bottom: 20px;
+}
+
+#chart3 {
+	margin-bottom: 20px;
+}
 
 #chart b {
 	font-weight: bold;
-	font-size: 16px;
+	font-size: 20px;
 }
 
 #chart2 b {
 	font-weight: bold;
-	font-size: 16px;
+	font-size: 20px;
 }
 
 #chart3 b {
 	font-weight: bold;
-	font-size: 16px;
+	font-size: 20px;
 }
 
 
