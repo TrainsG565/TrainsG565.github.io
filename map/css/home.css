@@ -143,6 +143,24 @@ body p {
 }
 
 
+#intro {
+	position: absolute;
+	top: 35vh;
+	height: auto;
+	width: auto;
+	padding-top: 15px;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-bottom: 15px;
+	background: #fff;
+	opacity: 1;
+	-webkit-transition: opacity .5s;
+	-moz-transition: opacity .5s;
+	-o-transition: opacity .5s;
+	transition: opacity .5s;
+	visibility: visible;
+}
+
 
 
 

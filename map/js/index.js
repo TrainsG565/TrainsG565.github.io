@@ -31,6 +31,16 @@ $(function() {
 });
 // lazy load
 
+function exploreMap() {
+	var placeholder = document.getElementById('intro');
+	
+	placeholder.style.opacity = 0;
+	
+	setTimeout(function(){ placeholder.style.visibility = 'hidden'; }, 50);
+	
+	
+}
+
 
 
 
