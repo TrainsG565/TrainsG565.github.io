@@ -31,6 +31,39 @@ $(function() {
 });
 // lazy load
 
+var demoLegendCross = [
+	'circleWhite',
+	'circleBlack',
+	'circleHispanic',
+	'circleAsian',
+	'circleAmerican'
+];
+
+var demoLegendArr = [
+	'White',
+	'Black',
+	'Hispanic',
+	'Asian',
+	'Other'
+];
+
+function demoLegendHover(source) {
+	var placeholder = document.getElementById(source);
+	
+	var spot = demoLegendCross.indexOf(source);
+	
+	placeholder.innerHTML = demoLegendArr[spot];
+	placeholder.style.width = '70px';
+};
+
+function demoLegendOut(source) {
+	var placeholder = document.getElementById(source);
+	
+	placeholder.innerHTML = '';
+	placeholder.style.height = '25px';
+	placeholder.style.width = '25px';
+}
+
 
 
 
