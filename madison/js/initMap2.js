@@ -198,29 +198,29 @@ map02.on('click', function(e) {
     	console.log(feature.properties.type);
     } else if (feature.layer.id == 'kohlButton2') {
     	// add popup for option to click for info and buffers
-    	var setHTML = "<b>Kohl Buffer Information</b>" + "<br>" + "Major Property Type 1km: " + "<br>" + "Average Net Taxes 1km: " + "<br>" + "Demographics 1km: " + "<br>" +
-    		"Major Property Type 2km: " + "<br>" + "Average Net Taxes 2km: " + "<br>" + "Demographics 2km: ";
+    	var setHTML = "<b>Kohl Buffer Information</b>" + "<br>" + "Major Property Type 1km: 1019 Commercial 2565 Residential" + "<br>" + "Average Net Taxes 1km: <b>10,523</b>" + "<br>" + "Demographics 1km: " + "<br>" +
+    		"Major Property Type 2km: 1710 Commercial 3 Industrial 6049 Residential" + "<br>" + "Average Net Taxes 2km: <b>10,088</b>" + "<br>" + "Demographics 2km: ";
     	popupClick2.setLngLat(feature.geometry.coordinates)
         	.setHTML(setHTML)
         	.addTo(map02);
     } else if (feature.layer.id == 'mononaButton2') {
     	// add popup for option to click for info and buffers
-    	var setHTML = "<b>Monona Buffer Information</b>" + "<br>" + "Major Property Type 1km: " + "<br>" + "Average Net Taxes 1km: " + "<br>" + "Demographics 1km: " + "<br>" +
-    		"Major Property Type 2km: " + "<br>" + "Average Net Taxes 2km: " + "<br>" + "Demographics 2km: ";
+    	var setHTML = "<b>Monona Buffer Information</b>" + "<br>" + "Major Property Type 1km: 985 Commercial 3301 Residential" + "<br>" + "Average Net Taxes 1km: <b>7,243</b>" + "<br>" + "Demographics 1km: " + "<br>" +
+    		"Major Property Type 2km: 1639 Commercial 3 Industrial 5770 Residential" + "<br>" + "Average Net Taxes 2km: <b>9,312</b>" + "<br>" + "Demographics 2km: ";
     	popupClick2.setLngLat(feature.geometry.coordinates)
         	.setHTML(setHTML)
         	.addTo(map02);
     } else if (feature.layer.id == 'yaharaButton2') {
     	// add popup for option to click for info and buffers
-    	var setHTML = "<b>Yahara Buffer Information</b>" + "<br>" + "Major Property Type 1km: " + "<br>" + "Average Net Taxes 1km: " + "<br>" + "Demographics 1km: " + "<br>" +
-    		"Major Property Type 2km: " + "<br>" + "Average Net Taxes 2km: " + "<br>" + "Demographics 2km: ";
+    	var setHTML = "<b>Yahara Buffer Information</b>" + "<br>" + "Major Property Type 1km: 255 Commercial 9 Industrial 2118 Residential" + "<br>" + "Average Net Taxes 1km: <b>6,087</b>" + "<br>" + "Demographics 1km: " + "<br>" +
+    		"Major Property Type 2km: 591 Commercial 28 Industrial 5492 Residential" + "<br>" + "Average Net Taxes 2km: <b>6,304</b>" + "<br>" + "Demographics 2km: ";
     	popupClick2.setLngLat(feature.geometry.coordinates)
         	.setHTML(setHTML)
         	.addTo(map02);
     } else if (feature.layer.id == 'msnButton2') {
     	// add popup for option to click for info and buffer
-    	var setHTML = "<b>MSN Buffer Information</b>" + "<br>" + "Major Property Type 1km: " + "<br>" + "Average Net Taxes 1km: " + "<br>" + "Demographics 1km: " + "<br>" +
-    		"Major Property Type 2km: " + "<br>" + "Average Net Taxes 2km: " + "<br>" + "Demographics 2km: ";
+    	var setHTML = "<b>MSN Buffer Information</b>" + "<br>" + "Major Property Type 1km: 1 Agricultural 46 Commercial 1 Industrial 143 Residential" + "<br>" + "Average Net Taxes 1km: <b>7,892</b>" + "<br>" + "Demographics 1km: " + "<br>" +
+    		"Major Property Type 2km: 3 Agricultural 166 Commercial 5 Industrial 2647 Residential" + "<br>" + "Average Net Taxes 2km: <b>4,177</b>" + "<br>" + "Demographics 2km: ";
     	popupClick2.setLngLat(feature.geometry.coordinates)
         	.setHTML(setHTML)
         	.addTo(map02);
