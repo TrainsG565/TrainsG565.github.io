@@ -105,7 +105,7 @@ body p {
 
 #blocker {
 	position: absolute;
-	top: 50vh;
+	top: 70vh;
 	left:0;
 	width: 100%;
 	height: auto;
@@ -118,9 +118,9 @@ body p {
 
 
 #testImage {
-	height: 50vh;
+	height: 70vh;
 	width: 100%;
-	background: url(trainImage01_bw.jpeg) no-repeat center center fixed; 
+	background: url(trainImage01_bw_simple.jpeg) no-repeat center center fixed; 
   	-webkit-background-size: cover;
   	-moz-background-size: cover;
   	-o-background-size: cover;
