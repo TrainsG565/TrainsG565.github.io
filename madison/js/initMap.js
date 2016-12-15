@@ -156,6 +156,7 @@ map01.on('click', function(e) {
     	for (var x=0; x < prime.length; x++) {
     		testFilterArr.push(['==', 'route_shor', parseInt(prime[x])]);
     	}
+    	console.log(testFilterArr);
     	
     	
     	map01.setLayoutProperty('busroute', 'visibility', 'visible');
