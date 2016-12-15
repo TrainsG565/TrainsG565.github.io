@@ -480,22 +480,7 @@ function deactivateBuffers() {
 	bike1ButtonControl = false;
 	bike2ButtonControl = false;
 	
-	// added test
-	if (specialParcelControl == true) {
-		map02.setPitch(0.1);
-    	for (g=0; g < trackBufferLayers2.length; g++) {
-    		if (trackBufferLayers2[g] == 'parcelKohl1km' || trackBufferLayers2[g] == 'parcelKohl1km' || trackBufferLayers2[g] == 'parcelMonona1km' || trackBufferLayers2[g] == 'parcelMonona2km' ||
-    		trackBufferLayers2[g] == 'parcelYahara1km' || trackBufferLayers2[g] == 'parcelYahara2km' || trackBufferLayers2[g] == 'parcelMSN1km' || trackBufferLayers2[g] == 'parcelMSN2km') {
-    			map02.setPaintProperty(trackBufferLayers2[g], 'fill-extrude-height', 0);
-    			
-    			map02.setPaintProperty(trackBufferLayers2[g], 'fill-extrude-base', 0);
-    			map02.setPaintProperty(trackBufferLayers2[g], 'fill-opacity', 1);
-    		}
-    	}
-    	specialParcelControl = false;
-    } else {
-    	// do nothing
-    }
+	
 	
 	//console.log('remove all buffer layers');
 	var i;

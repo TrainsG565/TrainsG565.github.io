@@ -453,22 +453,7 @@ function addBuffers2(x) {
 				});
 				trackBufferLayers2.push('parcelKohl1km');
 				
-				// added test
-				if (specialParcelControl == true) {
-					map02.setPitch(0.1);
-    				for (g=0; g < trackBufferLayers2.length; g++) {
-    					if (trackBufferLayers2[g] == 'parcelKohl1km' || trackBufferLayers2[g] == 'parcelKohl1km' || trackBufferLayers2[g] == 'parcelMonona1km' || trackBufferLayers2[g] == 'parcelMonona2km' ||
-    					trackBufferLayers2[g] == 'parcelYahara1km' || trackBufferLayers2[g] == 'parcelYahara2km' || trackBufferLayers2[g] == 'parcelMSN1km' || trackBufferLayers2[g] == 'parcelMSN2km') {
-    						map02.setPaintProperty(trackBufferLayers2[g], 'fill-extrude-height', 0);
-    			
-    						map02.setPaintProperty(trackBufferLayers2[g], 'fill-extrude-base', 0);
-    						map02.setPaintProperty(trackBufferLayers2[g], 'fill-opacity', 1);
-    					}
-    				}
-    				specialParcelControl = false;
-    			} else {
-    				// do nothing
-    			}
+				
 			} else if (bufferPosition == 3) {
 				//console.log('add parcel 2km kohl');
 				map02.addLayer({
@@ -497,31 +482,8 @@ function addBuffers2(x) {
 					},
 					'filter': ['==', 'GID', 5]
 				});
-				//trackBufferLayers2.push('parcelKohl2km');
+				trackBufferLayers2.push('parcelKohl2km');
 				
-				// added test
-				if (specialParcelControl == true) {
-					console.log('test1');
-					map02.setPitch(0.1);
-					console.log('test2');
-    				for (g=0; g < trackBufferLayers2.length; g++) {
-    					if (trackBufferLayers2[g] == 'parcelKohl1km' || trackBufferLayers2[g] == 'parcelKohl1km' || trackBufferLayers2[g] == 'parcelMonona1km' || trackBufferLayers2[g] == 'parcelMonona2km' ||
-    					trackBufferLayers2[g] == 'parcelYahara1km' || trackBufferLayers2[g] == 'parcelYahara2km' || trackBufferLayers2[g] == 'parcelMSN1km' || trackBufferLayers2[g] == 'parcelMSN2km') {
-    						console.log('testextrude');
-    						map02.setPaintProperty(trackBufferLayers2[g], 'fill-extrude-height', 0);
-    						
-    						console.log('testbase');
-    						map02.setPaintProperty(trackBufferLayers2[g], 'fill-extrude-base', 0);
-    						console.log('testopacity');
-    						map02.setPaintProperty(trackBufferLayers2[g], 'fill-opacity', 1);
-    					}
-    				}
-    				console.log('test3');
-    				specialParcelControl = false;
-    			} else {
-    				// do nothing
-    			}
-    			trackBufferLayers2.push('parcelKohl2km');
 			}
 		} else if (position == 1) {
 			if (bufferPosition == 0) {
@@ -592,22 +554,7 @@ function addBuffers2(x) {
 				});
 				trackBufferLayers2.push('parcelMonona1km');
 				
-				// added test
-				if (specialParcelControl == true) {
-					map02.setPitch(0.1);
-    				for (g=0; g < trackBufferLayers2.length; g++) {
-    					if (trackBufferLayers2[g] == 'parcelKohl1km' || trackBufferLayers2[g] == 'parcelKohl1km' || trackBufferLayers2[g] == 'parcelMonona1km' || trackBufferLayers2[g] == 'parcelMonona2km' ||
-    					trackBufferLayers2[g] == 'parcelYahara1km' || trackBufferLayers2[g] == 'parcelYahara2km' || trackBufferLayers2[g] == 'parcelMSN1km' || trackBufferLayers2[g] == 'parcelMSN2km') {
-    						map02.setPaintProperty(trackBufferLayers2[g], 'fill-extrude-height', 0);
-    			
-    						map02.setPaintProperty(trackBufferLayers2[g], 'fill-extrude-base', 0);
-    						map02.setPaintProperty(trackBufferLayers2[g], 'fill-opacity', 1);
-    					}
-    				}
-    				specialParcelControl = false;
-    			} else {
-    				// do nothing
-    			}
+				
 			} else if (bufferPosition == 3) {
 				//console.log('add parcel 2km monona');
 				map02.addLayer({
@@ -638,22 +585,7 @@ function addBuffers2(x) {
 				});
 				trackBufferLayers2.push('parcelMonona2km');
 				
-				// added test
-				if (specialParcelControl == true) {
-					map02.setPitch(0.1);
-    				for (g=0; g < trackBufferLayers2.length; g++) {
-    					if (trackBufferLayers2[g] == 'parcelKohl1km' || trackBufferLayers2[g] == 'parcelKohl1km' || trackBufferLayers2[g] == 'parcelMonona1km' || trackBufferLayers2[g] == 'parcelMonona2km' ||
-    					trackBufferLayers2[g] == 'parcelYahara1km' || trackBufferLayers2[g] == 'parcelYahara2km' || trackBufferLayers2[g] == 'parcelMSN1km' || trackBufferLayers2[g] == 'parcelMSN2km') {
-    						map02.setPaintProperty(trackBufferLayers2[g], 'fill-extrude-height', 0);
-    			
-    						map02.setPaintProperty(trackBufferLayers2[g], 'fill-extrude-base', 0);
-    						map02.setPaintProperty(trackBufferLayers2[g], 'fill-opacity', 1);
-    					}
-    				}
-    				specialParcelControl = false;
-    			} else {
-    				// do nothing
-    			}
+				
 			}
 		} else if (position == 2) {
 			if (bufferPosition == 0) {
@@ -724,22 +656,7 @@ function addBuffers2(x) {
 				});
 				trackBufferLayers2.push('parcelYahara1km');
 				
-				// added test
-				if (specialParcelControl == true) {
-					map02.setPitch(0.1);
-    				for (g=0; g < trackBufferLayers2.length; g++) {
-    					if (trackBufferLayers2[g] == 'parcelKohl1km' || trackBufferLayers2[g] == 'parcelKohl1km' || trackBufferLayers2[g] == 'parcelMonona1km' || trackBufferLayers2[g] == 'parcelMonona2km' ||
-    					trackBufferLayers2[g] == 'parcelYahara1km' || trackBufferLayers2[g] == 'parcelYahara2km' || trackBufferLayers2[g] == 'parcelMSN1km' || trackBufferLayers2[g] == 'parcelMSN2km') {
-    						map02.setPaintProperty(trackBufferLayers2[g], 'fill-extrude-height', 0);
-    			
-    						map02.setPaintProperty(trackBufferLayers2[g], 'fill-extrude-base', 0);
-    						map02.setPaintProperty(trackBufferLayers2[g], 'fill-opacity', 1);
-    					}
-    				}
-    				specialParcelControl = false;
-    			} else {
-    				// do nothing
-    			}
+				
 			} else if (bufferPosition == 3) {
 				//console.log('add parcel 2km yahara');
 				map02.addLayer({
@@ -770,22 +687,7 @@ function addBuffers2(x) {
 				});
 				trackBufferLayers2.push('parcelYahara2km');
 				
-				// added test
-				if (specialParcelControl == true) {
-					map02.setPitch(0.1);
-    				for (g=0; g < trackBufferLayers2.length; g++) {
-    					if (trackBufferLayers2[g] == 'parcelKohl1km' || trackBufferLayers2[g] == 'parcelKohl1km' || trackBufferLayers2[g] == 'parcelMonona1km' || trackBufferLayers2[g] == 'parcelMonona2km' ||
-    					trackBufferLayers2[g] == 'parcelYahara1km' || trackBufferLayers2[g] == 'parcelYahara2km' || trackBufferLayers2[g] == 'parcelMSN1km' || trackBufferLayers2[g] == 'parcelMSN2km') {
-    						map02.setPaintProperty(trackBufferLayers2[g], 'fill-extrude-height', 0);
-    			
-    						map02.setPaintProperty(trackBufferLayers2[g], 'fill-extrude-base', 0);
-    						map02.setPaintProperty(trackBufferLayers2[g], 'fill-opacity', 1);
-    					}
-    				}
-    				specialParcelControl = false;
-    			} else {
-    				// do nothing
-    			}
+				
 			}
 		} else if (position == 3) {
 			if (bufferPosition == 0) {
@@ -856,22 +758,7 @@ function addBuffers2(x) {
 				});
 				trackBufferLayers2.push('parcelMSN1km');
 				
-				// added test
-				if (specialParcelControl == true) {
-					map02.setPitch(0.1);
-    				for (g=0; g < trackBufferLayers2.length; g++) {
-    					if (trackBufferLayers2[g] == 'parcelKohl1km' || trackBufferLayers2[g] == 'parcelKohl1km' || trackBufferLayers2[g] == 'parcelMonona1km' || trackBufferLayers2[g] == 'parcelMonona2km' ||
-    					trackBufferLayers2[g] == 'parcelYahara1km' || trackBufferLayers2[g] == 'parcelYahara2km' || trackBufferLayers2[g] == 'parcelMSN1km' || trackBufferLayers2[g] == 'parcelMSN2km') {
-    						map02.setPaintProperty(trackBufferLayers2[g], 'fill-extrude-height', 0);
-    			
-    						map02.setPaintProperty(trackBufferLayers2[g], 'fill-extrude-base', 0);
-    						map02.setPaintProperty(trackBufferLayers2[g], 'fill-opacity', 1);
-    					}
-    				}
-    				specialParcelControl = false;
-    			} else {
-    				// do nothing
-    			}
+				
 			} else if (bufferPosition == 3) {
 				//console.log('add parcel 2km msn');
 				map02.addLayer({
@@ -902,22 +789,7 @@ function addBuffers2(x) {
 				});
 				trackBufferLayers2.push('parcelMSN2km');
 				
-				// added test
-				if (specialParcelControl == true) {
-					map02.setPitch(0.1);
-    				for (g=0; g < trackBufferLayers2.length; g++) {
-    					if (trackBufferLayers2[g] == 'parcelKohl1km' || trackBufferLayers2[g] == 'parcelKohl1km' || trackBufferLayers2[g] == 'parcelMonona1km' || trackBufferLayers2[g] == 'parcelMonona2km' ||
-    					trackBufferLayers2[g] == 'parcelYahara1km' || trackBufferLayers2[g] == 'parcelYahara2km' || trackBufferLayers2[g] == 'parcelMSN1km' || trackBufferLayers2[g] == 'parcelMSN2km') {
-    						map02.setPaintProperty(trackBufferLayers2[g], 'fill-extrude-height', 0);
-    			
-    						map02.setPaintProperty(trackBufferLayers2[g], 'fill-extrude-base', 0);
-    						map02.setPaintProperty(trackBufferLayers2[g], 'fill-opacity', 1);
-    					}
-    				}
-    				specialParcelControl = false;
-    			} else {
-    				// do nothing
-    			}
+				
 			}
 		}
 	}
@@ -948,43 +820,13 @@ function removeBuffers2(x) {
 				//console.log('remove parcel 1km kohl');
 				var spot = trackBufferLayers2.indexOf('parcelKohl1km');
 				trackBufferLayers2.splice(spot, 1);
-				// added test
-				if (specialParcelControl == true) {
-					map02.setPitch(0.1);
-    				for (g=0; g < trackBufferLayers2.length; g++) {
-    					if (trackBufferLayers2[g] == 'parcelKohl1km' || trackBufferLayers2[g] == 'parcelKohl1km' || trackBufferLayers2[g] == 'parcelMonona1km' || trackBufferLayers2[g] == 'parcelMonona2km' ||
-    					trackBufferLayers2[g] == 'parcelYahara1km' || trackBufferLayers2[g] == 'parcelYahara2km' || trackBufferLayers2[g] == 'parcelMSN1km' || trackBufferLayers2[g] == 'parcelMSN2km') {
-    						map02.setPaintProperty(trackBufferLayers2[g], 'fill-extrude-height', 0);
-    			
-    						map02.setPaintProperty(trackBufferLayers2[g], 'fill-extrude-base', 0);
-    						map02.setPaintProperty(trackBufferLayers2[g], 'fill-opacity', 1);
-    					}
-    				}
-    				specialParcelControl = false;
-    			} else {
-    				// do nothing
-    			}
+				
 				map02.removeLayer('parcelKohl1km');
 			} else if (bufferPosition == 3) {
 				//console.log('remove parcel 2km kohl');
 				var spot = trackBufferLayers2.indexOf('parcelKohl2km');
 				trackBufferLayers2.splice(spot, 1);
-				// added test
-				if (specialParcelControl == true) {
-					map02.setPitch(0.1);
-    				for (g=0; g < trackBufferLayers2.length; g++) {
-    					if (trackBufferLayers2[g] == 'parcelKohl1km' || trackBufferLayers2[g] == 'parcelKohl1km' || trackBufferLayers2[g] == 'parcelMonona1km' || trackBufferLayers2[g] == 'parcelMonona2km' ||
-    					trackBufferLayers2[g] == 'parcelYahara1km' || trackBufferLayers2[g] == 'parcelYahara2km' || trackBufferLayers2[g] == 'parcelMSN1km' || trackBufferLayers2[g] == 'parcelMSN2km') {
-    						map02.setPaintProperty(trackBufferLayers2[g], 'fill-extrude-height', 0);
-    			
-    						map02.setPaintProperty(trackBufferLayers2[g], 'fill-extrude-base', 0);
-    						map02.setPaintProperty(trackBufferLayers2[g], 'fill-opacity', 1);
-    					}
-    				}
-    				specialParcelControl = false;
-    			} else {
-    				// do nothing
-    			}
+				
 				map02.removeLayer('parcelKohl2km');
 			}
 		} else if (position == 1) {
@@ -1004,43 +846,13 @@ function removeBuffers2(x) {
 				//console.log('remove parcel 1km monona');
 				var spot = trackBufferLayers2.indexOf('parcelMonona1km');
 				trackBufferLayers2.splice(spot, 1);
-				// added test
-				if (specialParcelControl == true) {
-					map02.setPitch(0.1);
-    				for (g=0; g < trackBufferLayers2.length; g++) {
-    					if (trackBufferLayers2[g] == 'parcelKohl1km' || trackBufferLayers2[g] == 'parcelKohl1km' || trackBufferLayers2[g] == 'parcelMonona1km' || trackBufferLayers2[g] == 'parcelMonona2km' ||
-    					trackBufferLayers2[g] == 'parcelYahara1km' || trackBufferLayers2[g] == 'parcelYahara2km' || trackBufferLayers2[g] == 'parcelMSN1km' || trackBufferLayers2[g] == 'parcelMSN2km') {
-    						map02.setPaintProperty(trackBufferLayers2[g], 'fill-extrude-height', 0);
-    			
-    						map02.setPaintProperty(trackBufferLayers2[g], 'fill-extrude-base', 0);
-    						map02.setPaintProperty(trackBufferLayers2[g], 'fill-opacity', 1);
-    					}
-    				}
-    				specialParcelControl = false;
-    			} else {
-    				// do nothing
-    			}
+				
 				map02.removeLayer('parcelMonona1km');
 			} else if (bufferPosition == 3) {
 				//console.log('remove parcel 2km monona');
 				var spot = trackBufferLayers2.indexOf('parcelMonona2km');
 				trackBufferLayers2.splice(spot, 1);
-				// added test
-				if (specialParcelControl == true) {
-					map02.setPitch(0.1);
-    				for (g=0; g < trackBufferLayers2.length; g++) {
-    					if (trackBufferLayers2[g] == 'parcelKohl1km' || trackBufferLayers2[g] == 'parcelKohl1km' || trackBufferLayers2[g] == 'parcelMonona1km' || trackBufferLayers2[g] == 'parcelMonona2km' ||
-    					trackBufferLayers2[g] == 'parcelYahara1km' || trackBufferLayers2[g] == 'parcelYahara2km' || trackBufferLayers2[g] == 'parcelMSN1km' || trackBufferLayers2[g] == 'parcelMSN2km') {
-    						map02.setPaintProperty(trackBufferLayers2[g], 'fill-extrude-height', 0);
-    			
-    						map02.setPaintProperty(trackBufferLayers2[g], 'fill-extrude-base', 0);
-    						map02.setPaintProperty(trackBufferLayers2[g], 'fill-opacity', 1);
-    					}
-    				}
-    				specialParcelControl = false;
-    			} else {
-    				// do nothing
-    			}
+				
 				map02.removeLayer('parcelMonona2km');
 			}
 		} else if (position == 2) {
@@ -1060,43 +872,13 @@ function removeBuffers2(x) {
 				//console.log('remove parcel 1km yahara');
 				var spot = trackBufferLayers2.indexOf('parcelYahara1km');
 				trackBufferLayers2.splice(spot, 1);
-				// added test
-				if (specialParcelControl == true) {
-					map02.setPitch(0.1);
-    				for (g=0; g < trackBufferLayers2.length; g++) {
-    					if (trackBufferLayers2[g] == 'parcelKohl1km' || trackBufferLayers2[g] == 'parcelKohl1km' || trackBufferLayers2[g] == 'parcelMonona1km' || trackBufferLayers2[g] == 'parcelMonona2km' ||
-    					trackBufferLayers2[g] == 'parcelYahara1km' || trackBufferLayers2[g] == 'parcelYahara2km' || trackBufferLayers2[g] == 'parcelMSN1km' || trackBufferLayers2[g] == 'parcelMSN2km') {
-    						map02.setPaintProperty(trackBufferLayers2[g], 'fill-extrude-height', 0);
-    			
-    						map02.setPaintProperty(trackBufferLayers2[g], 'fill-extrude-base', 0);
-    						map02.setPaintProperty(trackBufferLayers2[g], 'fill-opacity', 1);
-    					}
-    				}
-    				specialParcelControl = false;
-    			} else {
-    				// do nothing
-    			}
+				
 				map02.removeLayer('parcelYahara1km');
 			} else if (bufferPosition == 3) {
 				//console.log('remove parcel 2km yahara');
 				var spot = trackBufferLayers2.indexOf('parcelYahara2km');
 				trackBufferLayers2.splice(spot, 1);
-				// added test
-				if (specialParcelControl == true) {
-					map02.setPitch(0.1);
-    				for (g=0; g < trackBufferLayers2.length; g++) {
-    					if (trackBufferLayers2[g] == 'parcelKohl1km' || trackBufferLayers2[g] == 'parcelKohl1km' || trackBufferLayers2[g] == 'parcelMonona1km' || trackBufferLayers2[g] == 'parcelMonona2km' ||
-    					trackBufferLayers2[g] == 'parcelYahara1km' || trackBufferLayers2[g] == 'parcelYahara2km' || trackBufferLayers2[g] == 'parcelMSN1km' || trackBufferLayers2[g] == 'parcelMSN2km') {
-    						map02.setPaintProperty(trackBufferLayers2[g], 'fill-extrude-height', 0);
-    			
-    						map02.setPaintProperty(trackBufferLayers2[g], 'fill-extrude-base', 0);
-    						map02.setPaintProperty(trackBufferLayers2[g], 'fill-opacity', 1);
-    					}
-    				}
-    				specialParcelControl = false;
-    			} else {
-    				// do nothing
-    			}
+				
 				map02.removeLayer('parcelYahara2km');
 			}
 		} else if (position == 3) {
@@ -1116,43 +898,13 @@ function removeBuffers2(x) {
 				//console.log('remove parcel 1km msn');
 				var spot = trackBufferLayers2.indexOf('parcelMSN1km');
 				trackBufferLayers2.splice(spot, 1);
-				// added test
-				if (specialParcelControl == true) {
-					map02.setPitch(0.1);
-    				for (g=0; g < trackBufferLayers2.length; g++) {
-    					if (trackBufferLayers2[g] == 'parcelKohl1km' || trackBufferLayers2[g] == 'parcelKohl1km' || trackBufferLayers2[g] == 'parcelMonona1km' || trackBufferLayers2[g] == 'parcelMonona2km' ||
-    					trackBufferLayers2[g] == 'parcelYahara1km' || trackBufferLayers2[g] == 'parcelYahara2km' || trackBufferLayers2[g] == 'parcelMSN1km' || trackBufferLayers2[g] == 'parcelMSN2km') {
-    						map02.setPaintProperty(trackBufferLayers2[g], 'fill-extrude-height', 0);
-    			
-    						map02.setPaintProperty(trackBufferLayers2[g], 'fill-extrude-base', 0);
-    						map02.setPaintProperty(trackBufferLayers2[g], 'fill-opacity', 1);
-    					}
-    				}
-    				specialParcelControl = false;
-    			} else {
-    				// do nothing
-    			}
+				
 				map02.removeLayer('parcelMSN1km');
 			} else if (bufferPosition == 3) {
 				//console.log('remove parcel 2km msn');
 				var spot = trackBufferLayers2.indexOf('parcelMSN2km');
 				trackBufferLayers2.splice(spot, 1);
-				// added test
-				if (specialParcelControl == true) {
-					map02.setPitch(0.1);
-    				for (g=0; g < trackBufferLayers2.length; g++) {
-    					if (trackBufferLayers2[g] == 'parcelKohl1km' || trackBufferLayers2[g] == 'parcelKohl1km' || trackBufferLayers2[g] == 'parcelMonona1km' || trackBufferLayers2[g] == 'parcelMonona2km' ||
-    					trackBufferLayers2[g] == 'parcelYahara1km' || trackBufferLayers2[g] == 'parcelYahara2km' || trackBufferLayers2[g] == 'parcelMSN1km' || trackBufferLayers2[g] == 'parcelMSN2km') {
-    						map02.setPaintProperty(trackBufferLayers2[g], 'fill-extrude-height', 0);
-    			
-    						map02.setPaintProperty(trackBufferLayers2[g], 'fill-extrude-base', 0);
-    						map02.setPaintProperty(trackBufferLayers2[g], 'fill-opacity', 1);
-    					}
-    				}
-    				specialParcelControl = false;
-    			} else {
-    				// do nothing
-    			}
+				
 				map02.removeLayer('parcelMSN2km');
 			}
 		}
