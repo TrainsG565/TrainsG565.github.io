@@ -163,7 +163,18 @@ map02.on('click', function(e) {
     feature.layer.id == 'parcelYahara1km' || feature.layer.id == 'parcelYahara2km' || feature.layer.id == 'parcelMSN1km' || feature.layer.id == 'parcelMSN2km') {
     	
     	if (specialParcelControl == false) {
-			map02.setPitch(55);
+    		var myTimer = setInterval(myTimer, 50);
+			
+			var m = 0.1;
+			function myTimer() {
+    			m += 1;
+    			if (m >= 55) {
+    				clearInterval(myTimer);
+    			} else if (m < 55) {
+    				map02.setPitch(m);
+    			}
+			}
+			
     		var g; 
     		for (g=0; g < trackBufferLayers2.length; g++) {
     			if (trackBufferLayers2[g] == 'parcelKohl1km' || trackBufferLayers2[g] == 'parcelKohl1km' || trackBufferLayers2[g] == 'parcelMonona1km' || trackBufferLayers2[g] == 'parcelMonona2km' ||
