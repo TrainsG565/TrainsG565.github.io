@@ -496,22 +496,6 @@ function addBuffers2(x) {
 				});
 				trackBufferLayers2.push('parcelKohl2km');
 				
-				// added test
-				if (specialParcelControl == true) {
-					map02.setPitch(0.1);
-    				for (g=0; g < trackBufferLayers2.length; g++) {
-    					if (trackBufferLayers2[g] == 'parcelKohl1km' || trackBufferLayers2[g] == 'parcelKohl1km' || trackBufferLayers2[g] == 'parcelMonona1km' || trackBufferLayers2[g] == 'parcelMonona2km' ||
-    					trackBufferLayers2[g] == 'parcelYahara1km' || trackBufferLayers2[g] == 'parcelYahara2km' || trackBufferLayers2[g] == 'parcelMSN1km' || trackBufferLayers2[g] == 'parcelMSN2km') {
-    						console.log(trackBufferLayers2[g]);
-    						map02.setPaintProperty(trackBufferLayers2[g], 'fill-extrude-height', 0);
-    			
-    						map02.setPaintProperty(trackBufferLayers2[g], 'fill-extrude-base', 0);
-    						map02.setPaintProperty(trackBufferLayers2[g], 'fill-opacity', 1);
-    					}
-    				}
-    				specialParcelControl = false;
-    			}
-				
 			}
 		} else if (position == 1) {
 			if (bufferPosition == 0) {
