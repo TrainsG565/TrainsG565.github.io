@@ -180,6 +180,7 @@ map02.on('click', function(e) {
     		}
     	} else if (specialParcelControl == true) {
     		map02.setPitch(0.1);
+    		map02.setBearing(0);
     		for (g=0; g < trackBufferLayers2.length; g++) {
     			if (trackBufferLayers2[g] == 'parcelKohl1km' || trackBufferLayers2[g] == 'parcelKohl1km' || trackBufferLayers2[g] == 'parcelMonona1km' || trackBufferLayers2[g] == 'parcelMonona2km' ||
     			trackBufferLayers2[g] == 'parcelYahara1km' || trackBufferLayers2[g] == 'parcelYahara2km' || trackBufferLayers2[g] == 'parcelMSN1km' || trackBufferLayers2[g] == 'parcelMSN2km') {
