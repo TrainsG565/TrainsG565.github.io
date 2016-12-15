@@ -497,7 +497,7 @@ function addBuffers2(x) {
 					},
 					'filter': ['==', 'GID', 5]
 				});
-				trackBufferLayers2.push('parcelKohl2km');
+				//trackBufferLayers2.push('parcelKohl2km');
 				
 				// added test
 				if (specialParcelControl == true) {
@@ -515,6 +515,7 @@ function addBuffers2(x) {
     			} else {
     				// do nothing
     			}
+    			trackBufferLayers2.push('parcelKohl2km');
 			}
 		} else if (position == 1) {
 			if (bufferPosition == 0) {
