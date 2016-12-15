@@ -163,13 +163,13 @@ map02.on('click', function(e) {
     feature.layer.id == 'parcelYahara1km' || feature.layer.id == 'parcelYahara2km' || feature.layer.id == 'parcelMSN1km' || feature.layer.id == 'parcelMSN2km') {
     	
     	if (specialParcelControl == false) {
-    		var myTimer = setInterval(myTimer, 50);
+    		var timer = setInterval(myTimer, 50);
 			
-			var m = 0.1;
+			var m = 0;
 			function myTimer() {
     			m += 1;
     			if (m >= 55) {
-    				clearInterval(myTimer);
+    				clearInterval(timer);
     			} else if (m < 55) {
     				map02.setPitch(m);
     			}
