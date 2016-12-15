@@ -501,16 +501,22 @@ function addBuffers2(x) {
 				
 				// added test
 				if (specialParcelControl == true) {
+					console.log('test1');
 					map02.setPitch(0.1);
+					console.log('test2');
     				for (g=0; g < trackBufferLayers2.length; g++) {
     					if (trackBufferLayers2[g] == 'parcelKohl1km' || trackBufferLayers2[g] == 'parcelKohl1km' || trackBufferLayers2[g] == 'parcelMonona1km' || trackBufferLayers2[g] == 'parcelMonona2km' ||
     					trackBufferLayers2[g] == 'parcelYahara1km' || trackBufferLayers2[g] == 'parcelYahara2km' || trackBufferLayers2[g] == 'parcelMSN1km' || trackBufferLayers2[g] == 'parcelMSN2km') {
+    						console.log('testextrude');
     						map02.setPaintProperty(trackBufferLayers2[g], 'fill-extrude-height', 0);
-    			
+    						
+    						console.log('testbase');
     						map02.setPaintProperty(trackBufferLayers2[g], 'fill-extrude-base', 0);
+    						console.log('testopacity');
     						map02.setPaintProperty(trackBufferLayers2[g], 'fill-opacity', 1);
     					}
     				}
+    				console.log('test3');
     				specialParcelControl = false;
     			} else {
     				// do nothing
