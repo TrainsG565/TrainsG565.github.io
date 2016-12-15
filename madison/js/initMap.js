@@ -142,12 +142,13 @@ map01.on('click', function(e) {
     if (feature.layer.id == 'busKohl1km' || feature.layer.id == 'busKohl2km' || feature.layer.id == 'busMonona1km' || feature.layer.id == 'busMonona2km' ||
     feature.layer.id == 'busYahara1km' || feature.layer.id == 'busYahara2km' || feature.layer.id == 'busMSN1km' || feature.layer.id == 'busMSN2km') {
     	
-        	
+        testFilterArr.length = 0;
+        testArr.length = 0;
+        
     	testArr.push(feature.properties.Route);
     	var energy = testArr.join();
     	var prime = energy.split(", ");
     	
-    	testFilterArr.length = 0;
     	testFilterArr = [
     		'any'
     	];
@@ -564,11 +565,16 @@ function removeBuffers(x) {
 				var spot = trackBufferLayers.indexOf('busKohl1km');
 				trackBufferLayers.splice(spot, 1);
 				map01.removeLayer('busKohl1km');
+				
+				testFilterArr.length = 0;
+        		testArr.length = 0;
 			} else if (bufferPosition == 1) {
 				//console.log('remove bus 2km kohl');
 				var spot = trackBufferLayers.indexOf('busKohl2km');
 				trackBufferLayers.splice(spot, 1);
 				map01.removeLayer('busKohl2km');
+				testFilterArr.length = 0;
+        		testArr.length = 0;
 			} else if (bufferPosition == 2) {
 				//console.log('remove bike 1km kohl');
 				var spot = trackBufferLayers.indexOf('bikeKohl1km');
@@ -586,11 +592,15 @@ function removeBuffers(x) {
 				var spot = trackBufferLayers.indexOf('busMonona1km');
 				trackBufferLayers.splice(spot, 1);
 				map01.removeLayer('busMonona1km');
+				testFilterArr.length = 0;
+        		testArr.length = 0;
 			} else if (bufferPosition == 1) {
 				//console.log('remove bus 2km monona');
 				var spot = trackBufferLayers.indexOf('busMonona2km');
 				trackBufferLayers.splice(spot, 1);
 				map01.removeLayer('busMonona2km');
+				testFilterArr.length = 0;
+        		testArr.length = 0;
 			} else if (bufferPosition == 2) {
 				//console.log('remove bike 1km monona');
 				var spot = trackBufferLayers.indexOf('bikeMonona1km');
@@ -608,11 +618,15 @@ function removeBuffers(x) {
 				var spot = trackBufferLayers.indexOf('busYahara1km');
 				trackBufferLayers.splice(spot, 1);
 				map01.removeLayer('busYahara1km');
+				testFilterArr.length = 0;
+        		testArr.length = 0;
 			} else if (bufferPosition == 1) {
 				//console.log('remove bus 2km yahara');
 				var spot = trackBufferLayers.indexOf('busYahara2km');
 				trackBufferLayers.splice(spot, 1);
 				map01.removeLayer('busYahara2km');
+				testFilterArr.length = 0;
+        		testArr.length = 0;
 			} else if (bufferPosition == 2) {
 				//console.log('remove bike 1km yahara');
 				var spot = trackBufferLayers.indexOf('bikeYahara1km');
@@ -630,11 +644,15 @@ function removeBuffers(x) {
 				var spot = trackBufferLayers.indexOf('busMSN1km');
 				trackBufferLayers.splice(spot, 1);
 				map01.removeLayer('busMSN1km');
+				testFilterArr.length = 0;
+        		testArr.length = 0;
 			} else if (bufferPosition == 1) {
 				//console.log('remove bus 2km msn');
 				var spot = trackBufferLayers.indexOf('busMSN2km');
 				trackBufferLayers.splice(spot, 1);
 				map01.removeLayer('busMSN2km');
+				testFilterArr.length = 0;
+        		testArr.length = 0;
 			} else if (bufferPosition == 2) {
 				//console.log('remove bike 1km msn');
 			} else if (bufferPosition == 3) {
